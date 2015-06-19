@@ -2,6 +2,11 @@
 Changelog for package jsk_3rdparty
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2015-06-19)
+------------------
+* jsk_patch is not releasesd on indigo
+* Contributors: Kei Okada
+
 2.0.0 (2015-06-19)
 ------------------
 * move from jsk_common to jsk_3rdparty
