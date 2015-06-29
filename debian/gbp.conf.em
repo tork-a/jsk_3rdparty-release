@@ -1,3 +1,3 @@
 [git-buildpackage]
-upstream-tag=release/jade/ff/2.0.1-1
+upstream-tag=@(release_tag)
 upstream-tree=tag
