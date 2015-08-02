@@ -1,0 +1,12 @@
+Source: ros-hydro-rosping
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-mk, ros-hydro-rosboost-cfg, ros-hydro-rosbuild, ros-hydro-roscpp, ros-hydro-rostest, ros-hydro-std-msgs
+Homepage: http://ros.org/wiki/rosping
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rosping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-roscpp, ros-hydro-std-msgs
+Description: rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message. For echoing ROS node, use rosnode.
