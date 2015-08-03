@@ -1,0 +1,12 @@
+Source: ros-jade-julius
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-mk, ros-jade-roslib, ros-jade-rospack
+Homepage: http://ros.org/wiki/julius
+Standards-Version: 3.9.2
+
+Package: ros-jade-julius
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: julius: Open-Source Large Vocabulary CSR Engine (http://julius.sourceforge.jp/index.php)
