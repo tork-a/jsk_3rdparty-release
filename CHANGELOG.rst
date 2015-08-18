@@ -2,6 +2,11 @@
 Changelog for package ff
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.4 (2015-08-18)
+------------------
+* add ca-certificates for https download
+* Contributors: Kei Okada
+
 2.0.3 (2015-08-01)
 ------------------
 
