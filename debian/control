@@ -1,0 +1,12 @@
+Source: ros-jade-rospatlite
+Section: misc
+Priority: extra
+Maintainer: Takuya Nakaoka <nakaokat@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-rospy, ros-jade-std-msgs
+Homepage: http://ros.org/wiki/rospatlite
+Standards-Version: 3.9.2
+
+Package: ros-jade-rospatlite
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-rospy, ros-jade-std-msgs
+Description: rospatlite
