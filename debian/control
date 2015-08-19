@@ -1,0 +1,12 @@
+Source: ros-hydro-bayesian-belief-networks
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git-core, ros-hydro-catkin, ros-hydro-message-generation, ros-hydro-mk, ros-hydro-rospy, ros-hydro-std-msgs
+Homepage: https://github.com/eBay/bayesian-belief-networks
+Standards-Version: 3.9.2
+
+Package: ros-hydro-bayesian-belief-networks
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-message-runtime, ros-hydro-rospy, ros-hydro-std-msgs
+Description: The bayesian_belief_networks package form https://github.com/eBay/bayesian-belief-networks, Authored by Neville Newey, Anzar Afaq, Copyright 2013 eBay Software Foundation
