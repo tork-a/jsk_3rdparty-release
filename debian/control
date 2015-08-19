@@ -1,0 +1,12 @@
+Source: ros-indigo-opt-camera
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-camera-calibration-parsers, ros-indigo-catkin, ros-indigo-compressed-image-transport, ros-indigo-cv-bridge, ros-indigo-driver-base, ros-indigo-dynamic-reconfigure, ros-indigo-image-proc, ros-indigo-roslang, ros-indigo-rospack, ros-indigo-sensor-msgs
+Homepage: http://ros.org/wiki/opt_camera
+Standards-Version: 3.9.2
+
+Package: ros-indigo-opt-camera
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-camera-calibration-parsers, ros-indigo-compressed-image-transport, ros-indigo-cv-bridge, ros-indigo-driver-base, ros-indigo-dynamic-reconfigure, ros-indigo-image-proc, ros-indigo-rospack, ros-indigo-sensor-msgs
+Description: opt_camera
