@@ -2,6 +2,9 @@
 Changelog for package assimp_devel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.5 (2015-08-23)
+------------------
+
 2.0.4 (2015-08-18)
 ------------------
 * add ca-certificates for https download
