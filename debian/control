@@ -1,0 +1,12 @@
+Source: ros-jade-bayesian-belief-networks
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git-core, ros-jade-catkin, ros-jade-message-generation, ros-jade-mk, ros-jade-rospy, ros-jade-std-msgs
+Homepage: https://github.com/eBay/bayesian-belief-networks
+Standards-Version: 3.9.2
+
+Package: ros-jade-bayesian-belief-networks
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-message-runtime, ros-jade-rospy, ros-jade-std-msgs
+Description: The bayesian_belief_networks package form https://github.com/eBay/bayesian-belief-networks, Authored by Neville Newey, Anzar Afaq, Copyright 2013 eBay Software Foundation
