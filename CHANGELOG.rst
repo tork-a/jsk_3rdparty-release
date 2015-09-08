@@ -2,6 +2,9 @@
 Changelog for package collada_urdf_jsk_patch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.6 (2015-09-08)
+------------------
+
 2.0.5 (2015-08-23)
 ------------------
 * [collada_urdf_jsk_patch] Depends on catkin-tools
