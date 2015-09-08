@@ -1,0 +1,504 @@
+ros-jade-mini-maxwell (2.0.6-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 07 Sep 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.5-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 22 Aug 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.4-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 17 Aug 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.3-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 31 Jul 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.2-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 28 Jun 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.1-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 18 Jun 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (2.0.0-0vivid) vivid; urgency=high
+
+  * move from jsk_common to jsk_3rdparty
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 18 Jun 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.72-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 06 Jun 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.71-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 16 May 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.70-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 07 May 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.69-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 04 May 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.68-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 04 May 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.67-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 02 May 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.66-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 02 Apr 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.65-0vivid) vivid; urgency=high
+
+  * [drc_network] launch maxwell pro without gui
+  * [mini_maxwell] Fix utility script for maxwell pro
+  * Contributors: Ryohei Ueda
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 01 Apr 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.64-0vivid) vivid; urgency=high
+
+  * [mini_maxwell] Add script to launch official script
+  * [mini_maxwell] Add script to download maxwell pro's script
+  * Contributors: Ryohei Ueda
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 28 Mar 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.63-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 18 Feb 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.62-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 16 Feb 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.61-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 10 Feb 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.60-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 02 Feb 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.59-0vivid) vivid; urgency=high
+
+  * Remove rosbuild files
+  * [mini_maxwell] Publish status of mini maxwell in drc_2015_environment.py
+  * [mini_maxwell] Fix minimaxwell configuration not to drop all the
+    packets :)
+  * [mini_maxwell] Support 'disable_network_limitation' and add launch file
+  * [mini_maxwell] Add udp mode to simple test server
+  * [mini_maxwell] Add script to test like DRC-final-2015
+  * [mini_maxwell] Use struct module to make message with fixed size
+  * [mini_maxwell] Add simple echo server to debug mini maxwell settings
+  * Contributors: Ryohei Ueda
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 02 Feb 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.58-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 06 Jan 2015 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.57-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 22 Dec 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.56-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 16 Dec 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.55-0vivid) vivid; urgency=high
+
+  * add install macro
+  * add mini maxwell scripts instead of downloading them
+  * Contributors: Yusuke Furuta
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 08 Dec 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.54-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 14 Nov 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.53-0vivid) vivid; urgency=high
+
+  * fix author/maintaner name
+  * add more build_depend
+  * Contributors: Kei Okada
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 31 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.52-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 22 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.51-0vivid) vivid; urgency=high
+
+  * fix version number of mini_maxwell
+  * download scripts in catkin_make
+  * add sample program to control bandwidth
+  * change band number
+  * catkinize mini_maxwell
+  * change mini maxwell parameter with dynamic reconfigure
+  * Contributors: Kei Okada, Yusuke Furuta
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 19 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.50-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 19 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.49-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 12 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.48-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 11 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.47-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 07 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.46-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 02 Oct 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.45-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 28 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.44-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 26 Sep 2014 00:17:00 -0000
+
+ros-jade-mini-maxwell (1.0.43-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 25 Sep 2014 16:08:00 -0000
+
+ros-jade-mini-maxwell (1.0.42-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 24 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.41-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 22 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.40-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 18 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.39-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 16 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.38-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 12 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.37-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 07 Sep 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.36-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 31 Aug 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.35-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 15 Aug 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.34-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 13 Aug 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.33-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 27 Jul 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.32-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 25 Jul 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.31-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 22 Jul 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.30-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 14 Jul 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.29-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 01 Jul 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.28-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 23 Jun 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.27-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 09 Jun 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.26-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 29 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.25-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 25 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.24-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 23 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.23-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 22 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.22-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 21 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.21-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 19 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.20-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 08 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.19-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Mon, 05 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.18-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 03 May 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.17-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.16-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 14:29:00 -0000
+
+ros-jade-mini-maxwell (1.0.15-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 11:19:00 -0000
+
+ros-jade-mini-maxwell (1.0.14-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 03:52:00 -0000
+
+ros-jade-mini-maxwell (1.0.13-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 02:06:00 -0000
+
+ros-jade-mini-maxwell (1.0.12-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 18 Apr 2014 07:58:00 -0000
+
+ros-jade-mini-maxwell (1.0.11-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 17 Apr 2014 23:18:00 -0000
+
+ros-jade-mini-maxwell (1.0.10-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 16 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.9-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 11 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.8-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 10 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.7-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Wed, 09 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.6-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 06 Apr 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.5-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Sun, 30 Mar 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.4-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Fri, 28 Mar 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.3-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 18 Mar 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.2-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 11 Mar 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.1-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Thu, 06 Mar 2014 15:00:00 -0000
+
+ros-jade-mini-maxwell (1.0.0-0vivid) vivid; urgency=high
+
+
+
+ -- Yusuke Furuta <furuta@jsk.imi.i.u-tokyo.ac.jp>  Tue, 04 Mar 2014 15:00:00 -0000
+
+
