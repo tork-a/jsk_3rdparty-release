@@ -1,0 +1,12 @@
+Source: ros-jade-downward
+Section: misc
+Priority: extra
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), bison, flex, g++, gawk, mercurial, python-dev, ros-jade-catkin, ros-jade-mk, ros-jade-roslib, ros-jade-rospack
+Homepage: http://ros.org/wiki/downward
+Standards-Version: 3.9.2
+
+Package: ros-jade-downward
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: fast downward: PDDL Planner (http://www.fast-downward.org)
