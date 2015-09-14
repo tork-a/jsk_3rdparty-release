@@ -1,0 +1,12 @@
+Source: ros-jade-voice-text
+Section: misc
+Priority: extra
+Maintainer: k-okada <t@t.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin
+Homepage: http://ros.org/wiki/voice_text
+Standards-Version: 3.9.2
+
+Package: ros-jade-voice-text
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: voice_text (www.voicetext.jp)
