@@ -1,0 +1,153 @@
+ros-hydro-julius (2.0.7-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 13 Sep 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.6-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 07 Sep 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.5-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 22 Aug 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.4-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 17 Aug 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.3-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 31 Jul 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.2-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 28 Jun 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.1-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 18 Jun 2015 15:00:00 -0000
+
+ros-hydro-julius (2.0.0-0raring) raring; urgency=high
+
+  * move from jsk_common to jsk_3rdparty
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 18 Jun 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.72-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 06 Jun 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.71-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 16 May 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.70-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 07 May 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.69-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 04 May 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.68-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 04 May 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.67-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 02 May 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.66-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 02 Apr 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.65-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 01 Apr 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.64-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 28 Mar 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.63-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 18 Feb 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.62-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 16 Feb 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.61-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 10 Feb 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.60-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 02 Feb 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.59-0raring) raring; urgency=high
+
+  * Remove rosbuild files
+  * Contributors: Ryohei Ueda
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 02 Feb 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.58-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 06 Jan 2015 15:00:00 -0000
+
+ros-hydro-julius (1.0.57-0raring) raring; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 22 Dec 2014 15:00:00 -0000
+
+ros-hydro-julius (1.0.56-0raring) raring; urgency=high
+
+  * catkinize julius
+  * Contributors: Yuki Furuta
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 16 Dec 2014 15:00:00 -0000
+
+
