@@ -1,0 +1,12 @@
+Source: ros-hydro-rostwitter
+Section: misc
+Priority: extra
+Maintainer: k-okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git-core, python-oauth2, python-requests, python-setuptools, python-simplejson, ros-hydro-catkin, ros-hydro-mk, ros-hydro-rospy, ros-hydro-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-hydro-rostwitter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-oauth2, python-requests, python-simplejson, ros-hydro-rospy, ros-hydro-std-msgs
+Description: The rostwitter package
