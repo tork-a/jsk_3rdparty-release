@@ -1,0 +1,12 @@
+Source: ros-jade-rosping
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-mk, ros-jade-rosboost-cfg, ros-jade-rosbuild, ros-jade-roscpp, ros-jade-rostest, ros-jade-std-msgs
+Homepage: http://ros.org/wiki/rosping
+Standards-Version: 3.9.2
+
+Package: ros-jade-rosping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-roscpp, ros-jade-std-msgs
+Description: rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message. For echoing ROS node, use rosnode.
