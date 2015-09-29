@@ -1,0 +1,12 @@
+Source: ros-jade-ffha
+Section: misc
+Priority: extra
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), bison, flex, gawk, ros-jade-catkin, ros-jade-mk, ros-jade-rosbuild, ros-jade-roslib, ros-jade-rospack
+Homepage: http://ros.org/wiki/downward
+Standards-Version: 3.9.2
+
+Package: ros-jade-ffha
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ffha: PDDL Planner (http://ipc.informatik.uni-freiburg.de)
