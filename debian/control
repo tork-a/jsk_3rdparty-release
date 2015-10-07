@@ -1,0 +1,12 @@
+Source: ros-jade-jsk-3rdparty
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin
+Homepage: http://ros.org/wiki/jsk_3rdparty
+Standards-Version: 3.9.2
+
+Package: ros-jade-jsk-3rdparty
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-assimp-devel, ros-jade-bayesian-belief-networks, ros-jade-downward, ros-jade-ff, ros-jade-ffha, ros-jade-julius, ros-jade-libsiftfast, ros-jade-mini-maxwell, ros-jade-nlopt, ros-jade-opt-camera, ros-jade-rospatlite, ros-jade-rosping, ros-jade-rostwitter, ros-jade-voice-text
+Description: Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg
