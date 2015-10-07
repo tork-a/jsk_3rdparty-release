@@ -1,0 +1,12 @@
+Source: ros-jade-rostwitter
+Section: misc
+Priority: extra
+Maintainer: k-okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git-core, python-oauth2, python-requests, python-setuptools, python-simplejson, ros-jade-catkin, ros-jade-mk, ros-jade-rospy, ros-jade-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jade-rostwitter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-oauth2, python-requests, python-simplejson, ros-jade-rospy, ros-jade-std-msgs
+Description: The rostwitter package
