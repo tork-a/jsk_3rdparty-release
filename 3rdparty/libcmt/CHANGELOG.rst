@@ -2,6 +2,9 @@
 Changelog for package libcmt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.10 (2015-10-07)
+-------------------
+
 2.0.9 (2015-09-26)
 ------------------
 * use libopencv-dev instad of opencv2, see `#23 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/23>`_
