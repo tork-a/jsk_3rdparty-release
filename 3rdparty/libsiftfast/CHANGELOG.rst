@@ -2,6 +2,9 @@
 Changelog for package libsiftfast
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.10 (2015-10-07)
+-------------------
+
 2.0.9 (2015-09-26)
 ------------------
 * [libsiftfast] Install python binding correctly when catkin config --no-install
