@@ -1,0 +1,12 @@
+Source: ros-jade-ff
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), bison, ca-certificates, flex, openssl, ros-jade-catkin, ros-jade-mk, ros-jade-rosbash, ros-jade-rosbuild, ros-jade-roslib, ros-jade-rospack, unzip
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jade-ff
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ff: pddl planner. see http://www.loria.fr/~hoffmanj/ff.html
