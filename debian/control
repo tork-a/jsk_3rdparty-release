@@ -1,0 +1,12 @@
+Source: ros-indigo-sklearn
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), python-sklearn, ros-indigo-catkin, ros-indigo-ml-classifiers, ros-indigo-rospy
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-sklearn
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-sklearn, ros-indigo-ml-classifiers, ros-indigo-rospy
+Description: ROS wrapper for the sklearn library
