@@ -2,6 +2,9 @@
 Changelog for package downward
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.13 (2015-12-15)
+-------------------
+
 2.0.12 (2015-11-26)
 -------------------
 * package.xml : downward uses time command on running (https://github.com/jsk-ros-pkg/jsk_planning/pull/30#issuecomment-146065373)
