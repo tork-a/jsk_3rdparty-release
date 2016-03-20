@@ -1,3 +1,58 @@
+## jsk_3rdparty (jade) - 2.0.14-0
+
+The packages in the `jsk_3rdparty` repository were released into the `jade` distro by running `/usr/bin/bloom-release jsk_3rdparty --track jade --rosdistro jade` on `Sun, 20 Mar 2016 13:08:13 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `collada_urdf_jsk_patch`
+- `downward`
+- `ff`
+- `ffha`
+- `jsk_3rdparty`
+- `julius`
+- `libcmt`
+- `libsiftfast`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `pr2_groovy_patches`
+- `image_view_jsk_patch`
+- `laser_filters_jsk_patch`
+- `depth_image_proc_jsk_patch`
+- `openni_tracker_jsk_patch`
+- `sklearn`
+- `#`
+- `until`
+- `ml-classsfiers`
+- `is`
+- `released`
+- `https://github.com/jolting/ml_classifiers-release/issues/1`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.0.13-0`
+- old version: `2.0.13-0`
+- new version: `2.0.14-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.21`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.4`
+- vcstools version: `0.1.38`
+
+
 ## jsk_3rdparty (indigo) - 2.0.14-0
 
 The packages in the `jsk_3rdparty` repository were released into the `indigo` distro by running `/usr/bin/bloom-release jsk_3rdparty --track indigo --rosdistro indigo` on `Sun, 20 Mar 2016 12:55:59 -0000`
