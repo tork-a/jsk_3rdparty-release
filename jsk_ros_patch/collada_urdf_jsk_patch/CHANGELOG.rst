@@ -2,6 +2,14 @@
 Changelog for package collada_urdf_jsk_patch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.16 (2016-10-17)
+-------------------
+
+2.0.15 (2016-10-16)
+-------------------
+* collada_urdf_jsk_patch : compile with -v -i
+* Contributors: Kei Okada
+
 2.0.14 (2016-03-20)
 -------------------
 
