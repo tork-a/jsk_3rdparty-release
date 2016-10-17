@@ -1,4 +1,4 @@
-From a2f09bd535e2bd8574698236de44f702b3bdc6c5 Mon Sep 17 00:00:00 2001
+From 5d530734788880218015616618029589647bdd19 Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 21 Jun 2015 15:37:19 +0900
 Subject: [PATCH] ml-classifier is not released on jade yet
@@ -8,7 +8,7 @@ Subject: [PATCH] ml-classifier is not released on jade yet
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 1fde64d..9036969 100644
+index 4c69b83..2e62a84 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -21,7 +21,7 @@
@@ -21,5 +21,5 @@ index 1fde64d..9036969 100644
    <run_depend>ff</run_depend>
    <run_depend>mini_maxwell</run_depend>
 -- 
-1.9.1
+1.9.0
 
