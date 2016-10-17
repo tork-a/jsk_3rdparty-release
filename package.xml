@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>jsk_3rdparty</name>
-  <version>2.0.14</version>
+  <version>2.0.16</version>
   <description>
    <p>Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg</p>
   </description>
@@ -21,7 +21,6 @@
   <run_depend>rospatlite</run_depend>
   <run_depend>nlopt</run_depend>
   <run_depend>voice_text</run_depend>
-  <!-- <run_depend>sklearn</run_depend> --> <!-- mk-clasfiers is not  relesed on jade yet -->
   <run_depend>assimp_devel</run_depend>
   <run_depend>ff</run_depend>
   <run_depend>mini_maxwell</run_depend>
