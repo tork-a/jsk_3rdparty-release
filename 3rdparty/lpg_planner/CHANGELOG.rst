@@ -1,12 +1,15 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package mini_maxwell
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package lpg_planner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 2.0.18 (2016-10-28)
 -------------------
 
 2.0.17 (2016-10-22)
 -------------------
+* update version to 2.0.16 for lpg_planner
+* [lpg_planner] add lpg_planner
+* Contributors: Kamada Hitoshi, Kei Okada
 
 2.0.16 (2016-10-17)
 -------------------
@@ -16,9 +19,6 @@ Changelog for package mini_maxwell
 
 2.0.14 (2016-03-20)
 -------------------
-* remove dynamic_reconfigure.parameter_generator, which only used for rosbuild
-* [mini_maxwell] Update maintainer
-* Contributors: Kei Okada, Ryohei Ueda
 
 2.0.13 (2015-12-15)
 -------------------
@@ -26,11 +26,11 @@ Changelog for package mini_maxwell
 2.0.12 (2015-11-26)
 -------------------
 
-2.0.11 (2015-10-07)
--------------------
+2.0.11 (2015-10-07 14:16)
+-------------------------
 
-2.0.10 (2015-10-07)
--------------------
+2.0.10 (2015-10-07 12:47)
+-------------------------
 
 2.0.9 (2015-09-26)
 ------------------
@@ -56,12 +56,11 @@ Changelog for package mini_maxwell
 2.0.2 (2015-06-29)
 ------------------
 
-2.0.1 (2015-06-19)
-------------------
+2.0.1 (2015-06-19 21:21)
+------------------------
 
-2.0.0 (2015-06-19)
-------------------
-* move from jsk_common to jsk_3rdparty
+2.0.0 (2015-06-19 10:41)
+------------------------
 
 1.0.72 (2015-06-07)
 -------------------
@@ -72,11 +71,11 @@ Changelog for package mini_maxwell
 1.0.70 (2015-05-08)
 -------------------
 
-1.0.69 (2015-05-05)
--------------------
+1.0.69 (2015-05-05 12:28)
+-------------------------
 
-1.0.68 (2015-05-05)
--------------------
+1.0.68 (2015-05-05 09:49)
+-------------------------
 
 1.0.67 (2015-05-03)
 -------------------
@@ -86,15 +85,9 @@ Changelog for package mini_maxwell
 
 1.0.65 (2015-04-02)
 -------------------
-* [drc_network] launch maxwell pro without gui
-* [mini_maxwell] Fix utility script for maxwell pro
-* Contributors: Ryohei Ueda
 
 1.0.64 (2015-03-29)
 -------------------
-* [mini_maxwell] Add script to launch official script
-* [mini_maxwell] Add script to download maxwell pro's script
-* Contributors: Ryohei Ueda
 
 1.0.63 (2015-02-19)
 -------------------
@@ -105,21 +98,11 @@ Changelog for package mini_maxwell
 1.0.61 (2015-02-11)
 -------------------
 
-1.0.60 (2015-02-03)
--------------------
+1.0.60 (2015-02-03 10:12)
+-------------------------
 
-1.0.59 (2015-02-03)
--------------------
-* Remove rosbuild files
-* [mini_maxwell] Publish status of mini maxwell in drc_2015_environment.py
-* [mini_maxwell] Fix minimaxwell configuration not to drop all the
-  packets :)
-* [mini_maxwell] Support 'disable_network_limitation' and add launch file
-* [mini_maxwell] Add udp mode to simple test server
-* [mini_maxwell] Add script to test like DRC-final-2015
-* [mini_maxwell] Use struct module to make message with fixed size
-* [mini_maxwell] Add simple echo server to debug mini maxwell settings
-* Contributors: Ryohei Ueda
+1.0.59 (2015-02-03 04:05)
+-------------------------
 
 1.0.58 (2015-01-07)
 -------------------
@@ -132,34 +115,21 @@ Changelog for package mini_maxwell
 
 1.0.55 (2014-12-09)
 -------------------
-* add install macro
-* add mini maxwell scripts instead of downloading them
-* Contributors: Yusuke Furuta
 
 1.0.54 (2014-11-15)
 -------------------
 
 1.0.53 (2014-11-01)
 -------------------
-* fix author/maintaner name
-* add more build_depend
-* Contributors: Kei Okada
 
 1.0.52 (2014-10-23)
 -------------------
 
-1.0.51 (2014-10-20)
--------------------
-* fix version number of mini_maxwell
-* download scripts in catkin_make
-* add sample program to control bandwidth
-* change band number
-* catkinize mini_maxwell
-* change mini maxwell parameter with dynamic reconfigure
-* Contributors: Kei Okada, Yusuke Furuta
+1.0.51 (2014-10-20 16:01)
+-------------------------
 
-1.0.50 (2014-10-20)
--------------------
+1.0.50 (2014-10-20 01:50)
+-------------------------
 
 1.0.49 (2014-10-13)
 -------------------
