@@ -6,4 +6,6 @@ openni_tracker_jsk_patch
 
 sklearn # until ml-classsfiers is released https://github.com/jolting/ml_classifiers-release/issues/1
 
+collada_urdf_jsk_patch # python-catkin-tools is not releasead on debian
+
 
