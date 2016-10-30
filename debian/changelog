@@ -1,0 +1,564 @@
+ros-kinetic-voice-text (2.0.18-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 28 Oct 2016 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.17-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 22 Oct 2016 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.16-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 17 Oct 2016 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.15-1jessie) jessie; urgency=high
+
+  * voice_text : clean up CMakeList.txt
+  * [3rdparty/voice_text/text2wave] Enable text2wave using VoiceText other than pr2 robots.
+  * Contributors: Kei Okada, Shunichi Nozawa
+
+ -- k-okada <t@t.com>  Sun, 16 Oct 2016 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.14-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 20 Mar 2016 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.13-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 15 Dec 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.12-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 26 Nov 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.11-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 07 Oct 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.10-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 07 Oct 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.9-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 26 Sep 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.8-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 15 Sep 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.7-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 14 Sep 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.6-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 08 Sep 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.5-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 23 Aug 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.4-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 18 Aug 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.3-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 01 Aug 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.2-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 29 Jun 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.1-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 19 Jun 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (2.0.0-1jessie) jessie; urgency=high
+
+  * move from jsk_common to jsk_3rdparty
+
+ -- k-okada <t@t.com>  Fri, 19 Jun 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.72-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 07 Jun 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.71-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 17 May 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.70-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 08 May 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.69-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 05 May 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.68-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 05 May 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.67-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 03 May 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.66-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 03 Apr 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.65-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 02 Apr 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.64-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 29 Mar 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.63-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 19 Feb 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.62-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 17 Feb 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.61-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 11 Feb 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.60-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 03 Feb 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.59-1jessie) jessie; urgency=high
+
+  * Remove rosbuild files
+  * Contributors: Ryohei Ueda
+
+ -- k-okada <t@t.com>  Tue, 03 Feb 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.58-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 07 Jan 2015 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.57-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 23 Dec 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.56-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 17 Dec 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.55-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 09 Dec 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.54-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 15 Nov 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.53-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 01 Nov 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.52-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 23 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.51-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 20 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.50-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 20 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.49-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 13 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.48-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 12 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.47-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 08 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.46-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 03 Oct 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.45-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 29 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.44-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 26 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.43-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 26 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.42-1jessie) jessie; urgency=high
+
+  * Support cakint for vice_text by using catkin_find command
+  * Contributors: Ryohei Ueda
+
+ -- k-okada <t@t.com>  Thu, 25 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.41-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 23 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.40-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 19 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.39-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 17 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.38-1jessie) jessie; urgency=high
+
+  * catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
+  * Contributors: Ryohei Ueda, JSK applications
+  * catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
+  * Contributors: Yuto Inagaki
+
+ -- k-okada <t@t.com>  Sat, 13 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.37-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 08 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.36-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 01 Sep 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.35-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 16 Aug 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.34-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 14 Aug 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.33-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 28 Jul 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.32-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 26 Jul 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.31-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 23 Jul 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.30-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 15 Jul 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.29-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 02 Jul 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.28-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 24 Jun 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.27-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 10 Jun 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.26-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 30 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.25-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 26 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.24-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 24 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.23-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 23 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.22-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 22 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.21-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 20 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.20-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 09 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.19-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Tue, 06 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.18-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 04 May 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.17-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sun, 20 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.16-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 19 Apr 2014 23:29:00 -0000
+
+ros-kinetic-voice-text (1.0.15-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 19 Apr 2014 20:19:00 -0000
+
+ros-kinetic-voice-text (1.0.14-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 19 Apr 2014 12:52:00 -0000
+
+ros-kinetic-voice-text (1.0.13-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 19 Apr 2014 11:06:00 -0000
+
+ros-kinetic-voice-text (1.0.12-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 18 Apr 2014 16:58:00 -0000
+
+ros-kinetic-voice-text (1.0.11-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 18 Apr 2014 08:18:00 -0000
+
+ros-kinetic-voice-text (1.0.10-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 17 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.9-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 12 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.8-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 11 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.7-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Thu, 10 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.6-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 07 Apr 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.5-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Mon, 31 Mar 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.4-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Sat, 29 Mar 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.3-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 19 Mar 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.2-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Wed, 12 Mar 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.1-1jessie) jessie; urgency=high
+
+
+
+ -- k-okada <t@t.com>  Fri, 07 Mar 2014 00:00:00 -0000
+
+ros-kinetic-voice-text (1.0.0-1jessie) jessie; urgency=high
+
+  * add nkf to rosdep.yaml
+  * do not compile if voicetext is not installed
+  * add r58200(fixed include path), r58221(added nkf to rosdep) by mikita
+  * add voice_text client program, copy from jsk-ros-pkg-unreleased
+  * Contributors: Kei Okada
+
+ -- k-okada <t@t.com>  Wed, 05 Mar 2014 00:00:00 -0000
+
+
