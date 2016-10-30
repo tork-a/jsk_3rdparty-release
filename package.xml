@@ -30,7 +30,7 @@
   <run_depend>libsiftfast</run_depend>
   <run_depend>ffha</run_depend>
   <run_depend>downward</run_depend>
-  <run_depend>rostwitter</run_depend>
+  <!-- <run_depend>rostwitter</run_depend> -->
   <run_depend>bayesian_belief_networks</run_depend>
   <run_depend>julius</run_depend>
   <export>
