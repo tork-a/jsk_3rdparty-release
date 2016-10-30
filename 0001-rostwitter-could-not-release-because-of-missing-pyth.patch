@@ -1,0 +1,26 @@
+From 0c7592ca35e181fb89c43338fe9f76b4db5c7f22 Mon Sep 17 00:00:00 2001
+From: Kei Okada <kei.okada@gmail.com>
+Date: Sun, 30 Oct 2016 05:52:45 +0000
+Subject: [PATCH] rostwitter could not release because of missing python-oauth2
+ on kinetic
+
+---
+ package.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/package.xml b/package.xml
+index 6c503dc..47cc1fe 100644
+--- a/package.xml
++++ b/package.xml
+@@ -30,7 +30,7 @@
+   <run_depend>libsiftfast</run_depend>
+   <run_depend>ffha</run_depend>
+   <run_depend>downward</run_depend>
+-  <run_depend>rostwitter</run_depend>
++  <!-- <run_depend>rostwitter</run_depend> -->
+   <run_depend>bayesian_belief_networks</run_depend>
+   <run_depend>julius</run_depend>
+   <export>
+-- 
+1.9.1
+
