@@ -2,6 +2,11 @@
 Changelog for package rosping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.19 (2017-02-22)
+-------------------
+* CMakeLists.txt: fix for cmake 3.5.1 (`#87 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/87>`_)
+* Contributors: Kei Okada
+
 2.0.18 (2016-10-28)
 -------------------
 
