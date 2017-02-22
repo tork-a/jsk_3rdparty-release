@@ -2,6 +2,11 @@
 Changelog for package downward
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.19 (2017-02-22)
+-------------------
+* add gawk to run_depend (`#85 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/85>`_)
+* Contributors: Kei Okada
+
 2.0.18 (2016-10-28)
 -------------------
 
