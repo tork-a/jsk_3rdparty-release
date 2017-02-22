@@ -2,6 +2,9 @@
 Changelog for package libcmt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.19 (2017-02-22)
+-------------------
+
 2.0.18 (2016-10-28)
 -------------------
 * add patch to fix opencv3 https://github.com/delmottea/libCMT/pull/18 (`#78 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/78>`_)
