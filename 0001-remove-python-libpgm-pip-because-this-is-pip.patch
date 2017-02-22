@@ -1,4 +1,4 @@
-From 802e8839de3fdc1c3d06af2bebbabb8e709a2556 Mon Sep 17 00:00:00 2001
+From 529102889ad2ec692a7309bc25c1e80b49513fb1 Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 30 Oct 2016 05:54:20 +0000
 Subject: [PATCH] remove python-libpgm-pip because this is pip
