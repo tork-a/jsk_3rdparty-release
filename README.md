@@ -1,12 +1,36 @@
-# jsk_3rdparty
+rospatlite
+==========
 
-[![Build Status](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty.svg?branch=master)](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty)
+This is a ROS driver for patlite.
 
+Setup
+----
+1. connect the patlite with your computer directly
+2. set IP address of your computer to 192.168.10.x (patlite has 192.168.10.1)
+3. open http://192.168.10.1/index.htm with your web broswser and setup network stuff.
+Please see [the manual](http://www.patlite.jp/product/nh-spl.html) for details.
+4. `roslaunch rospatlite patlite.launch IP:=IP_ADDRES`
+5. enjoy patlite
 
-## Deb Build Status
+Usage
+-----
 
-| Package              | Indigo (Saucy)                                                                                                                                                                                   | Indigo (Trusty)                                                                                                                                                                                    | Jade (Trusty)                                                                                                                                                                                      | Jade (Vivid)                                                                                                                                                                                     | Kinetic (Wily)                                                                                                                                                                                 | Kinetic (Xenial)                                                                                                                                                                                     |
-|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| jsk_3rdparty (armhf) | [![Build Status](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary) | [![Build Status](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary) |
-| jsk_3rdparty (i386)  | [![Build Status](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary)           | [![Build Status](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary)             |
-| jsk_3rdparty (amd64) | [![Build Status](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary)         | [![Build Status](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary)           |
+Run patlite_node.py with following ros params.
+
+- host : a hostname or ip address of your patlite
+- port : a port for TCP connection of your patlite
+- timeout : timeout of socket
+
+Then you can see some topics under the private namespace.
+
+    $ rostopic list
+    /patlite/set/blue
+    /patlite/set/buzzer
+    /patlite/set/green
+    /patlite/set/red
+    /patlite/set/white
+    /patlite/set/yellow
+    $ rostopic pub /patlite/set/buzzer std_msgs/Int8 1 # <- buzzer ON
+    $ rostopic pub /patlite/set/buzzer std_msgs/Int8 0 # <- buzzer OFF
+    $ rostopic pub /patlite/set/red std_msgs/Int8 1 # <- red light ON
+    $ rostopic pub /patlite/set/yellow std_msgs/Int8 2 # <- yellow light blink
