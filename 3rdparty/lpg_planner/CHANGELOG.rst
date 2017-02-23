@@ -1,6 +1,6 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package voice_text
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package lpg_planner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 2.0.19 (2017-02-22)
 -------------------
@@ -10,15 +10,15 @@ Changelog for package voice_text
 
 2.0.17 (2016-10-22)
 -------------------
+* update version to 2.0.16 for lpg_planner
+* [lpg_planner] add lpg_planner
+* Contributors: Kamada Hitoshi, Kei Okada
 
 2.0.16 (2016-10-17)
 -------------------
 
 2.0.15 (2016-10-16)
 -------------------
-* voice_text : clean up CMakeList.txt
-* [3rdparty/voice_text/text2wave] Enable text2wave using VoiceText other than pr2 robots.
-* Contributors: Kei Okada, Shunichi Nozawa
 
 2.0.14 (2016-03-20)
 -------------------
@@ -29,11 +29,11 @@ Changelog for package voice_text
 2.0.12 (2015-11-26)
 -------------------
 
-2.0.11 (2015-10-07)
--------------------
+2.0.11 (2015-10-07 14:16)
+-------------------------
 
-2.0.10 (2015-10-07)
--------------------
+2.0.10 (2015-10-07 12:47)
+-------------------------
 
 2.0.9 (2015-09-26)
 ------------------
@@ -59,12 +59,11 @@ Changelog for package voice_text
 2.0.2 (2015-06-29)
 ------------------
 
-2.0.1 (2015-06-19)
-------------------
+2.0.1 (2015-06-19 21:21)
+------------------------
 
-2.0.0 (2015-06-19)
-------------------
-* move from jsk_common to jsk_3rdparty
+2.0.0 (2015-06-19 10:41)
+------------------------
 
 1.0.72 (2015-06-07)
 -------------------
@@ -75,11 +74,11 @@ Changelog for package voice_text
 1.0.70 (2015-05-08)
 -------------------
 
-1.0.69 (2015-05-05)
--------------------
+1.0.69 (2015-05-05 12:28)
+-------------------------
 
-1.0.68 (2015-05-05)
--------------------
+1.0.68 (2015-05-05 09:49)
+-------------------------
 
 1.0.67 (2015-05-03)
 -------------------
@@ -102,13 +101,11 @@ Changelog for package voice_text
 1.0.61 (2015-02-11)
 -------------------
 
-1.0.60 (2015-02-03)
--------------------
+1.0.60 (2015-02-03 10:12)
+-------------------------
 
-1.0.59 (2015-02-03)
--------------------
-* Remove rosbuild files
-* Contributors: Ryohei Ueda
+1.0.59 (2015-02-03 04:05)
+-------------------------
 
 1.0.58 (2015-01-07)
 -------------------
@@ -131,11 +128,11 @@ Changelog for package voice_text
 1.0.52 (2014-10-23)
 -------------------
 
-1.0.51 (2014-10-20)
--------------------
+1.0.51 (2014-10-20 16:01)
+-------------------------
 
-1.0.50 (2014-10-20)
--------------------
+1.0.50 (2014-10-20 01:50)
+-------------------------
 
 1.0.49 (2014-10-13)
 -------------------
@@ -152,16 +149,14 @@ Changelog for package voice_text
 1.0.45 (2014-09-29)
 -------------------
 
-1.0.44 (2014-09-26)
--------------------
+1.0.44 (2014-09-26 09:17)
+-------------------------
 
-1.0.43 (2014-09-26)
--------------------
+1.0.43 (2014-09-26 01:08)
+-------------------------
 
 1.0.42 (2014-09-25)
 -------------------
-* Support cakint for vice_text by using catkin_find command
-* Contributors: Ryohei Ueda
 
 1.0.41 (2014-09-23)
 -------------------
@@ -174,11 +169,6 @@ Changelog for package voice_text
 
 1.0.38 (2014-09-13)
 -------------------
-* catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
-* Contributors: Ryohei Ueda, JSK applications
-
-* catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
-* Contributors: Yuto Inagaki
 
 1.0.37 (2014-09-08)
 -------------------
@@ -293,8 +283,3 @@ Changelog for package voice_text
 
 1.0.0 (2014-03-05)
 ------------------
-* add nkf to rosdep.yaml
-* do not compile if voicetext is not installed
-* add r58200(fixed include path), r58221(added nkf to rosdep) by mikita
-* add voice_text client program, copy from jsk-ros-pkg-unreleased
-* Contributors: Kei Okada
