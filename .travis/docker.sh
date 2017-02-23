@@ -31,6 +31,7 @@ function travis_time_end {
 export -f travis_time_end
 
 function travis_wait {
+  set +x
   local timeout=$1
 
   if [[ $timeout =~ ^[0-9]+$ ]]; then
@@ -66,6 +67,7 @@ function travis_wait {
   echo -e "\n${ANSI_GREEN}Log:${ANSI_RESET}\n"
   cat $log_file
 
+  set -x
   return $result
 }
 export -f travis_wait
@@ -118,6 +120,7 @@ export DISPLAY=:0
 sudo -E Xorg -noreset +extension GLX +extension RANDR +extension RENDER -logfile /tmp/xorg.log -config dummy.xorg.conf $DISPLAY &
 sleep 3
 glxinfo | grep GLX
+export QT_X11_NO_MITSHM=1 # see http://wiki.ros.org/docker/Tutorials/GUI
 
 # ensure setting testing environment same as travis
 export USE_JENKINS=false
