@@ -2,6 +2,14 @@
 Changelog for package nlopt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.19 (2017-02-22)
+-------------------
+* nlopt/CMakeLists.txt: cp .so, .so.0, .so.0.7.0 (`#88 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/88>`_)
+* Contributors: Kei Okada
+
+2.0.18 (2016-10-28)
+-------------------
+
 2.0.17 (2016-10-22)
 -------------------
 
