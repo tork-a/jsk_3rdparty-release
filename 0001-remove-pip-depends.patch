@@ -1,4 +1,4 @@
-From 3508f82fa771d674663a596ff9e5ef704fa1932b Mon Sep 17 00:00:00 2001
+From 228ce952254ca560d457dbb9230e34a117492b4c Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Thu, 26 Nov 2015 14:30:41 +0900
 Subject: [PATCH] remove pip depends
@@ -8,7 +8,7 @@ Subject: [PATCH] remove pip depends
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 113fe8f..dcd757b 100644
+index 75af1d5..f3d24c9 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -12,7 +12,7 @@
