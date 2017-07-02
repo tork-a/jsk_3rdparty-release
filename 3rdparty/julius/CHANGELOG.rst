@@ -2,6 +2,11 @@
 Changelog for package julius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2017-07-02)
+------------------
+* [julius] update to use julius v4.4.2 (`#99 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/99>`_)
+* Contributors: Yuki Furuta
+
 2.0.20 (2017-05-09)
 -------------------
 
