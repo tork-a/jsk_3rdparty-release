@@ -1,0 +1,12 @@
+Source: ros-kinetic-lpg-planner
+Section: misc
+Priority: extra
+Maintainer: Hitoshi Kamada <h-kamada@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://ros.org/wiki/downward
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-lpg-planner
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: lpg_planner: LPGL Planner (http://zeus.ing.unibs.it/lpg/)
