@@ -2,6 +2,11 @@
 Changelog for package julius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2017-07-05)
+------------------
+* [julius] fix: failure on buildfirm (`#109 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/109>`_)
+* Contributors: Yuki Furuta
+
 2.1.0 (2017-07-02)
 ------------------
 * [julius] update to use julius v4.4.2 (`#99 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/99>`_)
