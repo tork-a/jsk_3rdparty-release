@@ -2,6 +2,9 @@
 Changelog for package rostwitter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2017-07-05)
+------------------
+
 2.1.0 (2017-07-02)
 ------------------
 * rostwitter: fix error message when access token is not found (`#100 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/100>`_)
