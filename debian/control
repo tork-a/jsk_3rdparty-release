@@ -1,0 +1,12 @@
+Source: ros-jade-voice-text
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-dynamic-reconfigure, ros-jade-message-generation, ros-jade-roscpp
+Homepage: http://ros.org/wiki/voice_text
+Standards-Version: 3.9.2
+
+Package: ros-jade-voice-text
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, nkf, ros-jade-dynamic-reconfigure, ros-jade-message-runtime, ros-jade-sound-play
+Description: voice_text (www.voicetext.jp)
