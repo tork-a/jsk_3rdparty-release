@@ -1,0 +1,12 @@
+Source: ros-kinetic-jsk-3rdparty
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: http://ros.org/wiki/jsk_3rdparty
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-jsk-3rdparty
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-assimp-devel, ros-kinetic-bayesian-belief-networks, ros-kinetic-downward, ros-kinetic-ff, ros-kinetic-ffha, ros-kinetic-julius, ros-kinetic-libcmt, ros-kinetic-libsiftfast, ros-kinetic-mini-maxwell, ros-kinetic-nlopt, ros-kinetic-opt-camera, ros-kinetic-pgm-learner, ros-kinetic-rospatlite, ros-kinetic-rosping, ros-kinetic-slic, ros-kinetic-voice-text
+Description: Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg
