@@ -1,3 +1,54 @@
+## jsk_3rdparty (indigo) - 2.1.3-0
+
+The packages in the `jsk_3rdparty` repository were released into the `indigo` distro by running `/home/k-okada/catkin_ws/ws_rosdep/bloom/devel/bin/bloom-release -y jsk_3rdparty --track indigo --rosdistro indigo` on `Fri, 07 Jul 2017 04:21:27 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `collada_urdf_jsk_patch`
+- `downward`
+- `ff`
+- `ffha`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `laser_filters_jsk_patch`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `slic`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `pr2_groovy_patches`
+- `image_view_jsk_patch`
+- `depth_image_proc_jsk_patch`
+- `openni_tracker_jsk_patch`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.2-0`
+- old version: `2.1.2-0`
+- new version: `2.1.3-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.26`
+- catkin_pkg version: `0.3.1`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.6.2`
+- vcstools version: `0.1.39`
+
+
 ## jsk_3rdparty (indigo) - 2.1.2-0
 
 The packages in the `jsk_3rdparty` repository were released into the `indigo` distro by running `/usr/bin/bloom-release -y jsk_3rdparty --track indigo --rosdistro indigo` on `Thu, 06 Jul 2017 12:16:01 -0000`
