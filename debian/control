@@ -1,0 +1,12 @@
+Source: ros-indigo-collada-urdf-jsk-patch
+Section: misc
+Priority: extra
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), collada-dom-dev, git-core, libgts-dev, python-catkin-tools, ros-indigo-angles, ros-indigo-assimp-devel, ros-indigo-catkin, ros-indigo-class-loader, ros-indigo-cmake-modules, ros-indigo-collada-parser, ros-indigo-collada-urdf, ros-indigo-geometric-shapes, ros-indigo-kdl-parser, ros-indigo-mk, ros-indigo-pluginlib, ros-indigo-resource-retriever, ros-indigo-roscpp, ros-indigo-rostest, ros-indigo-tf
+Homepage: http://ros.org/wiki/collada_urdf_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-indigo-collada-urdf-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, collada-dom-dev, libgts-dev, python-catkin-tools, ros-indigo-angles, ros-indigo-assimp-devel, ros-indigo-class-loader, ros-indigo-collada-parser, ros-indigo-collada-urdf, ros-indigo-geometric-shapes, ros-indigo-kdl-parser, ros-indigo-pluginlib, ros-indigo-resource-retriever, ros-indigo-roscpp, ros-indigo-tf, ros-indigo-urdf
+Description: unaccepted patch for collada_urdf
