@@ -1,4 +1,4 @@
-From 56712c66721ac736377f604342f2a8d5d7714704 Mon Sep 17 00:00:00 2001
+From fd1c06ce4c51d8c954bfe897593d1402c662eec0 Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 30 Oct 2016 05:52:45 +0000
 Subject: [PATCH] rostwitter could not release because of missing python-oauth2
@@ -22,5 +22,5 @@ index 1e69844..0913524 100644
    <run_depend>julius</run_depend>
    <export>
 -- 
-1.9.1
+1.9.0
 
