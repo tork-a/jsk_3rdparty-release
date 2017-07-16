@@ -2,6 +2,15 @@
 Changelog for package voice_text
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.4 (2017-07-16)
+------------------
+
+2.1.3 (2017-07-07)
+------------------
+
+2.1.2 (2017-07-06)
+------------------
+
 2.1.1 (2017-07-05)
 ------------------
 * add dynamic_reconfigure to run/build depends  (`#110 <https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/110>`_)
