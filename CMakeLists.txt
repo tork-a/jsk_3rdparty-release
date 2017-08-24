@@ -15,12 +15,14 @@ add_custom_command(
 
 add_custom_command(
   OUTPUT grammar_kit_installed
-  COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.grammar-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
-)
+  # COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.grammar-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
+  COMMAND mkdir -p ${INSTALL_DIR}/SampleGrammars ${INSTALL_DIR}/SampleGrammars_en
+  )
 
 add_custom_command(
   OUTPUT dictation_kit_installed
-  COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.dictation-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
+  # COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.dictation-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
+  COMMAND mkdir -p ${INSTALL_DIR}/conf ${INSTALL_DIR}/model
 )
 
 add_custom_target(all_installed ALL DEPENDS julius_installed grammar_kit_installed dictation_kit_installed)
