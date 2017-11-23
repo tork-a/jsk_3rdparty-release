@@ -1,14 +1,16 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package rostwitter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package ros_speech_recognition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 2.1.6 (2017-11-21)
 ------------------
 
 2.1.5 (2017-11-20)
 ------------------
-* update to use python-requests-oauthlib, maybe we can now just to copy python-twitter (`#128 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/128>`_ )
-* Contributors: Kei Okada
+* ros_speech_recognition: add continuous mode (`#127 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/127>`_)
+* ros_speech_recognition: add README (`#123 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/123>`_)
+* add ros_speech_recognition package (`#121 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/121>`_)
+* Contributors: Yuki Furuta
 
 2.1.4 (2017-07-16)
 ------------------
@@ -24,8 +26,6 @@ Changelog for package rostwitter
 
 2.1.0 (2017-07-02)
 ------------------
-* rostwitter: fix error message when access token is not found (`#100 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/100>`_)
-* Contributors: Kei Okada
 
 2.0.20 (2017-05-09)
 -------------------
@@ -54,11 +54,11 @@ Changelog for package rostwitter
 2.0.12 (2015-11-26)
 -------------------
 
-2.0.11 (2015-10-07)
--------------------
+2.0.11 (2015-10-07 14:16)
+-------------------------
 
-2.0.10 (2015-10-07)
--------------------
+2.0.10 (2015-10-07 12:47)
+-------------------------
 
 2.0.9 (2015-09-26)
 ------------------
@@ -84,17 +84,11 @@ Changelog for package rostwitter
 2.0.2 (2015-06-29)
 ------------------
 
-2.0.1 (2015-06-19)
-------------------
+2.0.1 (2015-06-19 21:21)
+------------------------
 
-2.0.0 (2015-06-19)
-------------------
-* move from jsk_common to jsk_3rdparty
-* [tweet.py] fix to post more than 116 character on PostMedia
-* Contributors: Kei Okada
-
-1.0.72 (2015-06-07)
--------------------
+2.0.0 (2015-06-19 10:41)
+------------------------
 
 1.0.71 (2015-05-17)
 -------------------
@@ -102,16 +96,14 @@ Changelog for package rostwitter
 1.0.70 (2015-05-08)
 -------------------
 
-1.0.69 (2015-05-05)
--------------------
+1.0.69 (2015-05-05 12:28)
+-------------------------
 
-1.0.68 (2015-05-05)
--------------------
+1.0.68 (2015-05-05 09:49)
+-------------------------
 
 1.0.67 (2015-05-03)
 -------------------
-* [scripts/tweet.py] fix for error handling
-* Contributors: Kanae Kochigami
 
 1.0.66 (2015-04-03)
 -------------------
@@ -131,13 +123,11 @@ Changelog for package rostwitter
 1.0.61 (2015-02-11)
 -------------------
 
-1.0.60 (2015-02-03)
--------------------
+1.0.60 (2015-02-03 10:12)
+-------------------------
 
-1.0.59 (2015-02-03)
--------------------
-* Remove rosbuild files
-* Contributors: Ryohei Ueda
+1.0.59 (2015-02-03 04:05)
+-------------------------
 
 1.0.58 (2015-01-07)
 -------------------
@@ -153,8 +143,6 @@ Changelog for package rostwitter
 
 1.0.54 (2014-11-15)
 -------------------
-* add python-requests
-* Contributors: Kei Okada
 
 1.0.53 (2014-11-01)
 -------------------
@@ -162,11 +150,11 @@ Changelog for package rostwitter
 1.0.52 (2014-10-23)
 -------------------
 
-1.0.51 (2014-10-20)
--------------------
+1.0.51 (2014-10-20 16:01)
+-------------------------
 
-1.0.50 (2014-10-20)
--------------------
+1.0.50 (2014-10-20 01:50)
+-------------------------
 
 1.0.49 (2014-10-13)
 -------------------
@@ -179,30 +167,21 @@ Changelog for package rostwitter
 
 1.0.46 (2014-10-03)
 -------------------
-* fix: data=data does not work, see https://github.com/jsk-ros-pkg/jsk_robot/issues/91
-* data=data does not work, see https://github.com/jsk-ros-pkg/jsk_robot/issues/91
 
 1.0.45 (2014-09-29)
 -------------------
-* Merge pull request #543 from k-okada/use_deb_request
-  rewrite twitter.py to use ubuntu python-oauth2 and python-request
-* rewrite twitter.py to use ubuntu python-oauth2 and python-request
 
-1.0.44 (2014-09-26)
--------------------
+1.0.44 (2014-09-26 09:17)
+-------------------------
 
-1.0.43 (2014-09-26)
--------------------
+1.0.43 (2014-09-26 01:08)
+-------------------------
 
 1.0.42 (2014-09-25)
 -------------------
-* add oauth2 and oauthlib to depends
-* Contributors: Kei Okada
 
 1.0.41 (2014-09-23)
 -------------------
-* Fix rostwitter to call Api.postUpdate
-* Contributors: Ryohei Ueda
 
 1.0.40 (2014-09-19)
 -------------------
@@ -211,6 +190,9 @@ Changelog for package rostwitter
 -------------------
 
 1.0.38 (2014-09-13)
+-------------------
+
+1.0.37 (2014-09-08)
 -------------------
 
 1.0.36 (2014-09-01)
@@ -248,16 +230,12 @@ Changelog for package rostwitter
 
 1.0.25 (2014-05-26)
 -------------------
-* do not error if pip is not installed
 
 1.0.24 (2014-05-24)
 -------------------
-* rostwitter/rbayesian_belief_networks : add disable_ssl
 
 1.0.23 (2014-05-23)
 -------------------
-* add rostwitter
-* Contributors: Kei Okada
 
 1.0.22 (2014-05-22)
 -------------------
