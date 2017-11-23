@@ -1,0 +1,145 @@
+From 24523fbc2e0857ca3f12d72e7dae81b86b3acb3b Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Thu, 24 Aug 2017 15:51:52 +0900
+Subject: [PATCH] add patches for prerm/preinst, see
+ https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/118#issuecomment-323360851
+
+---
+ CMakeLists.txt |  8 ++++---
+ debian/preinst | 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ debian/prerm   | 21 +++++++++++++++++
+ 3 files changed, 99 insertions(+), 3 deletions(-)
+ create mode 100644 debian/preinst
+ create mode 100644 debian/prerm
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f9495cd..2fe8000 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -15,12 +15,14 @@ add_custom_command(
+ 
+ add_custom_command(
+   OUTPUT grammar_kit_installed
+-  COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.grammar-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
+-)
++  # COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.grammar-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
++  COMMAND mkdir -p ${INSTALL_DIR}/SampleGrammars ${INSTALL_DIR}/SampleGrammars_en
++  )
+ 
+ add_custom_command(
+   OUTPUT dictation_kit_installed
+-  COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.dictation-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
++  # COMMAND make -f ${PROJECT_SOURCE_DIR}/Makefile.dictation-kit MD5SUM_DIR=${MD5SUM_DIR} INSTALL_DIR=${INSTALL_DIR}
++  COMMAND mkdir -p ${INSTALL_DIR}/conf ${INSTALL_DIR}/model
+ )
+ 
+ add_custom_target(all_installed ALL DEPENDS julius_installed grammar_kit_installed dictation_kit_installed)
+diff --git a/debian/preinst b/debian/preinst
+new file mode 100644
+index 0000000..939cb4c
+--- /dev/null
++++ b/debian/preinst
+@@ -0,0 +1,73 @@
++#!/bin/bash -e
++
++. /usr/share/debconf/confmodule
++db_version 2.0
++db_capb backup
++
++errmsg()
++{
++    echo >&2 ''
++    echo >&2 "$@"
++    echo >&2 "try 'dpkg-reconfigure debconf' to select a frontend other than noninteractive"
++    echo >&2 ''
++    exit 1
++}
++
++download()
++{
++    uri=$1
++    src=$2
++    zip=$3
++    md5=$4
++    cmd=$5
++
++    tmpdir=$(mktemp -d)
++
++    echo "Downloading $zip..." 1>&2
++
++    wget -O "$tmpdir/$zip" "$uri" 1>&2
++    if [ -e "$tmpdir/$zip" ]; then
++        md5ref=$(md5sum "$tmpdir/$zip" | cut -f1 -d' ')
++        if [ "$md5ref" != "$md5" ]; then
++            errmsg "md5sum of $tmpdir/$zip is different. expected $md5, but actual $md5ref"
++        fi
++    else
++        errmsg "could not download $tmpdir/$zip"
++    fi
++    (cd $tmpdir; $cmd $zip 1>&2)
++    if [ ! -e "$tmpdir/$src" ]; then
++        errmsg "Extracted archive $tmpdir/$zip, but $tmpdir/$src not found"
++    fi
++    echo "Done" 1>&2
++    echo $tmpdir/$src
++}
++
++GRAMMARKIT_VERSION=4.3.1
++GRAMMARKIT_MD5SUM=25fbae0bbff21fc549851b3bad7f2973
++DICTATIONKIT_VERSION=4.4
++DICTATIONKIT_MD5SUM=04c98c1d0d91c91faa62684f1cce1841
++INSTALL_DIR=/opt/ros/indigo/share/julius
++
++# download & install grammar kit
++SOURCE_DIR=$(download \
++    "https://github.com/julius-speech/grammar-kit/archive/v${GRAMMARKIT_VERSION}.tar.gz" \
++    grammar-kit-${GRAMMARKIT_VERSION} \
++    grammar-kit-v${GRAMMARKIT_VERSION}.tar.gz \
++    "$GRAMMARKIT_MD5SUM" \
++    "tar xvf" \
++)
++rsync -a ${SOURCE_DIR}/model ${INSTALL_DIR}
++rsync -a ${SOURCE_DIR}/SampleGrammars ${INSTALL_DIR}
++rsync -a ${SOURCE_DIR}/SampleGrammars_en ${INSTALL_DIR}
++rsync -a ${SOURCE_DIR}/*conf ${INSTALL_DIR}/conf
++
++# download & install dictation kit
++SOURCE_DIR=$(download \
++    "https://osdn.net/frs/redir.php?m=ymu&f=%2Fjulius%2F66544%2Fdictation-kit-v${DICTATIONKIT_VERSION}.zip" \
++    dictation-kit-v${DICTATIONKIT_VERSION} \
++    dictation-kit-v${DICTATIONKIT_VERSION}.zip \
++    "$DICTATIONKIT_MD5SUM" \
++    "unzip" \
++)
++rsync -a ${SOURCE_DIR}/model/ ${INSTALL_DIR}/model
++rsync -a ${SOURCE_DIR}/*conf ${INSTALL_DIR}/conf
+diff --git a/debian/prerm b/debian/prerm
+new file mode 100644
+index 0000000..c3a7774
+--- /dev/null
++++ b/debian/prerm
+@@ -0,0 +1,21 @@
++#!/bin/bash -e
++
++. /usr/share/debconf/confmodule
++db_version 2.0
++db_capb backup
++
++errmsg()
++{
++    echo >&2 ''
++    echo >&2 "$@"
++    echo >&2 "try 'dpkg-reconfigure debconf' to select a frontend other than noninteractive"
++    echo >&2 ''
++    exit 1
++}
++
++INSTALL_DIR=/opt/ros/indigo/share/julius
++
++rm -rf $INSTALL_DIR/conf
++rm -rf $INSTALL_DIR/model
++rm -rf $INSTALL_DIR/SampleGrammars
++rm -rf $INSTALL_DIR/SampleGrammars_en
+-- 
+1.9.0
+
