@@ -2,6 +2,16 @@
 Changelog for package downward
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.6 (2017-11-21)
+------------------
+* remove both "g++" "g++-static" from package.xml (`#129 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/129>`_)
+* Contributors: Kei Okada
+
+2.1.5 (2017-11-20)
+------------------
+* change from g++-static to g++ (`#115 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/115>`_)
+* Contributors: Kei Okada
+
 2.1.4 (2017-07-16)
 ------------------
 
