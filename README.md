@@ -1,83 +1,12 @@
-voice_text
-==========
+# jsk_3rdparty
 
-ROS Interface for HOYA VoiceText Speech Synthesis Engine
+[![Build Status](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty.svg?branch=master)](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty)
 
-## Installation
 
-1. Install VoiceText SDK
-2. Put license file
-3. Build this package
+## Deb Build Status
 
-```bash
-cd /path/to/catkin_workspace
-catkin build voice_text
-```
-
-## Usage
-
-1. Launch `voice_text` node
-
-```bash
-roslaunch voice_text voice_text.launch
-```
-
-**TIPS** If you want to launch VoiceText engine on remote machine, try creating launch file like below:
-
-```xml
-<launch>
-  <machine name="remote" address="192.168.0.3" />
-  <include file="$(find voice_text)/launch/voice_text.launch">
-    <arg name="machine" value="remote" />
-  </include>
-</launch>
-```
-
-2. Say
-
-Now speech synthesis is enabled.
-
-```bash
-rosrun sound_play say.py Hello! dummy 1.0 robotsound:=robotsound_jp
-```
-
-Robot says "Hello!"
-
-## Reference
-
-### Service
-
-* `text_to_speech` (`voice_text/TextToSpeech`)
-
-  Set `text_path` for path to text file that contains speech sentences.
-  Set `wave_path` for path to generated wave file to be generated.
-  If `ok` in response is set to `true`, wave file is generated successfully.
-
-### Parameters
-
-* `~db_path` (String, default: `"/var/vt/sayaka/M16"`)
-
-  Path to VoiceText database directory.
-
-* `~license_path` (String, default: `""`)
-
-  Path to VoiceText license file.
-  If this parameter is empty, SDK tries to search `data-common/verify` directory relative to `db_path`.
-
-### Dynamic Parameters
-
-* `~pitch` (Int, default: `100`)
-
-  Pitch of voice by percentage. Speaks higher if this parameter is higher than `100`.
-
-* `~speed` (Int, default: `100`)
-
-  Speed of speech by percentage.
-
-* `~volume` (Int, default: `100`)
-
-  Volumet of speech by percentage.
-
-* `~pause` (Int, default: `800`)
-
-  Pause duration between sentences by milliseconds.
+| Package              | Indigo (Saucy)                                                                                                                                                                                   | Indigo (Trusty)                                                                                                                                                                                    | Jade (Trusty)                                                                                                                                                                                      | Jade (Vivid)                                                                                                                                                                                     | Kinetic (Wily)                                                                                                                                                                                 | Kinetic (Xenial)                                                                                                                                                                                     |
+|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| jsk_3rdparty (armhf) | [![Build Status](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary) | [![Build Status](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary) |
+| jsk_3rdparty (i386)  | [![Build Status](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary)           | [![Build Status](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary)             |
+| jsk_3rdparty (amd64) | [![Build Status](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary)         | [![Build Status](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary)           |
