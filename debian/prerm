@@ -13,7 +13,7 @@ errmsg()
     exit 1
 }
 
-INSTALL_DIR=/opt/ros/indigo/share/julius
+INSTALL_DIR=/opt/ros/kinetic/share/julius
 
 rm -rf $INSTALL_DIR/conf
 rm -rf $INSTALL_DIR/model
