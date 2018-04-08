@@ -1,0 +1,40 @@
+From 679bc9dc3550d71a2daeb19b0e8e78fda2341755 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Mon, 19 Mar 2018 10:48:58 +0900
+Subject: [PATCH 2/2] update from kinetic to indigo, closes
+ https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/133
+
+---
+ debian/preinst | 2 +-
+ debian/prerm   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/debian/preinst b/debian/preinst
+index 939cb4c..ee784e8 100644
+--- a/debian/preinst
++++ b/debian/preinst
+@@ -46,7 +46,7 @@ GRAMMARKIT_VERSION=4.3.1
+ GRAMMARKIT_MD5SUM=25fbae0bbff21fc549851b3bad7f2973
+ DICTATIONKIT_VERSION=4.4
+ DICTATIONKIT_MD5SUM=04c98c1d0d91c91faa62684f1cce1841
+-INSTALL_DIR=/opt/ros/indigo/share/julius
++INSTALL_DIR=/opt/ros/kinetic/share/julius
+ 
+ # download & install grammar kit
+ SOURCE_DIR=$(download \
+diff --git a/debian/prerm b/debian/prerm
+index c3a7774..45fae14 100644
+--- a/debian/prerm
++++ b/debian/prerm
+@@ -13,7 +13,7 @@ errmsg()
+     exit 1
+ }
+ 
+-INSTALL_DIR=/opt/ros/indigo/share/julius
++INSTALL_DIR=/opt/ros/kinetic/share/julius
+ 
+ rm -rf $INSTALL_DIR/conf
+ rm -rf $INSTALL_DIR/model
+-- 
+1.9.0
+

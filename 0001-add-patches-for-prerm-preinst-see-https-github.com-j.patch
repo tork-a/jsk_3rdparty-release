@@ -1,7 +1,7 @@
-From ca85aa22f467a8a0834bd8d15bc96844f31a2e0a Mon Sep 17 00:00:00 2001
+From 8862955ee6f5c89b4e199d9873cbae8b6b5fc98e Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Thu, 24 Aug 2017 15:51:52 +0900
-Subject: [PATCH] add patches for prerm/preinst, see
+Subject: [PATCH 1/2] add patches for prerm/preinst, see
  https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/118#issuecomment-323360851
 
 ---
