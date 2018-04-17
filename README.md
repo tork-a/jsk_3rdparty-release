@@ -1,3 +1,55 @@
+## jsk_3rdparty (indigo) - 2.1.8-0
+
+The packages in the `jsk_3rdparty` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --rosdistro indigo --track indigo` on `Tue, 17 Apr 2018 01:10:32 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `collada_urdf_jsk_patch`
+- `downward`
+- `ff`
+- `ffha`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `laser_filters_jsk_patch`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `slic`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `pr2_groovy_patches`
+- `image_view_jsk_patch`
+- `depth_image_proc_jsk_patch`
+- `openni_tracker_jsk_patch`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.6-0`
+- old version: `2.1.6-0`
+- new version: `2.1.8-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.1`
+- catkin_pkg version: `0.3.9`
+- rosdep version: `0.11.8`
+- rosdistro version: `0.6.2`
+- vcstools version: `0.1.39`
+
+
 ## jsk_3rdparty (kinetic) - 2.1.8-0
 
 The packages in the `jsk_3rdparty` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --rosdistro kinetic --track kinetic` on `Tue, 17 Apr 2018 00:17:35 -0000`
