@@ -18,7 +18,11 @@
 #include <voice_text/TextToSpeech.h>
 
 // VoiceText
+#ifdef USE_DUMMY_INCLUDE
+#include "dummy/vt_dummy.h"
+#else
 #include "/usr/vt/sayaka/M16/inc/vt_jpn.h"
+#endif
 
 namespace fs = boost::filesystem;
 
@@ -62,6 +66,9 @@ public:
     if (!license_path_.empty()) free(license_path_char);
     if (ret != VT_LOADTTS_SUCCESS) {
       ROS_FATAL("Failed to load TTS engine (code %d)", ret);
+      if (ret == -1) {
+        ROS_FATAL("You must install voice_text library before building this library");
+      }
       return false;
     }
 
