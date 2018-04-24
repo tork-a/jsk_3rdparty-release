@@ -1,4 +1,4 @@
-From e607c2d1b21f6356e12dab6e78133c20164d04bb Mon Sep 17 00:00:00 2001
+From 9e901f1e9a5153200662a5207c2a806f42eab061 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Mon, 19 Mar 2018 10:48:58 +0900
 Subject: [PATCH 2/2] update from kinetic to indigo, closes
