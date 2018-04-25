@@ -1,12 +1,141 @@
-# jsk_3rdparty
+ros_speech_recognition
+======================
 
-[![Build Status](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty.svg?branch=master)](https://travis-ci.org/jsk-ros-pkg/jsk_3rdparty)
+A ROS package for speech-to-text services.  
+This package uses Python package [SpeechRecognition](https://pypi.python.org/pypi/SpeechRecognition) as a backend.
 
+## Tutorials
 
-## Deb Build Status
+1. Install this package
 
-| Package              | Indigo (Saucy)                                                                                                                                                                                   | Indigo (Trusty)                                                                                                                                                                                    | Jade (Trusty)                                                                                                                                                                                      | Jade (Vivid)                                                                                                                                                                                     | Kinetic (Wily)                                                                                                                                                                                 | Kinetic (Xenial)                                                                                                                                                                                     |
-|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| jsk_3rdparty (armhf) | [![Build Status](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uShf__jsk_3rdparty__ubuntu_saucy_armhf__binary) | [![Build Status](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Ibin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uThf__jsk_3rdparty__ubuntu_trusty_armhf__binary) | [![Build Status](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary/badge/icon)](http://build.ros.org/job/Jbin_arm_uVhf__jsk_3rdparty__ubuntu_vivid_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_arm_uWhf__jsk_3rdparty__ubuntu_wily_armhf__binary) | [![Build Status](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary/badge/icon)](http://build.ros.org/job/Kbin_uxhf_uXhf__jsk_3rdparty__ubuntu_xenial_armhf__binary) |
-| jsk_3rdparty (i386)  | [![Build Status](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uS32__jsk_3rdparty__ubuntu_saucy_i386__binary)           | [![Build Status](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Ibin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uT32__jsk_3rdparty__ubuntu_trusty_i386__binary)           | [![Build Status](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary/badge/icon)](http://build.ros.org/job/Jbin_uV32__jsk_3rdparty__ubuntu_vivid_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uW32__jsk_3rdparty__ubuntu_wily_i386__binary)           | [![Build Status](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary/badge/icon)](http://build.ros.org/job/Kbin_uX32__jsk_3rdparty__ubuntu_xenial_i386__binary)             |
-| jsk_3rdparty (amd64) | [![Build Status](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uS64__jsk_3rdparty__ubuntu_saucy_amd64__binary)         | [![Build Status](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Ibin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uT64__jsk_3rdparty__ubuntu_trusty_amd64__binary)         | [![Build Status](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary/badge/icon)](http://build.ros.org/job/Jbin_uV64__jsk_3rdparty__ubuntu_vivid_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uW64__jsk_3rdparty__ubuntu_wily_amd64__binary)         | [![Build Status](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary/badge/icon)](http://build.ros.org/job/Kbin_uX64__jsk_3rdparty__ubuntu_xenial_amd64__binary)           |
+  ```bash
+  sudo apt install ros-${ROS_DISTRO}-ros-speech-recognition
+  ```
+  
+2. Launch speech recognition node
+
+  ```bash
+  roslaunch ros_speech_recognition speech_recognition.launch
+  ```
+  
+3. Use from Python
+
+  ```python
+  import rospy
+  from ros_speech_recognition import SpeechRecognitionClient
+  
+  rospy.init_node("client")
+  client = SpeechRecognitionClient()
+  result = client.recognize()  # Please say 'Hello, world!' towards microphone
+  print result # => 'Hello, world!'
+  ```
+  
+## Interface
+
+### Publishing Topics
+
+* `sound_play` (`sound_play/SoundRequestAction`)
+
+  Action client to play sound on events. If the action server is not available, no sound is played.
+  
+### Subscribing Topics
+
+* `audio` (`audio_common_msgs/AudioData`)
+
+  Audio stream data to be recognized.
+
+### Advertising Services
+
+* `speech_recognition` (`speech_recognition_msgs/SpeechRecognition`)
+
+  Service for speech recognition
+
+## Parameters
+
+* `~language` (`String`, default: `en-US`)
+
+  Language to be recognized
+  
+* `~engine` (`Enum[String]`, default: `Google`)
+
+  Speech-to-text engine (To see full options use `dynamic_reconfigure`)
+  
+* `~energy_threshold` (`Double`, default: `300`)
+
+  Threshold for Voice activity detection
+  
+* `~dynamic_energy_threshold` (`Bool`, default: `True`)
+
+  Adaptive estimation for `energy_threshold`
+
+* `~dynamic_energy_adjustment_damping` (`Double`, default: `0.15`)
+
+  Damping threshold for dynamic VAD
+  
+* `~dynamic_energy_ratio` (`Double`, default: `1.5`)
+
+  Energy ratio for dynamic VAD
+  
+* `~pause_threshold` (`Double`, default: `0.8`)
+
+  Seconds of non-speaking audio before a phrase is considered complete
+  
+* `~operation_timeout` (`Double`, default: `0.0`)
+
+  Seconds after an internal operation (e.g., an API request) starts before it times out
+  
+* `~phrase_threshold` (`Double`, default: `0.3`)
+
+  Minimum seconds of speaking audio before we consider the speaking audio a phrase
+  
+* `~non_speaking_duration` (`Double`, default: `0.5`)
+
+  Seconds of non-speaking audio to keep on both sides of the recording
+
+* `~depth` (`Int`, default: `16`)
+
+  Depth of audio signal
+  
+* `~sample_rate` (`Int`, default: `16000`)
+
+  Sample rate of audio signal
+  
+* `~start_signal` (`String`, default: `/usr/share/sounds/ubuntu/stereo/bell.ogg`)
+
+  Path to sound file for bell on the start of audio caption
+  
+* `~recognized_signal` (`String`, default: `/usr/share/sounds/ubuntu/stereo/button-toggle-on.ogg`)
+
+  Path to sound file for bell on the end of audio caption
+  
+* `~success_signal` (`String`, default: `/usr/share/sounds/ubuntu/stereo/message-new-instant.ogg`)
+
+  Path to sound file for bell on getting successful recognition result
+  
+* `~timeout_signal` (`String`, default: `/usr/share/sounds/ubuntu/stereo/window-slide.ogg`)
+
+  Path to sound file for bell on timeout for recognition
+  
+* `~google_key` (`String`, default: `None`)
+
+  Auth Key for Google API. If `None`, use public key. (No guarantee to be blocked.)  
+  This is valid only if `~engine` is `Google`.
+  
+* `~google_cloud_credentials_json` (`String`, default: `None`)
+
+  Path to credential json file.
+  This is valid only if `~engine` is `GoogleCloud`.
+  
+* `~google_cloud_preferred_phrases` (`[String]`, default: `None`)
+
+  Preferred phrases parameters.
+  This is valid only if `~engine` is `GoogleCloud`.
+  
+* `~bing_key` (`String`, default: `None`)
+
+  Auth key for Bing API.  
+  This is valid only if `~engine` is `bing`.
+  
+## Author
+
+Yuki Furuta <<furushchev@jsk.imi.i.u-tokyo.ac.jp>>
