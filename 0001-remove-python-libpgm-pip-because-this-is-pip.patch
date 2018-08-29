@@ -1,4 +1,4 @@
-From cf24fea76add4bb223f3e2063ccf4b4b0c24304e Mon Sep 17 00:00:00 2001
+From 3e73f4aeacad60d7cd5f6582836262afd3e06168 Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 30 Oct 2016 05:54:20 +0000
 Subject: [PATCH] remove python-libpgm-pip because this is pip
@@ -8,7 +8,7 @@ Subject: [PATCH] remove python-libpgm-pip because this is pip
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 20ecc32..5a162b3 100644
+index 6d65245..2c04da5 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -12,7 +12,7 @@
