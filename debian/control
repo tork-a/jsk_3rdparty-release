@@ -1,0 +1,12 @@
+Source: ros-melodic-jsk-3rdparty
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://ros.org/wiki/jsk_3rdparty
+Standards-Version: 3.9.2
+
+Package: ros-melodic-jsk-3rdparty
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-assimp-devel, ros-melodic-bayesian-belief-networks, ros-melodic-downward, ros-melodic-ff, ros-melodic-ffha, ros-melodic-julius, ros-melodic-julius-ros, ros-melodic-libcmt, ros-melodic-libsiftfast, ros-melodic-mini-maxwell, ros-melodic-nlopt, ros-melodic-opt-camera, ros-melodic-pgm-learner, ros-melodic-rospatlite, ros-melodic-rosping, ros-melodic-slic, ros-melodic-voice-text
+Description: Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg
