@@ -1,0 +1,12 @@
+Source: ros-lunar-libsiftfast
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, python-numpy, ros-lunar-catkin, ros-lunar-mk, ros-lunar-rosboost-cfg, ros-lunar-roslib, ros-lunar-rospack, subversion
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lunar-libsiftfast
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, python-numpy
+Description: Library to compute SIFT features
