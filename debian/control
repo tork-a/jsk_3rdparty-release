@@ -1,0 +1,12 @@
+Source: ros-lunar-opt-camera
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-camera-calibration-parsers, ros-lunar-catkin, ros-lunar-compressed-image-transport, ros-lunar-cv-bridge, ros-lunar-dynamic-reconfigure, ros-lunar-image-proc, ros-lunar-roslang, ros-lunar-rospack, ros-lunar-sensor-msgs
+Homepage: http://ros.org/wiki/opt_camera
+Standards-Version: 3.9.2
+
+Package: ros-lunar-opt-camera
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-camera-calibration-parsers, ros-lunar-compressed-image-transport, ros-lunar-cv-bridge, ros-lunar-dynamic-reconfigure, ros-lunar-image-proc, ros-lunar-rospack, ros-lunar-sensor-msgs
+Description: opt_camera
