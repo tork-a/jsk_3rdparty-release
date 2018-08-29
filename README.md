@@ -1,3 +1,77 @@
+## jsk_3rdparty (kinetic) - 2.1.11-0
+
+The packages in the `jsk_3rdparty` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release jsk_3rdparty -y --skip-pip --track kinetic --rosdistro kinetic` on `Wed, 29 Aug 2018 13:02:33 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `downward`
+- `ff`
+- `ffha`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `respeaker_ros`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `slic`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `pr2_groovy_patches`
+- `image_view_jsk_patch`
+- `laser_filters_jsk_patch`
+- `depth_image_proc_jsk_patch`
+- `openni_tracker_jsk_patch`
+- `sklearn`
+- `#`
+- `until`
+- `ml-classsfiers`
+- `is`
+- `released`
+- `https://github.com/jolting/ml_classifiers-release/issues/1`
+- `collada_urdf_jsk_patch`
+- `#`
+- `python-catkin-tools`
+- `is`
+- `not`
+- `releasead`
+- `on`
+- `debian`
+- `rostwitter`
+- `#`
+- `python-oauth2`
+- `is`
+- `not`
+- `releasead`
+- `for`
+- `16.04`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.10-0`
+- old version: `2.1.10-0`
+- new version: `2.1.11-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.9`
+- vcstools version: `0.1.40`
+
+
 ## jsk_3rdparty (indigo) - 2.1.11-0
 
 The packages in the `jsk_3rdparty` repository were released into the `indigo` distro by running `/usr/bin/bloom-release jsk_3rdparty -y --skip-pip --track indigo --rosdistro indigo` on `Wed, 29 Aug 2018 12:46:45 -0000`
