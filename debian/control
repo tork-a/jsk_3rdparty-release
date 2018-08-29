@@ -1,0 +1,12 @@
+Source: ros-melodic-collada-urdf-jsk-patch
+Section: misc
+Priority: extra
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, libcollada-dom2.4-dp-dev, libgts-dev, python-catkin-tools, ros-melodic-angles, ros-melodic-assimp-devel, ros-melodic-catkin, ros-melodic-class-loader, ros-melodic-cmake-modules, ros-melodic-collada-parser, ros-melodic-collada-urdf, ros-melodic-geometric-shapes, ros-melodic-kdl-parser, ros-melodic-mk, ros-melodic-pluginlib, ros-melodic-resource-retriever, ros-melodic-roscpp, ros-melodic-rostest, ros-melodic-tf
+Homepage: http://ros.org/wiki/collada_urdf_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-melodic-collada-urdf-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcollada-dom2.4-dp-dev, libgts-dev, python-catkin-tools, ros-melodic-angles, ros-melodic-assimp-devel, ros-melodic-class-loader, ros-melodic-collada-parser, ros-melodic-collada-urdf, ros-melodic-geometric-shapes, ros-melodic-kdl-parser, ros-melodic-pluginlib, ros-melodic-resource-retriever, ros-melodic-roscpp, ros-melodic-tf, ros-melodic-urdf
+Description: unaccepted patch for collada_urdf
