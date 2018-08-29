@@ -1,0 +1,12 @@
+Source: ros-melodic-julius-ros
+Section: misc
+Priority: extra
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-rostest
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-julius-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, julius-voxforge, nkf, python-lxml, python-rospkg, ros-melodic-audio-capture, ros-melodic-audio-common-msgs, ros-melodic-julius, ros-melodic-rospy, ros-melodic-sound-play, ros-melodic-speech-recognition-msgs, ros-melodic-std-srvs
+Description: The julius_ros package
