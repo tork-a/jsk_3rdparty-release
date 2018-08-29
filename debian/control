@@ -1,0 +1,12 @@
+Source: ros-melodic-laser-filters-jsk-patch
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, ros-melodic-catkin, ros-melodic-cmake-modules, ros-melodic-filters, ros-melodic-laser-filters, ros-melodic-laser-geometry, ros-melodic-mk
+Homepage: http://ros.org/wiki/laser_filters_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-melodic-laser-filters-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-filters, ros-melodic-laser-filters
+Description: laser_filters_jsk_patch
