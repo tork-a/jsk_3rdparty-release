@@ -1,0 +1,12 @@
+Source: ros-lunar-collada-urdf-jsk-patch
+Section: misc
+Priority: extra
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, libcollada-dom2.4-dp-dev, libgts-dev, python-catkin-tools, ros-lunar-angles, ros-lunar-assimp-devel, ros-lunar-catkin, ros-lunar-class-loader, ros-lunar-cmake-modules, ros-lunar-collada-parser, ros-lunar-collada-urdf, ros-lunar-geometric-shapes, ros-lunar-kdl-parser, ros-lunar-mk, ros-lunar-pluginlib, ros-lunar-resource-retriever, ros-lunar-roscpp, ros-lunar-rostest, ros-lunar-tf
+Homepage: http://ros.org/wiki/collada_urdf_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-lunar-collada-urdf-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcollada-dom2.4-dp-dev, libgts-dev, python-catkin-tools, ros-lunar-angles, ros-lunar-assimp-devel, ros-lunar-class-loader, ros-lunar-collada-parser, ros-lunar-collada-urdf, ros-lunar-geometric-shapes, ros-lunar-kdl-parser, ros-lunar-pluginlib, ros-lunar-resource-retriever, ros-lunar-roscpp, ros-lunar-tf, ros-lunar-urdf
+Description: unaccepted patch for collada_urdf
