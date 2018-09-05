@@ -1,0 +1,12 @@
+Source: ros-lunar-rostwitter
+Section: misc
+Priority: extra
+Maintainer: k-okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, python-requests, python-requests-oauthlib, python-setuptools, python-simplejson, ros-lunar-catkin, ros-lunar-mk, ros-lunar-rospy, ros-lunar-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lunar-rostwitter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-requests, python-requests-oauthlib, python-simplejson, ros-lunar-rospy, ros-lunar-std-msgs
+Description: The rostwitter package
