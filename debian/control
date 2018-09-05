@@ -1,0 +1,12 @@
+Source: ros-lunar-jsk-3rdparty
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin
+Homepage: http://ros.org/wiki/jsk_3rdparty
+Standards-Version: 3.9.2
+
+Package: ros-lunar-jsk-3rdparty
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-assimp-devel, ros-lunar-bayesian-belief-networks, ros-lunar-downward, ros-lunar-ff, ros-lunar-ffha, ros-lunar-julius, ros-lunar-julius-ros, ros-lunar-libcmt, ros-lunar-libsiftfast, ros-lunar-mini-maxwell, ros-lunar-nlopt, ros-lunar-opt-camera, ros-lunar-pgm-learner, ros-lunar-rospatlite, ros-lunar-rosping, ros-lunar-rostwitter, ros-lunar-slic, ros-lunar-voice-text
+Description: Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg
