@@ -1,0 +1,12 @@
+Source: ros-lunar-respeaker-ros
+Section: misc
+Priority: extra
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin, ros-lunar-dynamic-reconfigure
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lunar-respeaker-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-numpy, python-pyaudio, ros-lunar-angles, ros-lunar-audio-common-msgs, ros-lunar-dynamic-reconfigure, ros-lunar-geometry-msgs, ros-lunar-std-msgs, ros-lunar-tf
+Description: The respeaker_ros package
