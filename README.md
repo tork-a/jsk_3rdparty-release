@@ -1,3 +1,56 @@
+## jsk_3rdparty (lunar) - 2.1.11-2
+
+The packages in the `jsk_3rdparty` repository were released into the `lunar` distro by running `/usr/bin/bloom-release --skip-pip -y jsk_3rdparty --rosdistro lunar --track lunar` on `Thu, 06 Sep 2018 02:25:51 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `collada_urdf_jsk_patch`
+- `downward`
+- `ff`
+- `ffha`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `respeaker_ros`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `slic`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `pr2_groovy_patches`
+- `image_view_jsk_patch`
+- `laser_filters_jsk_patch`
+- `depth_image_proc_jsk_patch`
+- `openni_tracker_jsk_patch`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `2.1.11-1`
+- new version: `2.1.11-2`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.9`
+- vcstools version: `0.1.40`
+
+
 ## jsk_3rdparty (melodic) - 2.1.11-0
 
 The packages in the `jsk_3rdparty` repository were released into the `melodic` distro by running `/usr/bin/bloom-release jsk_3rdparty -y --skip-pip --track melodic --rosdistro melodic` on `Wed, 29 Aug 2018 23:12:42 -0000`
