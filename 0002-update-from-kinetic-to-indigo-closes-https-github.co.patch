@@ -1,4 +1,4 @@
-From 6e8238866f1004442e112027b498029bf1ee2d73 Mon Sep 17 00:00:00 2001
+From f876534f7246d40c8f538eb7d214c082559b00c3 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Mon, 19 Mar 2018 10:48:58 +0900
 Subject: [PATCH 2/2] update from kinetic to indigo, closes
@@ -10,7 +10,7 @@ Subject: [PATCH 2/2] update from kinetic to indigo, closes
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/debian/preinst b/debian/preinst
-index 939cb4c..ee784e8 100644
+index 939cb4cbb..ee784e834 100644
 --- a/debian/preinst
 +++ b/debian/preinst
 @@ -46,7 +46,7 @@ GRAMMARKIT_VERSION=4.3.1
@@ -23,7 +23,7 @@ index 939cb4c..ee784e8 100644
  # download & install grammar kit
  SOURCE_DIR=$(download \
 diff --git a/debian/prerm b/debian/prerm
-index c3a7774..45fae14 100644
+index c3a77743a..45fae1458 100644
 --- a/debian/prerm
 +++ b/debian/prerm
 @@ -13,7 +13,7 @@ errmsg()
@@ -36,5 +36,5 @@ index c3a7774..45fae14 100644
  rm -rf $INSTALL_DIR/conf
  rm -rf $INSTALL_DIR/model
 -- 
-1.9.0
+2.17.1
 
