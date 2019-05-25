@@ -2,6 +2,83 @@
 Changelog for package voice_text
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.12 (2019-05-25)
+-------------------
+* Fix install directory of text2wave to ./lib -> ./bin (`#160 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/160>`_)
+  `text2wave` Was wrongly  installed to `CATKIN_PACKAGE_LIB_DESTINATION`
+  The launch file is assumed that it is installed under `rospack find voice_text`/bin
+  https://github.com/jsk-ros-pkg/jsk_3rdparty/blob/2.1.10/3rdparty/voice_text/launch/voice_text.launch#L29
+* Contributors: Kei Okada
+
+2.1.11 (2018-08-29)
+-------------------
+
+2.1.10 (2018-04-25)
+-------------------
+* add dependencies from voice_text to vt_dummy, solves `#139 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/139>`_ (`#143 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/143>`_)
+* Contributors: Kei Okada
+
+2.1.9 (2018-04-24)
+------------------
+* voice_text: add gencfg target to deps (`#141 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/141>`_)
+* Contributors: Yuki Furta
+
+2.1.8 (2018-04-17)
+------------------
+
+2.1.7 (2018-04-09)
+------------------
+
+* voice_text: support dynamic linking (`#135 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/135>`_)
+  * install voice_text TARGETS - voice_text: CMakeLists.txt: remove debug code to force non-exists VT_LIB_PATH
+  * voice_text: guide to install libs
+  * install voice_text TARGETS
+  * voice_text: CMakeLists.txt: remove debug code to force non-exists VT_LIB_PATH
+  * add dependencies from generate_message_cpp to voice_text
+  * use vt_dummy when we do not have voice_text library
+* Contributors: Kei Okada, Yuki Furuta
+
+2.1.6 (2017-11-21)
+------------------
+
+2.1.5 (2017-11-20)
+------------------
+* [voice_text] Add respawn argument for sound_play (`#125 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/125>`_)
+* Contributors: Shunichi Nozawa
+
+2.1.4 (2017-07-16)
+------------------
+
+2.1.3 (2017-07-07)
+------------------
+
+2.1.2 (2017-07-06)
+------------------
+
+2.1.1 (2017-07-05)
+------------------
+* add dynamic_reconfigure to run/build depends  (`#110 <https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/110>`_)
+* Contributors: Kei Okada
+
+2.1.0 (2017-07-02)
+------------------
+* [voice_text] Refactor API (`#101 <https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/101>`_)
+  * Cleanup directory (remove rosbuild related files.)
+  * Rewrote VoiceText server node as ROS friendly.
+  * text2wave calls rosservice internally (This enables running VoiceText
+  * engine on remote machine easily)
+  * Create sample launch file
+  * Create README
+  * WARNING : This breaks API (we need to run voice_text node in addition to sound_play), so existing users will have to change launch file for using voice text.
+
+* Contributors: Yuki Furuta
+
+2.0.20 (2017-05-09)
+-------------------
+
+2.0.19 (2017-02-22)
+-------------------
+
 2.0.18 (2016-10-28)
 -------------------
 

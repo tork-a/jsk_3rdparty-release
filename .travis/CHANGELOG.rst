@@ -2,6 +2,152 @@
 Changelog for package jsk_travis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.42 (2019-02-05)
+-------------------
+* use --include-eol-distros on rosdep for EOF ros distros (i.e. jade) (`#364 <https://github.com/jsk-ros-pkg/jsk_travis/issues/364>`_)
+* Contributors: Yasuhiro Ishiguro
+
+0.4.41 (2018-12-27)
+-------------------
+* Increase maximum size of ccache to 30GB (`#363 <https://github.com/jsk-ros-pkg/jsk_travis/issues/363>`_)
+* Contributors: Yuto Uchimi
+
+0.4.40 (2018-11-10)
+-------------------
+* put fix_error branch on master, see `#361 <https://github.com/jsk-ros-pkg/jsk_travis/issues/361>`_ (`#362 <https://github.com/jsk-ros-pkg/jsk_travis/issues/362>`_)
+  * fix dpkg-deb: error: archive has premature member 'control.tar.xz' before 'control.tar.gz' `#9361 <https://github.com/jsk-ros-pkg/jsk_travis/issues/9361>`_
+  https://github.com/travis-ci/travis-ci/issues/9361#issuecomment-408431262
+  * this has been released as rosdep 0.13.0 -> https://github.com/ros-infrastructure/rosdep/pull/612#issuecomment-436774123
+* Contributors: Kei Okada
+
+0.4.39 (2018-10-26)
+-------------------
+* Enable rosdep quiet mode
+  * remove redundant messages from rosdep install
+  * apply https://github.com/ros-infrastructure/rosdep/pull/612 to enable rosdep quiet mode
+* Contributors: Kei Okada
+
+0.4.38 (2018-07-13)
+-------------------
+* Add melodic `#358 <https://github.com/jsk-ros-pkg/jsk_travis/issues/358>`_
+  * add DEBIAN_FRONTEND=noninteractive to travis.sh, see https://api.travis-ci.org/v3/job/402555750/log.txt for error case
+  * add test for melodic
+  * add support for melodic
+* Contributors: Kei Okada
+
+0.4.37 (2018-04-27)
+-------------------
+* Merge pull request `#355 <https://github.com/jsk-ros-pkg/jsk_travis/issues/355>`_ from wkentaro/pip9
+  Install pip<10
+* Install pip<10
+  Currently pip==10.0.1 is installed.
+  https://github.com/jsk-ros-pkg/jsk_recognition/pull/2280#issuecomment-384681527
+* Contributors: Kei Okada, Kentaro Wada
+
+0.4.36 (2018-04-24)
+-------------------
+* Merge pull request `#354 <https://github.com/jsk-ros-pkg/jsk_travis/issues/354>`_ from k-okada/fix_jenkins
+  need to upgrade when install python-jenkins
+* get-pip.py installs pip, so we do not need pip install pip
+* use 0.4.16 of python-jenkins
+* need to upgrade when install python-jenkins
+* Contributors: Kei Okada
+
+0.4.35 (2017-12-30)
+-------------------
+* Merge pull request `#353 <https://github.com/jsk-ros-pkg/jsk_travis/issues/353>`_ from k-okada/exit_rosdep
+  when rosdep install is called with -r, do not exit with 1
+* when rosdep install is called with -r, do not exit with 1
+* Merge pull request `#351 <https://github.com/jsk-ros-pkg/jsk_travis/issues/351>`_ from furushchev/fix-eof-error
+  travis.sh: fix EOFError
+* travis.sh: fix EOFError
+* Contributors: Furushchev, Kei Okada
+
+0.4.34 (2017-11-01)
+-------------------
+* travis.sh: use get-pip.py to get pipt (`#349 <https://github.com/jsk-ros-pkg/jsk_travis/issues/349>`_)
+* Contributors: Yuki Furuta
+
+0.4.33 (2017-08-30)
+-------------------
+* Fix typo about docker pulling DOCKER_IMAGE_JENKINS (`#346 <https://github.com/jsk-ros-pkg/jsk_travis/issues/346>`_)
+* Contributors: Kentaro Wada
+
+0.4.32 (2017-08-29)
+-------------------
+* Run docker pull to get latest docker image if possible (`#345 <https://github.com/jsk-ros-pkg/jsk_travis/issues/345>`_)
+* Support sudo: false of Travis option (`#344 <https://github.com/jsk-ros-pkg/jsk_travis/issues/344>`_)
+* Documentize NOT_TEST_INSTALL (`#343 <https://github.com/jsk-ros-pkg/jsk_travis/issues/343>`_)
+* Support testing on lunar (`#342 <https://github.com/jsk-ros-pkg/jsk_travis/issues/342>`_)
+* Contributors: Kentaro Wada
+
+0.4.31 (2017-08-19)
+-------------------
+* use http instaed of https (`#341 <https://github.com/jsk-ros-pkg/jsk_travis/issues/341>`_)
+* Contributors: Kei Okada
+
+0.4.30 (2017-08-06)
+-------------------
+* job_name = 'jenkins+ job_name + TRAVIS_REPO_SLUG' (`#340 <https://github.com/jsk-ros-pkg/jsk_travis/issues/340>`_)
+* Contributors: Kei Okada
+
+0.4.29 (2017-08-05)
+-------------------
+* filename must be less than 255 length (`#339 <https://github.com/jsk-ros-pkg/jsk_travis/issues/339>`_)
+* Contributors: Kei Okada
+
+0.4.28 (2017-08-05)
+-------------------
+* run travis without rosdep -r (`#337 <https://github.com/jsk-ros-pkg/jsk_travis/issues/337>`_)
+  * add -v rosdep options
+  * add ros_tutorials to workspece for test
+  * run travis without rosdep -r
+
+* to run docker, we do not need -ti option (`#338 <https://github.com/jsk-ros-pkg/jsk_travis/issues/338>`_)
+  -i, --interactive             Keep STDIN open even if not attached
+  -t, --tty                     Allocate a pseudo-TTY
+* Contributors: Kei Okada
+
+0.4.27 (2017-07-18)
+-------------------
+* apt-get install patch command (`#332 <https://github.com/jsk-ros-pkg/jsk_travis/issues/332>`_ )
+* Support ROSDEP_ADDITIONAL_OPTIONS on Jenkins (`#333 <https://github.com/jsk-ros-pkg/jsk_travis/issues/333>`_)
+* use language: c++ , to avoid custom python (`#334 <https://github.com/jsk-ros-pkg/jsk_travis/issues/334>`_)
+* Contributors: Kei Okada, Kentaro Wada
+
+0.4.26 (2017-07-01)
+-------------------
+* Correct exit status in rosdep-install.sh (`#331 <https://github.com/jsk-ros-pkg/jsk_travis/issues/331>`_ )
+* Add option to use custom docker image in Jenkins job (`#330 <https://github.com/jsk-ros-pkg/jsk_travis/issues/330>`_ )
+  * Update README for DOCKER_IMAGE_JENKINS env
+  * Add DOCKER_IMAGE_JENKINS option
+
+* Run rosdep init when required (`#327 <https://github.com/jsk-ros-pkg/jsk_travis/issues/327>`_)
+  * This is necessary to use ros:indigo docker image by DOCKER_IMAGE env,
+     because rosdep init has already been called.
+* Contributors: Kentaro Wada
+
+0.4.25 (2017-02-17)
+-------------------
+* Use X server of travis node (`#323 <https://github.com/jsk-ros-pkg/jsk_travis/issues/323>`_)
+  * [.travis.yml] allow failures on jade / kinetic gazebo test
+  * enable gazebo camera test
+  * Use host X11 server for docker
+* [travis_jenkins.py] delete: remove containers more than 48 hours ago (`#324 <https://github.com/jsk-ros-pkg/jsk_travis/issues/324>`_)
+  * [README.md] add description of DOCKER_RUN_OPTION
+  * [travis_jenkins.py] delete: remove containers more than 48 hours ago
+* Contributors: Kei Okada, Yuki Furuta
+
+0.4.24 (2017-02-14)
+-------------------
+* [travis.sh] fix typo EXTRA_DEBS -> EXTRA_DEBS
+* Contributors: Yuki Furuta
+
+0.4.23 (2017-02-08)
+-------------------
+* [dummy.xorg.conf] update for supporting GLX
+* Contributors: Yuki Furuta
+
 0.4.22 (2016-10-21)
 -------------------
 * Fix too many logs caused in travis_jenkins.py (`#319 <https://github.com/jsk-ros-pkg/jsk_travis/issues/319>`_ from wkentaro/docker-ps-a)

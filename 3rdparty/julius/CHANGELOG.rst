@@ -2,6 +2,63 @@
 Changelog for package julius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.12 (2019-05-25)
+-------------------
+
+2.1.11 (2018-08-29)
+-------------------
+
+2.1.10 (2018-04-25)
+-------------------
+
+2.1.9 (2018-04-24)
+------------------
+
+2.1.8 (2018-04-17)
+------------------
+* julius: add wget to dependencies (`#138 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/138>`_)
+* Contributors: Yuki Furuta
+
+2.1.7 (2018-04-09)
+------------------
+* julius: add rsync & unzip to run_depend (`#134 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/134>`_)
+* Contributors: Yuki Furuta
+
+2.1.6 (2017-11-21)
+------------------
+
+2.1.5 (2017-11-20)
+------------------
+
+2.1.4 (2017-07-16)
+------------------
+
+2.1.3 (2017-07-07)
+------------------
+* add unzip to build_depend ( `#114 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/114>`_ )
+* Contributors: Kei Okada
+
+2.1.2 (2017-07-06)
+------------------
+* [julius][package.xml] add rsync to run_depend (`#112 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/112>`_)
+* Contributors: Yui Furuta
+
+2.1.1 (2017-07-05)
+------------------
+* [julius] fix: failure on buildfirm (`#109 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/109>`_)
+* Contributors: Yuki Furuta
+
+2.1.0 (2017-07-02)
+------------------
+* [julius] update to use julius v4.4.2 (`#99 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/99>`_)
+* Contributors: Yuki Furuta
+
+2.0.20 (2017-05-09)
+-------------------
+
+2.0.19 (2017-02-22)
+-------------------
+
 2.0.18 (2016-10-28)
 -------------------
 

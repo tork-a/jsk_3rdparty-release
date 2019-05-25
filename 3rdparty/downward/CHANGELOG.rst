@@ -2,6 +2,59 @@
 Changelog for package downward
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.12 (2019-05-25)
+-------------------
+
+2.1.11 (2018-08-29)
+-------------------
+* downward: compile with -Wno-maybe-uninitialized to avoid error for 18.04 (`#154 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/154>`_)
+* Contributors: Kei Okada
+
+2.1.10 (2018-04-25)
+-------------------
+
+2.1.9 (2018-04-24)
+------------------
+
+2.1.8 (2018-04-17)
+------------------
+
+2.1.7 (2018-04-09)
+------------------
+
+2.1.6 (2017-11-21)
+------------------
+* remove both "g++" "g++-static" from package.xml (`#129 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/129>`_)
+* Contributors: Kei Okada
+
+2.1.5 (2017-11-20)
+------------------
+* change from g++-static to g++ (`#115 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/115>`_)
+* Contributors: Kei Okada
+
+2.1.4 (2017-07-16)
+------------------
+
+2.1.3 (2017-07-07)
+------------------
+
+2.1.2 (2017-07-06)
+------------------
+
+2.1.1 (2017-07-05)
+------------------
+
+2.1.0 (2017-07-02)
+------------------
+
+2.0.20 (2017-05-09)
+-------------------
+
+2.0.19 (2017-02-22)
+-------------------
+* add gawk to run_depend (`#85 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/85>`_)
+* Contributors: Kei Okada
+
 2.0.18 (2016-10-28)
 -------------------
 
