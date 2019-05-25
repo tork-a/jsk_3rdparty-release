@@ -1,4 +1,4 @@
-From 7662b54092dc10d18dfbf2d08660bc75b8870fe2 Mon Sep 17 00:00:00 2001
+From c745466c90b5f6e683ef73129af7e0ba6694a37e Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 30 Oct 2016 05:52:45 +0000
 Subject: [PATCH] rostwitter could not release because of missing python-oauth2
@@ -9,7 +9,7 @@ Subject: [PATCH] rostwitter could not release because of missing python-oauth2
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index c32eb56..428f55a 100644
+index a62072192..454450333 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -30,7 +30,7 @@
@@ -22,5 +22,5 @@ index c32eb56..428f55a 100644
    <run_depend>julius</run_depend>
    <run_depend>julius_ros</run_depend>
 -- 
-1.9.0
+2.17.1
 
