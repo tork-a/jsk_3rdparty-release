@@ -2,6 +2,64 @@
 Changelog for package collada_urdf_jsk_patch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.12 (2019-05-25)
+-------------------
+
+2.1.11 (2018-08-29)
+-------------------
+* collada_urdf_jsk_patch: std=gnu++11 need for kinetic and later (`#154 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/154>`_)
+* Contributors: Kei Okada
+
+2.1.10 (2018-04-25)
+-------------------
+
+2.1.9 (2018-04-24)
+------------------
+
+2.1.8 (2018-04-17)
+------------------
+
+2.1.7 (2018-04-09)
+------------------
+
+2.1.6 (2017-11-21)
+------------------
+
+2.1.5 (2017-11-20)
+------------------
+
+2.1.4 (2017-07-16)
+------------------
+
+2.1.3 (2017-07-07)
+------------------
+
+2.1.2 (2017-07-06)
+------------------
+
+2.1.1 (2017-07-05)
+------------------
+
+2.1.0 (2017-07-02)
+------------------
+* [collada_urdf_jsk_patch] fix: occasional build failure (`#105 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/105>`_)
+  * [collada_urdf_jsk_patch] fix: no notify catkin build in catkin build
+  * [collada_urdf_jsk_patch] fix occasional build failure
+* Contributors: Yuki Furuta
+
+2.0.20 (2017-05-09)
+-------------------
+* use indigo-devel before changing hydro-devel package structure
+* Contributors: Kei Okada
+
+2.0.19 (2017-02-22)
+-------------------
+* update patch for https://github.com/ros/robot_model/commit/3e5a220 (`#86 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/86>`_)
+  * [collada_urdf_jsk_patch][README.md] update readme
+  * [collada_urdf_jsk_patch][use_assimp_devel.patch] update patch according to latest commit at collada_urdf
+  * [collada_urdf_jsk_patch][Makefile] don't apply collada_urdf_latest_gazebo.patch (see https://github.com/ros/robot_model/commit/3e5a220a67cf063d1e389cfbce3f05147c46f547)
+* Contributors: Yuki Furuta
+
 2.0.18 (2016-10-28)
 -------------------
 * fix for kinetic (`#78 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/78>`_)
