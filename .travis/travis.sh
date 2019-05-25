@@ -152,6 +152,7 @@ sudo -E sh -c 'echo "deb $ROS_REPOSITORY_PATH `lsb_release -cs` main" > /etc/apt
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 lsb_release -a
 sudo apt-get update -q || echo Ignore error of apt-get update
+sudo apt-get install -y --force-yes -q -qq dpkg # https://github.com/travis-ci/travis-ci/issues/9361#issuecomment-408431262 dpkg-deb: error: archive has premature member 'control.tar.xz' before 'control.tar.gz' #9361
 sudo apt-get install -y --force-yes -q -qq python-rosdep python-wstool python-catkin-tools ros-$ROS_DISTRO-rosbash ros-$ROS_DISTRO-rospack ccache
 # setup catkin-tools option
 if [ ! "$CATKIN_TOOLS_BUILD_OPTIONS" ]; then
@@ -187,7 +188,7 @@ if [ ! -e /etc/ros/rosdep/sources.list.d/20-default.list ]; then
     sudo rosdep init
 fi
 ret=1
-rosdep update || while [ $ret != 0 ]; do sleep 1; rosdep update && ret=0 || echo "failed"; done
+rosdep update --include-eol-distros|| while [ $ret != 0 ]; do sleep 1; rosdep update --include-eol-distros && ret=0 || echo "failed"; done
 
 travis_time_end
 travis_time_start setup_catkin
