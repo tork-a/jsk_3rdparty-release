@@ -1,4 +1,4 @@
-From 969f802d8cf3c6bdfec807876eff0d9899eb3a45 Mon Sep 17 00:00:00 2001
+From f496c1c15e83948f8a935d83213088311f69d417 Mon Sep 17 00:00:00 2001
 From: Kei Okada <kei.okada@gmail.com>
 Date: Sun, 30 Oct 2016 05:52:45 +0000
 Subject: [PATCH] rostwitter could not release because of missing python-oauth2
