@@ -1,0 +1,12 @@
+Source: ros-melodic-pgm-learner
+Section: misc
+Priority: extra
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), python-scipy, ros-melodic-catkin, ros-melodic-message-generation, ros-melodic-rospy, ros-melodic-rostest
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-pgm-learner
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-scipy, ros-melodic-message-runtime, ros-melodic-rospy
+Description: Parameter/Structure Estimation and Inference for Bayesian Belief Network
