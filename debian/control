@@ -1,0 +1,12 @@
+Source: ros-kinetic-ros-speech-recognition
+Section: misc
+Priority: extra
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-speech-recognition-msgs
+Homepage: https://pypi.python.org/pypi/SpeechRecognition/
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-ros-speech-recognition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-audio-capture, ros-kinetic-audio-common-msgs, ros-kinetic-dynamic-reconfigure, ros-kinetic-sound-play, ros-kinetic-speech-recognition-msgs
+Description: ROS wrapper for Python SpeechRecognition library
