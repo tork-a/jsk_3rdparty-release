@@ -1,0 +1,12 @@
+Source: ros-melodic-nlopt
+Section: misc
+Priority: extra
+Maintainer: Noda Shintaro <s-noda@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libltdl-dev, libtool, libtool-bin, ros-melodic-catkin, ros-melodic-cmake-modules, ros-melodic-mk, ros-melodic-rosbuild, ros-melodic-rospack
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-nlopt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: nlopt
