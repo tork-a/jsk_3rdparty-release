@@ -1,0 +1,12 @@
+Source: ros-melodic-ros-speech-recognition
+Section: misc
+Priority: extra
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-dynamic-reconfigure, ros-melodic-speech-recognition-msgs
+Homepage: https://pypi.python.org/pypi/SpeechRecognition/
+Standards-Version: 3.9.2
+
+Package: ros-melodic-ros-speech-recognition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-audio-capture, ros-melodic-audio-common-msgs, ros-melodic-dynamic-reconfigure, ros-melodic-sound-play, ros-melodic-speech-recognition-msgs
+Description: ROS wrapper for Python SpeechRecognition library
