@@ -1,4 +1,4 @@
-From f14237742ed10e7f28126339bd861de47c561f1c Mon Sep 17 00:00:00 2001
+From 205893bf4d14fa56b957fa5274c5382483efa7c8 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Mon, 27 May 2019 03:13:36 +0000
 Subject: [PATCH] julius-voxforge is not available on stretch
