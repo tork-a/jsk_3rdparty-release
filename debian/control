@@ -1,0 +1,13 @@
+Source: ros-melodic-ff
+Section: misc
+Priority: extra
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), bison, ca-certificates, flex, openssl, ros-melodic-catkin, ros-melodic-mk, ros-melodic-rosbash, ros-melodic-rosbuild, ros-melodic-roslib, ros-melodic-rospack, unzip
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-ff
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: ff: pddl planner.
+ see http://www.loria.fr/~hoffmanj/ff.html
