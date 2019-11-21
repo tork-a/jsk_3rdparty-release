@@ -2,6 +2,12 @@
 Changelog for package nlopt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.14 (2019-11-21)
+-------------------
+* add website to package.xml (`#175 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/175>`_)
+  * remove whitespace in <name> section of nlopt/package.xml
+* Contributors: Kei Okada
+
 2.1.13 (2019-07-10)
 -------------------
 

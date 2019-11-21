@@ -2,6 +2,9 @@
 Changelog for package voice_text
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.14 (2019-11-21)
+-------------------
+
 2.1.13 (2019-07-10)
 -------------------
 * [voice_text] Call rosservice from python instead of bash (`#166 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/166>`_ )
