@@ -1,0 +1,12 @@
+Source: ros-kinetic-sesame-ros
+Section: misc
+Priority: optional
+Maintainer: Yuto Uchimi <uchimi@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-catkin-virtualenv, ros-kinetic-message-generation
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-sesame-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-message-runtime
+Description: ROS API for Sesame smart lock
