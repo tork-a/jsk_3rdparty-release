@@ -2,6 +2,11 @@
 Changelog for package julius_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.14 (2019-11-21)
+-------------------
+* set SoundRequest.volume for kinetic (`#173 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/173>`_)
+* Contributors: Kei OKada
+
 2.1.13 (2019-07-10)
 -------------------
 
