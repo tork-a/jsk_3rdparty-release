@@ -1,0 +1,12 @@
+ros-kinetic-dialogflow-task-executive (2.1.14-1xenial) xenial; urgency=high
+
+  * [dialogflow_task_executive] add dialogflow_task_executive (#165 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/165>)
+    * add std_msgs in package.xml (#177 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/177>)
+    * update system fig/img
+    * add jsk-dialog.conf example
+    * add upstart example
+  * Contributors: Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 21 Nov 2019 00:00:00 -0000
+
+
