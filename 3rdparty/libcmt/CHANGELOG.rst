@@ -2,6 +2,9 @@
 Changelog for package libcmt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.15 (2019-12-12)
+-------------------
+
 2.1.14 (2019-11-21)
 -------------------
 * [libcmt] Support using OpenCV3 in kinetic (`#179 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/179>`_)
