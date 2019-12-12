@@ -1,8 +1,0 @@
-ros-kinetic-sesame-ros (2.1.14-1xenial) xenial; urgency=high
-
-  * Add sesame_ros package (#176 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/176>)
-  * Contributors: Yuto Uchimi
-
- -- Yuto Uchimi <uchimi@jsk.imi.i.u-tokyo.ac.jp>  Thu, 21 Nov 2019 00:00:00 -0000
-
-
