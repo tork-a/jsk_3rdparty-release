@@ -1,4 +1,4 @@
-From 5e7f00f4a780c5168a60ce66f180985dc58e497a Mon Sep 17 00:00:00 2001
+From c5b32d7674d4e5b82c58abd704b54c383914f42f Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Thu, 24 Aug 2017 15:51:52 +0900
 Subject: [PATCH 1/2] add patches for prerm/preinst, see
