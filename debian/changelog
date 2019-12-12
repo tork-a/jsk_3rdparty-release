@@ -1,0 +1,20 @@
+ros-kinetic-sesame-ros (2.1.15-1xenial) xenial; urgency=high
+
+  * [sesame_ros] Add dependency for building cryptograpy (#180 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/180>)
+    
+      * Add url of ROS wiki for sesame_ros
+      * Add k-okada to maintainer of sesame_ros
+      * Add libffi-dev and libssl-dev as dependencies of cryptography
+    
+  * Contributors: Yuto Uchimi
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 12 Dec 2019 00:00:00 -0000
+
+ros-kinetic-sesame-ros (2.1.14-1xenial) xenial; urgency=high
+
+  * Add sesame_ros package (#176 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/176>)
+  * Contributors: Yuto Uchimi
+
+ -- Yuto Uchimi <uchimi@jsk.imi.i.u-tokyo.ac.jp>  Thu, 21 Nov 2019 00:00:00 -0000
+
+
