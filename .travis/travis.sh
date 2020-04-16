@@ -114,6 +114,20 @@ if [ "$USE_DOCKER" = true ]; then
 
   fi
 
+  travis_time_start setup_docker_env_file
+
+  DOCKER_ENV_FILE="/tmp/docker_env_file_$$"
+  : > $DOCKER_ENV_FILE
+  if [ "$ADDITIONAL_ENV_TO_DOCKER" != "" ]; then
+    env_list=(`echo "$ADDITIONAL_ENV_TO_DOCKER"`)
+    for env in ${env_list[@]}; do
+      echo "$env=${!env}" >> $DOCKER_ENV_FILE
+    done
+  fi
+  cat $DOCKER_ENV_FILE
+
+  travis_time_end
+
   docker pull $DOCKER_IMAGE || true
   docker run -v $HOME:$HOME -v $HOME/.ccache:$HOME/.ccache/ -v $HOME/.cache/pip:$HOME/.cache/pip/ \
     $DOCKER_XSERVER_OPTIONS \
@@ -128,19 +142,24 @@ if [ "$USE_DOCKER" = true ]; then
     -e ROSDEP_ADDITIONAL_OPTIONS -e ROSDEP_UPDATE_QUIET \
     -e SUDO_PIP -e USE_PYTHON_VIRTUALENV \
     -e NOT_TEST_INSTALL \
+    --env-file $DOCKER_ENV_FILE \
     -t $DOCKER_IMAGE bash -c 'cd $CI_SOURCE_PATH; .travis/docker.sh'
   DOCKER_EXIT_CODE=$?
+  rm $DOCKER_ENV_FILE
   sudo chown -R travis.travis $HOME/apt-cacher-ng
-  sudo tail -n 100 /var/log/apt-cacher-ng/*
-  sudo find $HOME/apt-cacher-ng
-  sudo find /var/cache/apt-cacher-ng
-  exit $DOCKER_EXIT_CODE
+  # sudo tail -n 100 /var/log/apt-cacher-ng/*
+  # sudo find $HOME/apt-cacher-ng
+  # sudo find /var/cache/apt-cacher-ng
+  sudo chown -R travis.travis $HOME
+  find $HOME/.ccache    -type f
+  find $HOME/.cache/pip -type f
+  return $DOCKER_EXIT_CODE
 fi
 
 if [ "$USE_TRAVIS" != "true" ] && [ "$ROS_DISTRO" != "hydro" -o "${USE_JENKINS}" == "true" ] && [ "$TRAVIS_JOB_ID" ]; then
     pip install --user -U python-jenkins==1.4.0 -q
     ./.travis/travis_jenkins.py
-    exit $?
+    return $?
 fi
 
 function error {
@@ -186,7 +205,13 @@ fi
 # Install base system
 sudo apt-get update -q || echo Ignore error of apt-get update
 sudo apt-get install -y --force-yes -q -qq dpkg # https://github.com/travis-ci/travis-ci/issues/9361#issuecomment-408431262 dpkg-deb: error: archive has premature member 'control.tar.xz' before 'control.tar.gz' #9361
+dpkg --version
+if [[ "$ROS_DISTRO" ==  "hydro" ]]; then
+    sudo apt-get install -y --force-yes -q python-vcstools=0.1.40-1
+    sudo apt-mark hold python-vcstools
+fi
 sudo apt-get install -y --force-yes -q -qq python-rosdep python-wstool python-catkin-tools ros-$ROS_DISTRO-rosbash ros-$ROS_DISTRO-rospack ccache pv
+
 # setup catkin-tools option
 if [ ! "$CATKIN_TOOLS_BUILD_OPTIONS" ]; then
   if [[ "$(pip show catkin-tools | grep '^Version:' | awk '{print $2}')" =~ 0.3.[0-9]+ ]]; then
@@ -264,7 +289,7 @@ if [ "$USE_DEB" == false ]; then
     fi
     if [ -e $CI_SOURCE_PATH/.travis.rosinstall.$ROS_DISTRO ]; then
         # install (maybe unreleased version) dependencies from source for specific ros version
-        wstool merge file://$CI_SOURCE_PATH/.travis.rosinstall.$ROS_DISTRO
+        wstool merge --merge-replace -y file://$CI_SOURCE_PATH/.travis.rosinstall.$ROS_DISTRO
     fi
     wstool update
 fi
@@ -318,7 +343,7 @@ fi
 if [ `whoami` = travis ]; then
     sudo rm -fr $HOME/.cache/pip/*
     sudo cp -r /root/.cache/pip/ $HOME/.cache/
-    sudo chown -R travis.travis $HOME/.cache/pip/*
+    sudo chown -R travis.travis $HOME/.cache/*
 fi
 # Show cached PIP packages
 sudo find -L /root/.cache/ | grep whl || echo "OK"
@@ -364,10 +389,18 @@ else
 fi
 if [ -z $TRAVIS_JOB_ID ]; then
   # on Jenkins
-  catkin run_tests -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
+  # suppressing the output
+  # - https://github.com/catkin/catkin_tools/issues/405
+  # - https://github.com/ros-planning/moveit_ci/pull/18
+  #catkin run_tests -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
+  catkin build --catkin-make-args run_tests -- -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
 else
   # on Travis
-  travis_wait 60 catkin run_tests -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
+  # suppressing the output
+  # - https://github.com/catkin/catkin_tools/issues/405
+  # - https://github.com/ros-planning/moveit_ci/pull/18
+  #travis_wait 60 catkin run_tests -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
+  travis_wait 60 catkin build --catkin-make-args run_tests -- -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
 fi
 catkin_test_results --verbose --all build || error
 
@@ -423,5 +456,6 @@ if [ "${ROS_LOG_DIR// }" == "" ]; then export ROS_LOG_DIR=~/.ros/test_results; f
 if [ -e $ROS_LOG_DIR ]; then catkin_test_results --verbose --all $ROS_LOG_DIR || error; fi
 if [ -e ~/ros/ws_$REPOSITORY_NAME/build/ ]; then catkin_test_results --verbose --all ~/ros/ws_$REPOSITORY_NAME/build/ || error; fi
 if [ -e ~/.ros/test_results/ ]; then catkin_test_results --verbose --all ~/.ros/test_results/ || error; fi
+ccache -s
 
 travis_time_end
