@@ -2,6 +2,23 @@
 Changelog for package respeaker_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.17 (2020-04-16)
+-------------------
+
+2.1.16 (2020-04-16)
+-------------------
+* [respeaker_ros] increase timeout to pass the test https://api.travis-ci.org/v3/job/554008643/log.txt
+* Contributors: Kei Okada
+
+2.1.15 (2019-12-12)
+-------------------
+* [respeaker_ros] add pixel-ring in run_depend of respeaker_ros (`#184 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/184>`_)
+* [respeaker_ros] install config dir in respeaker_ros (`#185 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/185>`_)
+* Contributors: Shingo Kitagawa
+
+2.1.14 (2019-11-21)
+-------------------
+
 2.1.13 (2019-07-10)
 -------------------
 * [respeaker_ros] increase timeout to pass the test (`#170 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/170>`_)
