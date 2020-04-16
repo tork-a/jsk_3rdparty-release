@@ -2,6 +2,68 @@
 Changelog for package jsk_travis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.7 (2019-12-11)
+------------------
+* Enable to pass additional environment variables to docker on travis/jenkins (`#395 <https://github.com/jsk-ros-pkg/jsk_travis/issues/395>`_)
+
+  * Format docker env-file in case it already exists (I haven't observed this phenomenon. Just in case)
+  * Each job on jenkins should have unique env-file
+  * Each job on travis should have unique env-file
+  * Add doc of ADDITIONAL_ENV_TO_DOCKER
+  * Enable to pass additional environment variables to jenkins docker
+  * Add test of ADDITIONAL_ENV_TO_DOCKER
+
+* Contributors: Shun Hasegawa
+
+0.5.6 (2019-11-11)
+------------------
+* Suppress the output of run_tests on jenkins (`#390 <https://github.com/jsk-ros-pkg/jsk_travis/issues/390>`_)
+* Don't use HTTP proxy for HTTPS urls for apt-cacher-ng (`#389 <https://github.com/jsk-ros-pkg/jsk_travis/issues/389>`_)
+  * To fix https://github.com/jsk-ros-pkg/jsk_travis/pull/388#issuecomment-549735323 and https://github.com/start-jsk/rtmros_common/pull/1077#issuecomment-549629846
+
+* Contributors: Shun Hasegawa
+
+0.5.5 (2019-10-26)
+------------------
+* Fix exitting from script and show ccache stat after build as well (`#385 <https://github.com/jsk-ros-pkg/jsk_travis/issues/385>`_)
+  * Show cache after docker
+  * Call 'return' instead of 'exit' after 'docker run' and 'travis_jenkins.py'
+  * Show ccache stat after build as well as before build
+
+* Contributors: Yuto Uchimi
+
+0.5.4 (2019-10-23)
+------------------
+* supress the output of run_tests (`#386 <https://github.com/jsk-ros-pkg/jsk_travis/issues/386>`_)
+  * catkin Make Args should only be run_tests, as --catkin-make-args stops with -- just after run_tests in `ros-planning/moveit_ci#18 <https://github.com/ros-planning/moveit_ci/issues/18>`_.
+  * catkin-make-args should be run_tests only
+* Contributors: Kei Okada, Shun Hasegawa
+
+0.5.3 (2019-08-28)
+------------------
+* Share only downloaded data in ~/.ros/ among all docker process on jenkins (`#384 <https://github.com/jsk-ros-pkg/jsk_travis/issues/384>`_)
+* Contributors: Yuto Uchimi
+
+0.5.2 (2019-08-13)
+------------------
+* fix docker/Makefile (`#382 <https://github.com/jsk-ros-pkg/jsk_travis/issues/382>`_)
+
+  * compile base file first
+  * fix CACHEBUST=$(date), which does not work on make command
+
+* fix dpkg-deb error on 12.04 (`#382 <https://github.com/jsk-ros-pkg/jsk_travis/issues/382>`_)
+
+  * hold python-vcstools for hydro
+  * show dpkg version
+  * remove debug code to show apt-cache-ng log
+
+* Contributors: Kei Okada
+
+0.5.1 (2019-08-01)
+------------------
+* use --merge-replace -y for .travis.rosinstall.$ROS_DISTRO (`#381 <https://github.com/jsk-ros-pkg/jsk_travis/issues/381>`_)
+* Contributors: Kei Okada
+
 0.5.0 (2019-06-25)
 ------------------
 * more fix for newer jenkins (`#378 <https://github.com/jsk-ros-pkg/jsk_travis/issues/378>`_, `#380 <https://github.com/jsk-ros-pkg/jsk_travis/issues/380>`_, `#379 <https://github.com/jsk-ros-pkg/jsk_travis/issues/379>`_)
