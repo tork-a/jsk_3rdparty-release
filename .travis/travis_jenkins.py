@@ -114,7 +114,19 @@ echo "TRAVIS_JENKINS_UNIQUE_ID : %(TRAVIS_JENKINS_UNIQUE_ID)s"
 # setup cache dir
 mkdir -p /data/cache/%(ROS_DISTRO)s/ccache
 mkdir -p /data/cache/%(ROS_DISTRO)s/pip-cache
-mkdir -p /data/cache/%(ROS_DISTRO)s/ros
+mkdir -p /data/cache/%(ROS_DISTRO)s/ros/data
+mkdir -p /data/cache/%(ROS_DISTRO)s/ros/rosdep
+
+# setup docker env-file
+DOCKER_ENV_FILE="/tmp/docker_env_file_$$"
+: > $DOCKER_ENV_FILE
+if [ "%(ADD_ENV_VALUE_TO_DOCKER)s" != "" ]; then
+  env_var_list=(`echo "%(ADD_ENV_VALUE_TO_DOCKER)s"`)
+  for env_var in ${env_var_list[@]}; do
+    echo "$env_var" >> $DOCKER_ENV_FILE
+  done
+fi
+cat $DOCKER_ENV_FILE
 
 #
 docker ps -a
@@ -144,10 +156,12 @@ docker run %(DOCKER_RUN_OPTION)s \\
     -e ROSDEP_ADDITIONAL_OPTIONS='%(ROSDEP_ADDITIONAL_OPTIONS)s'  \\
     -e DOCKER_RUN_OPTION='%(DOCKER_RUN_OPTION)s'  \\
     -e HOME=/workspace \\
+    --env-file $DOCKER_ENV_FILE \\
     -v $WORKSPACE/${BUILD_TAG}:/workspace \\
     -v /data/cache/%(ROS_DISTRO)s/ccache:/workspace/.ccache \\
     -v /data/cache/%(ROS_DISTRO)s/pip-cache:/root/.cache/pip \\
-    -v /data/cache/%(ROS_DISTRO)s/ros:/workspace/.ros \\
+    -v /data/cache/%(ROS_DISTRO)s/ros/data:/workspace/.ros/data \\
+    -v /data/cache/%(ROS_DISTRO)s/ros/rosdep:/workspace/.ros/rosdep \\
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \\
     -w /workspace %(DOCKER_IMAGE_JENKINS)s /bin/bash \\
     -c "$(cat &lt;&lt;EOL
@@ -174,6 +188,10 @@ sudo ccache -M 30G                   # set maximum size of ccache to 30G
 
 # Enable apt-cacher-ng to cache apt packages
 echo 'Acquire::http {proxy "http://$(ifdata -pa docker0):3142"; };' | sudo tee /etc/apt/apt.conf.d/02proxy.conf
+# to fix https://github.com/jsk-ros-pkg/jsk_travis/pull/388#issuecomment-549735323
+# see https://matoken.org/blog/2019/07/19/direct-access-to-https-repository-with-apt-cacher-ng/
+# see https://github.com/sameersbn/docker-apt-cacher-ng/tree/3.1#usage
+echo 'Acquire::https {proxy "false"; };' | sudo tee -a /etc/apt/apt.conf.d/02proxy.conf
 sudo apt-get update -qq || echo Ignore error of apt-get update
 export SHELL=/bin/bash
 
@@ -193,6 +211,7 @@ glxinfo | grep GLX || echo "OK"
 
 EOL
 )"
+rm $DOCKER_ENV_FILE
 
      </command>
     </hudson.tasks.Shell>
@@ -326,6 +345,14 @@ NUMBER_OF_LOGS_TO_KEEP = env.get('NUMBER_OF_LOGS_TO_KEEP', '30')
 REPOSITORY_NAME = env.get('REPOSITORY_NAME', '')
 TRAVIS_BUILD_WEB_URL = env.get('TRAVIS_BUILD_WEB_URL', '')
 TRAVIS_JOB_WEB_URL = env.get('TRAVIS_JOB_WEB_URL', '')
+ADDITIONAL_ENV_TO_DOCKER = env.get('ADDITIONAL_ENV_TO_DOCKER', '')
+ADD_ENV_VALUE_TO_DOCKER = ''
+tmp_list = []
+for add_env in ADDITIONAL_ENV_TO_DOCKER.split(' '):
+    if add_env != '':
+        add_env_val = env.get(add_env, '')
+        tmp_list.append(add_env + '=' + add_env_val)
+ADD_ENV_VALUE_TO_DOCKER = ' '.join(tmp_list)
 
 if env.get('ROS_DISTRO') == 'hydro':
     LSB_RELEASE = '12.04'
@@ -379,6 +406,7 @@ REPOSITORY_NAME = %(REPOSITORY_NAME)s
 TRAVIS_BUILD_WEB_URL = %(TRAVIS_BUILD_WEB_URL)s
 TRAVIS_JOB_WEB_URL = %(TRAVIS_JOB_WEB_URL)s
 DOCKER_IMAGE_JENKINS = %(DOCKER_IMAGE_JENKINS)s
+ADD_ENV_VALUE_TO_DOCKER = %(ADD_ENV_VALUE_TO_DOCKER)s
 ''' % locals())
 
 ### start here
@@ -484,6 +512,7 @@ REPOSITORY_NAME = %(REPOSITORY_NAME)s <br> \
 TRAVIS_BUILD_WEB_URL = %(TRAVIS_BUILD_WEB_URL)s <br> \
 TRAVIS_JOB_WEB_URL = %(TRAVIS_JOB_WEB_URL)s <br> \
 DOCKER_IMAGE_JENKINS = %(DOCKER_IMAGE_JENKINS)s <br> \
+ADD_ENV_VALUE_TO_DOCKER = %(ADD_ENV_VALUE_TO_DOCKER)s <br> \
 ') % locals())
 
 ## wait for result
