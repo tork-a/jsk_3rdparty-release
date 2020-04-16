@@ -2,6 +2,20 @@
 Changelog for package lpg_planner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.17 (2020-04-16)
+-------------------
+
+2.1.16 (2020-04-16)
+-------------------
+
+2.1.15 (2019-12-12)
+-------------------
+
+2.1.14 (2019-11-21)
+-------------------
+* add website to package.xml (`#175 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/175>`_), closes `#174 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/174>`_
+* Contributors: Kei Okada
+
 2.1.13 (2019-07-10)
 -------------------
 
