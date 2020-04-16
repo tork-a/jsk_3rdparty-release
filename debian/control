@@ -1,0 +1,12 @@
+Source: ros-melodic-dialogflow-task-executive
+Section: misc
+Priority: optional
+Maintainer: Shingo Kitagawa <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-message-generation, ros-melodic-std-msgs
+Homepage: http://ros.org/wiki/dialogflow_task_executive
+Standards-Version: 3.9.2
+
+Package: ros-melodic-dialogflow-task-executive
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-app-manager, ros-melodic-message-runtime
+Description: A ROS package for Task execution with dialogflow
