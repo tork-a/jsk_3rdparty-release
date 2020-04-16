@@ -1,3 +1,53 @@
+## jsk_3rdparty (melodic) - 2.1.17-1
+
+The packages in the `jsk_3rdparty` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --rosdistro melodic --track melodic -y` on `Thu, 16 Apr 2020 13:38:34 -0000`
+
+These packages were released:
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `collada_urdf_jsk_patch`
+- `dialogflow_task_executive`
+- `downward`
+- `ff`
+- `ffha`
+- `gdrive_ros`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `laser_filters_jsk_patch`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `respeaker_ros`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `sesame_ros`
+- `slic`
+- `voice_text`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.13-1`
+- old version: `2.1.13-1`
+- new version: `2.1.17-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.3`
+- catkin_pkg version: `0.4.16`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.0`
+- vcstools version: `0.1.42`
+
+
 ## jsk_3rdparty (kinetic) - 2.1.17-1
 
 The packages in the `jsk_3rdparty` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --rosdistro kinetic --track kinetic -y` on `Thu, 16 Apr 2020 13:08:46 -0000`
