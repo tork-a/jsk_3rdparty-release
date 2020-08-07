@@ -1,0 +1,730 @@
+ros-noetic-voice-text (2.1.20-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 07 Aug 2020 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.19-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.18-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 20 Jul 2020 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.17-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.16-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.15-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 12 Dec 2019 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.14-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 21 Nov 2019 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.13-1focal) focal; urgency=high
+
+  * [voice_text] Call rosservice from python instead of bash (#166 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/166> )
+    
+      * rewrite text2wave with python
+      * call rosservice from python instead of bash
+    
+  * Contributors: Hideaki Ito
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 10 Jul 2019 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.12-1focal) focal; urgency=high
+
+  * Fix install directory of text2wave to ./lib -> ./bin (#160 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/160>)
+    text2wave Was wrongly  installed to CATKIN_PACKAGE_LIB_DESTINATION
+    The launch file is assumed that it is installed under rospack find voice_text/bin
+    https://github.com/jsk-ros-pkg/jsk_3rdparty/blob/2.1.10/3rdparty/voice_text/launch/voice_text.launch#L29
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 25 May 2019 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.11-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 29 Aug 2018 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.10-1focal) focal; urgency=high
+
+  * add dependencies from voice_text to vt_dummy, solves #139 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/139> (#143 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/143>)
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 25 Apr 2018 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.9-1focal) focal; urgency=high
+
+  * voice_text: add gencfg target to deps (#141 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/141>)
+  * Contributors: Yuki Furta
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 24 Apr 2018 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.8-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 17 Apr 2018 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.7-1focal) focal; urgency=high
+
+  * voice_text: support dynamic linking (#135 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/135>)
+    * install voice_text TARGETS - voice_text: CMakeLists.txt: remove debug code to force non-exists VT_LIB_PATH
+    * voice_text: guide to install libs
+    * install voice_text TARGETS
+    * voice_text: CMakeLists.txt: remove debug code to force non-exists VT_LIB_PATH
+    * add dependencies from generate_message_cpp to voice_text
+    * use vt_dummy when we do not have voice_text library
+  * Contributors: Kei Okada, Yuki Furuta
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 09 Apr 2018 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.6-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 21 Nov 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.5-1focal) focal; urgency=high
+
+  * [voice_text] Add respawn argument for sound_play (#125 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/125>)
+  * Contributors: Shunichi Nozawa
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 20 Nov 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.4-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 16 Jul 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.3-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 07 Jul 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.2-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 06 Jul 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.1-1focal) focal; urgency=high
+
+  * add dynamic_reconfigure to run/build depends  (#110 <https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/110>)
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 05 Jul 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.1.0-1focal) focal; urgency=high
+
+  * [voice_text] Refactor API (#101 <https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/101>)
+    * Cleanup directory (remove rosbuild related files.)
+    * Rewrote VoiceText server node as ROS friendly.
+    * text2wave calls rosservice internally (This enables running VoiceText
+    * engine on remote machine easily)
+    * Create sample launch file
+    * Create README
+    * WARNING : This breaks API (we need to run voice_text node in addition to sound_play), so existing users will have to change launch file for using voice text.
+  * Contributors: Yuki Furuta
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 02 Jul 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.20-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 09 May 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.19-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 22 Feb 2017 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.18-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 28 Oct 2016 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.17-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 22 Oct 2016 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.16-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 17 Oct 2016 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.15-1focal) focal; urgency=high
+
+  * voice_text : clean up CMakeList.txt
+  * [3rdparty/voice_text/text2wave] Enable text2wave using VoiceText other than pr2 robots.
+  * Contributors: Kei Okada, Shunichi Nozawa
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 16 Oct 2016 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.14-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 20 Mar 2016 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.13-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 15 Dec 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.12-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 26 Nov 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.11-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 07 Oct 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.10-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 07 Oct 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.9-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 26 Sep 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.8-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 15 Sep 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.7-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 14 Sep 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.6-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 08 Sep 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.5-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 23 Aug 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.4-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 18 Aug 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.3-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 01 Aug 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.2-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 29 Jun 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.1-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 19 Jun 2015 00:00:00 -0000
+
+ros-noetic-voice-text (2.0.0-1focal) focal; urgency=high
+
+  * move from jsk_common to jsk_3rdparty
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 19 Jun 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.72-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 07 Jun 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.71-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 17 May 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.70-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 08 May 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.69-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 05 May 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.68-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 05 May 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.67-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 03 May 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.66-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 03 Apr 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.65-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 02 Apr 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.64-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 29 Mar 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.63-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 19 Feb 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.62-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 17 Feb 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.61-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 11 Feb 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.60-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 03 Feb 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.59-1focal) focal; urgency=high
+
+  * Remove rosbuild files
+  * Contributors: Ryohei Ueda
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 03 Feb 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.58-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 07 Jan 2015 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.57-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 23 Dec 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.56-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 17 Dec 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.55-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 09 Dec 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.54-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 15 Nov 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.53-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 01 Nov 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.52-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 23 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.51-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 20 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.50-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 20 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.49-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 13 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.48-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 12 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.47-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 08 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.46-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 03 Oct 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.45-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 29 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.44-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 26 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.43-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 26 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.42-1focal) focal; urgency=high
+
+  * Support cakint for vice_text by using catkin_find command
+  * Contributors: Ryohei Ueda
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 25 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.41-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 23 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.40-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 19 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.39-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 17 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.38-1focal) focal; urgency=high
+
+  * catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
+  * Contributors: Ryohei Ueda, JSK applications
+  * catkinize python_twoauth and voice_text, modify multi_map_server's catkin.cmake
+  * Contributors: Yuto Inagaki
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 13 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.37-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 08 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.36-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 01 Sep 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.35-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 16 Aug 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.34-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 14 Aug 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.33-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 28 Jul 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.32-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 26 Jul 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.31-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 23 Jul 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.30-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 15 Jul 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.29-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 02 Jul 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.28-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 24 Jun 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.27-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 10 Jun 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.26-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 30 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.25-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 26 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.24-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 24 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.23-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 23 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.22-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 22 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.21-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 20 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.20-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 09 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.19-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 06 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.18-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 04 May 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.17-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 20 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.16-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 19 Apr 2014 23:29:00 -0000
+
+ros-noetic-voice-text (1.0.15-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 19 Apr 2014 20:19:00 -0000
+
+ros-noetic-voice-text (1.0.14-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 19 Apr 2014 12:52:00 -0000
+
+ros-noetic-voice-text (1.0.13-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 19 Apr 2014 11:06:00 -0000
+
+ros-noetic-voice-text (1.0.12-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 18 Apr 2014 16:58:00 -0000
+
+ros-noetic-voice-text (1.0.11-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 18 Apr 2014 08:18:00 -0000
+
+ros-noetic-voice-text (1.0.10-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 17 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.9-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 12 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.8-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 11 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.7-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 10 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.6-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 07 Apr 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.5-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 31 Mar 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.4-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 29 Mar 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.3-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 19 Mar 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.2-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 12 Mar 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.1-1focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 07 Mar 2014 00:00:00 -0000
+
+ros-noetic-voice-text (1.0.0-1focal) focal; urgency=high
+
+  * add nkf to rosdep.yaml
+  * do not compile if voicetext is not installed
+  * add r58200(fixed include path), r58221(added nkf to rosdep) by mikita
+  * add voice_text client program, copy from jsk-ros-pkg-unreleased
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 05 Mar 2014 00:00:00 -0000
+
+
