@@ -1,0 +1,43 @@
+ros-noetic-gdrive-ros (2.1.20-1buster) buster; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Fri, 07 Aug 2020 00:00:00 -0000
+
+ros-noetic-gdrive-ros (2.1.19-1buster) buster; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-noetic-gdrive-ros (2.1.18-1buster) buster; urgency=high
+
+  * [gdrive_ros] Fix gdrive_ros to catch error properly (#205 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/205>)
+    
+      * fix ros log format in gdrive_ros
+      * add oserr when file not found in gdrive_ros
+    
+  * Contributors: Kei Okada, Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Mon, 20 Jul 2020 00:00:00 -0000
+
+ros-noetic-gdrive-ros (2.1.17-1buster) buster; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-gdrive-ros (2.1.16-1buster) buster; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-gdrive-ros (2.1.15-1buster) buster; urgency=high
+
+  * add gdrive_ros package (#182 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/182>)
+  * Contributors: Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 12 Dec 2019 00:00:00 -0000
+
+
