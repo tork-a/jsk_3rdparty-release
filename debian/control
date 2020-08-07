@@ -1,0 +1,12 @@
+Source: ros-noetic-ros-speech-recognition
+Section: misc
+Priority: optional
+Maintainer: Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-catkin_virtualenv, ros-noetic-dynamic-reconfigure, ros-noetic-roslaunch, ros-noetic-rostest, ros-noetic-speech-recognition-msgs
+Homepage: https://pypi.python.org/pypi/SpeechRecognition/
+Standards-Version: 3.9.2
+
+Package: ros-noetic-ros-speech-recognition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, flac, ros-noetic-audio-capture, ros-noetic-audio-common-msgs, ros-noetic-dynamic-reconfigure, ros-noetic-sound-play, ros-noetic-speech-recognition-msgs
+Description: ROS wrapper for Python SpeechRecognition library
