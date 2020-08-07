@@ -57,6 +57,12 @@ see [this document](https://github.com/jsk-ros-pkg/jsk_common#restart-travis-fro
   Specify your target distribution of ROS. Now we support hydro, indigo and jade.
   If you specify indigo or jade, tests automatically run on jenkins.
 
+* `ROS_PYTHON_VERSION` (default: none)
+
+  Specify your target python version used of ROS. Available from Noetic.
+  see [Build Using Python3](http://wiki.ros.org/UsingPython3/BuildUsingPython3) and
+  [rep 149](https://github.com/ros-infrastructure/rep/blob/master/rep-0149.rst)
+
 * `USE_DEB` (value: [`true`|`false`|`source`])
 
   If `false`, travis firstly sees [config files](#config-files) to resolve dependencies,
@@ -125,6 +131,11 @@ see [this document](https://github.com/jsk-ros-pkg/jsk_common#restart-travis-fro
   Specify environment variables you want to pass to docker on travis/jenkins.
   You can specify multiple variables separated by a space.  
   e.g. `IS_EUSLISP_TRAVIS_TEST IS_GAZEBO_TRAVIS_TEST`
+
+* `DEBUG_TRAVIS_PYTHON` (default: none)
+
+  Specify python command to run within travis/docker/jenkins,
+  for example set `DEBUG_TRAVIS_PYTHON` to `python -v`
 
 ## Config Files
 
