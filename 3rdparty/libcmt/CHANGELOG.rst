@@ -2,6 +2,21 @@
 Changelog for package libcmt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.20 (2020-08-07)
+-------------------
+
+2.1.19 (2020-07-21)
+-------------------
+
+2.1.18 (2020-07-20)
+-------------------
+* Fix for noetic (`#200 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/200>`_)
+
+  * use .zip instead of git clone
+  * for OpenCV4 includce opencv2/imgproc/types_c.h
+
+* Contributors: Kei Okada
+
 2.1.17 (2020-04-16)
 -------------------
 

@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 # need pip installed version of python-jenkins > 0.4.0
 
 import jenkins
 import requests
 import urllib
-import urllib2
+try:
+    import urllib2
+except:
+    import urllib.request, urllib.error
 import json
 import time
 import os
@@ -145,6 +149,7 @@ docker run %(DOCKER_RUN_OPTION)s \\
     -e TEST_PKGS='%(TEST_PKGS)s' \\
     -e NOT_TEST_INSTALL='%(NOT_TEST_INSTALL)s' \\
     -e ROS_PARALLEL_JOBS='%(ROS_PARALLEL_JOBS)s' \\
+    -e ROS_PYTHON_VERSION='%(ROS_PYTHON_VERSION)s' \\
     -e CATKIN_PARALLEL_JOBS='%(CATKIN_PARALLEL_JOBS)s' \\
     -e CATKIN_TOOLS_BUILD_OPTIONS='%(CATKIN_TOOLS_BUILD_OPTIONS)s' \\
     -e CATKIN_TOOLS_CONFIG_OPTIONS='%(CATKIN_TOOLS_CONFIG_OPTIONS)s' \\
@@ -272,16 +277,16 @@ def wait_for_finished(name, number):
         now = time.time() * 1000
         try:
             info = j.get_build_info(name, number)
-        except jenkins.NotFoundException, e:
+        except jenkins.NotFoundException as e:
             print('ERROR: Jenkins job name={0}, number={1} in server={2}'
-                  'not found.'.format(name, number, j.server))
+                  'not found.'.format(name, number, j.server), file=sys.stderr)
             break
-        except jenkins.JenkinsException, e:
+        except jenkins.JenkinsException as e:
             print('ERROR: Maybe Jenkins server is down. Please visit {0}'
-                  .format(j.server))
+                  .format(j.server), file=sys.stderr)
             break
-        except Exception, e:
-            print('ERROR: Unexpected error: {0}'.format(e))
+        except Exception as e:
+            print('ERROR: Unexpected error: {0}'.format(e), file=sys.stderr)
             break
         if not info['building']:
             result = info['result']
@@ -289,7 +294,7 @@ def wait_for_finished(name, number):
         # update progressbar
         progress = (now - info['timestamp']) / info['estimatedDuration']
         if loop % (display/sleep) == 0:
-            print info['url'], "building: ", info['building'], "result: ", info['result'], "progress: ", progress
+            print("{} building {}, result: {}, progress: {}".format(info['url'], info['building'], info['result'], progress), file=sys.stderr)
         time.sleep(sleep)
         loop += 1
     return result
@@ -308,7 +313,7 @@ def wait_for_building(name, number):
         except:
             pass
         if loop % (display/sleep) == 0:
-            print('wait for {} {}'.format(name, number))
+            print('wait for {} {}'.format(name, number), file=sys.stderr)
         time.sleep(sleep)
         loop += 1
 
@@ -330,6 +335,7 @@ TARGET_PKGS = env.get('TARGET_PKGS', '')
 BEFORE_SCRIPT = env.get('BEFORE_SCRIPT', '')
 NOT_TEST_INSTALL = env.get('NOT_TEST_INSTALL', '')
 ROS_PARALLEL_JOBS = env.get('ROS_PARALLEL_JOBS', '')
+ROS_PYTHON_VERSION = env.get('ROS_PYTHON_VERSION', '')
 CATKIN_PARALLEL_JOBS = env.get('CATKIN_PARALLEL_JOBS', '')
 CATKIN_TOOLS_BUILD_OPTIONS = env.get('CATKIN_TOOLS_BUILD_OPTIONS', '')
 CATKIN_TOOLS_CONFIG_OPTIONS = env.get('CATKIN_TOOLS_CONFIG_OPTIONS', '')
@@ -366,6 +372,9 @@ elif env.get('ROS_DISTRO') in ['kinetic', 'lunar']:
 elif env.get('ROS_DISTRO') in ['melodic']:
     LSB_RELEASE = '18.04'
     UBUNTU_DISTRO = 'bionic'
+elif env.get('ROS_DISTRO') in ['noetic']:
+    LSB_RELEASE = '20.04'
+    UBUNTU_DISTRO = 'focal'
 else:
     LSB_RELEASE = '14.04'
     UBUNTU_DISTRO = 'trusty'
@@ -390,6 +399,7 @@ TARGET_PKGS       = %(TARGET_PKGS)s
 BEFORE_SCRIPT      = %(BEFORE_SCRIPT)s
 NOT_TEST_INSTALL = %(NOT_TEST_INSTALL)s
 ROS_PARALLEL_JOBS       = %(ROS_PARALLEL_JOBS)s
+ROS_PYTHON_VERSION       = %(ROS_PYTHON_VERSION)s
 CATKIN_PARALLEL_JOBS    = %(CATKIN_PARALLEL_JOBS)s
 CATKIN_TOOLS_BUILD_OPTIONS    = %(CATKIN_TOOLS_BUILD_OPTIONS)s
 CATKIN_TOOLS_CONFIG_OPTIONS    = %(CATKIN_TOOLS_CONFIG_OPTIONS)s
@@ -407,7 +417,7 @@ TRAVIS_BUILD_WEB_URL = %(TRAVIS_BUILD_WEB_URL)s
 TRAVIS_JOB_WEB_URL = %(TRAVIS_JOB_WEB_URL)s
 DOCKER_IMAGE_JENKINS = %(DOCKER_IMAGE_JENKINS)s
 ADD_ENV_VALUE_TO_DOCKER = %(ADD_ENV_VALUE_TO_DOCKER)s
-''' % locals())
+''' % locals(), file=sys.stderr)
 
 ### start here
 j = Jenkins('http://jenkins.jsk.imi.i.u-tokyo.ac.jp:8080/', 'k-okada', '11402334328fd5a26f0092c1d763f67f52')
@@ -416,12 +426,12 @@ j = Jenkins('http://jenkins.jsk.imi.i.u-tokyo.ac.jp:8080/', 'k-okada', '11402334
 if j.get_plugin_info('ansicolor'):
     ANSICOLOR_PLUGIN_VERSION=j.get_plugin_info('ansicolor')['version']
 else:
-    print('you need to install ansi color plugin')
+    print('you need to install ansi color plugin', file=sys.stderr)
 # use timeout plugin
 if j.get_plugin_info('build-timeout'):
     TIMEOUT_PLUGIN_VERSION=j.get_plugin_info('build-timeout')['version']
 else:
-    print('you need to install build_timeout plugin')
+    print('you need to install build_timeout plugin', file=sys.stderr)
 # set job_name
 job_name = TRAVIS_REPO_SLUG
 
@@ -450,19 +460,19 @@ while True:
     message = j.get_queue_item(queue_number)['why']
     if message is None:
         break
-    print("wait for queueing ... {} ".format(message.encode('utf-8')))
+    print("wait for queueing ... {} ".format(message.encode('utf-8')), file=sys.stderr)
     time.sleep(3)
 
 # wait for execution
 while True:
     item = j.get_queue_item(queue_number)
-    if item.has_key('executable'):
+    if 'executable' in item:
         item = item['executable']
         break;
-    print("wait for execution....", item)
+    print("wait for execution.... {}".format(item), file=sys.stderr)
     time.sleep(10)
 build_number = item['number']
-print('build number is {}'.format(build_number))
+print('build number is {}'.format(build_number), file=sys.stderr)
 
 ## configure description
 if TRAVIS_PULL_REQUEST != 'false':
@@ -496,6 +506,7 @@ TARGET_PKGS       = %(TARGET_PKGS)s <br> \
 BEFORE_SCRIPT      = %(BEFORE_SCRIPT)s <br> \
 NOT_TEST_INSTALL = %(NOT_TEST_INSTALL)s <br> \
 ROS_PARALLEL_JOBS       = %(ROS_PARALLEL_JOBS)s <br> \
+ROS_PYTHON_VERSION       = %(ROS_PYTHON_VERSION)s <br> \
 CATKIN_PARALLEL_JOBS    = %(CATKIN_PARALLEL_JOBS)s <br> \
 CATKIN_TOOLS_BUILD_OPTIONS    = %(CATKIN_TOOLS_BUILD_OPTIONS)s <br> \
 CATKIN_TOOLS_CONFIG_OPTIONS    = %(CATKIN_TOOLS_CONFIG_OPTIONS)s <br> \
@@ -519,10 +530,10 @@ ADD_ENV_VALUE_TO_DOCKER = %(ADD_ENV_VALUE_TO_DOCKER)s <br> \
 result = wait_for_finished(job_name, build_number)
 
 ## show console
-print j.get_build_console_output(job_name, build_number)
-print "======================================="
-print j.get_build_info(job_name, build_number)['url']
-print "======================================="
+print (u"{}".format(j.get_build_console_output(job_name, build_number)), file=sys.stderr)
+print (u"=======================================", file=sys.stderr)
+print (u"{}".format(j.get_build_info(job_name, build_number)['url']), file=sys.stderr)
+print (u"=======================================", file=sys.stderr)
 if result == "SUCCESS" :
     exit(0)
 else:

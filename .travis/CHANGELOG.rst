@@ -2,6 +2,62 @@
 Changelog for package jsk_travis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.12 (2020-06-28)
+-------------------
+* check USE_JENKINS=true ROS_DISTRO=noetic without DOCKER_IMAGE_JENKINS (`#405 <https://github.com/jsk-ros-pkg/jsk_travis/issues/405>`_)
+
+  * install python3-pip for 20.04
+  * add python-gdown-pip to run_depend to check pip install
+  * qt5/moc does not work on docker (https://stackoverflow.com/questions/56319830/error-when-building-qt-app-in-a-recent-docker)
+  * add CATKIN_TOOLS_BUILD_OPTIONS for debug
+  * ros_tutorials now support noetic-devel
+  * install 'python' for noetic
+  * check USE_JENKINS=true ROS_DISTRO=noetic without DOCKER_IMAGE_JENKINS
+
+* Contributors: Kei Okada
+
+0.5.11 (2020-05-28)
+-------------------
+* update rosdep-install.sh for indigo, which does not read <*_depend condition="$ROS_PYTHON=VERSION == 2"> format (`#403 <https://github.com/jsk-ros-pkg/jsk_travis/issues/403>`_)
+
+  * remove condition=ROS_PYTHON=VERSION=2 for indigo
+  * use scipy instead of numpy, because numpy is already installed
+  * show debug message to stderr
+  * check if rosdep works with format=3
+  * add more travis_time_start/travis_time_end
+
+* Fix 0.5.10, which does not work for melodic/noetic (`#402 <https://github.com/jsk-ros-pkg/jsk_travis/issues/402>`_)
+
+  * add USE_DOCKER=true ROS_DISTRO=noetic
+  * do not print debug message end of docker.sh
+  * fix when ROS_PYTHON_VERSION is not set
+  * add USE_DOCKER=true ROS_DISTRO=noetic
+
+* Contributors: Kei Okada
+
+0.5.10 (2020-05-02)
+-------------------
+* add support noetic/focal (`#401 <https://github.com/jsk-ros-pkg/jsk_travis/issues/401>`_)
+* Contributors: Kei Okada
+
+0.5.9 (2020-04-03)
+------------------
+* output all messages to sys.stderr (`#398 <https://github.com/jsk-ros-pkg/jsk_travis/issues/398>`_)
+* Contributors: Kei Okada
+
+0.5.8 (2020-04-02)
+------------------
+* Fix utf-8/ascii errors (`#397 <https://github.com/jsk-ros-pkg/jsk_travis/issues/397>`_))
+
+  * fix for https://github.com/start-jsk/rtmros_common/pull/1089
+  * PYTHONIOENCODING=utf-8 fix utf-8
+  * support python3
+  * use python-jenkins 1.7.0
+  * set unicode for print console output
+  * add DEBUG_TRAVIS_PYTHON
+
+* Contributors: Kei Okada
+
 0.5.7 (2019-12-11)
 ------------------
 * Enable to pass additional environment variables to docker on travis/jenkins (`#395 <https://github.com/jsk-ros-pkg/jsk_travis/issues/395>`_)
