@@ -1,0 +1,720 @@
+ros-noetic-respeaker-ros (2.1.20-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 07 Aug 2020 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.19-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.18-1buster) buster; urgency=high
+
+  * Fix for noetic (#200 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/200>)
+    
+      * respeaker_ros: use catkin_install_python to install scripts
+      * fix 2to3, with print, raise, exception
+      * use package.xml format 3 for package contains python depends
+    
+  * [respeaker_ros] use rospy.logerr instead of print (#206 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/206>)
+  * Add args to ros_speech_recognition (#197 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/197>)
+    
+      * [respeaker_ros] update run_depend and test file to pass travis test properly
+    
+  * Contributors: Kei Okada, Naoya Yamaguchi, Shingo Kitagawa
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Jul 2020 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.17-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.16-1buster) buster; urgency=high
+
+  * [respeaker_ros] increase timeout to pass the test https://api.travis-ci.org/v3/job/554008643/log.txt
+  * Contributors: Kei Okada
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.15-1buster) buster; urgency=high
+
+  * [respeaker_ros] add pixel-ring in run_depend of respeaker_ros (#184 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/184>)
+  * [respeaker_ros] install config dir in respeaker_ros (#185 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/185>)
+  * Contributors: Shingo Kitagawa
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 12 Dec 2019 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.14-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 21 Nov 2019 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.13-1buster) buster; urgency=high
+
+  * [respeaker_ros] increase timeout to pass the test (#170 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/170>)
+    
+      * default tts_action_names should be soundplay
+      * [respeaker_ros] increase timeout to pass the test https://api.travis-ci.org/v3/job/554008643/log.txt
+      * [respeaker_ros] add python-speechrocognition-pip to package.depends, because scripts/speech_to_text.py depends on it
+    
+  * [respeaker_ros] Add test file for speech_to_text (#164 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/164>)
+    
+      * add test file for speech_to_text
+    
+  * [respeaker_ros] add tts_action_names param: do not listen when the robot is speaking either japanese or english (#168 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/168>)
+    
+      * add tts_actions param: do not listen when the robot is speaking either japanese or english
+    
+  * Contributors: Naoya Yamaguchi, Shingo Kitagawa
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 10 Jul 2019 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.12-1buster) buster; urgency=high
+
+  * Make sample_respeaker.launch re-usable (#161 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/161>)
+    
+      * [respeaker_ros] add docs for each args in sample_respeaker.launch
+      * make sample_respeaker.launch re-usable
+    
+  * respeaker_ros: cleanup error messages (#155 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/155>)
+  * Contributors: Yuki Furuta, Kei Okada, Naoya Yamaguchi
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 25 May 2019 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.11-1buster) buster; urgency=high
+
+  * Add respeaker_ros package (#152 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/152>)
+  * Contributors: Yuki Furuta
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 29 Aug 2018 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.10-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 25 Apr 2018 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.9-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 24 Apr 2018 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.8-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 17 Apr 2018 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.7-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 09 Apr 2018 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.6-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 21 Nov 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.5-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Nov 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.4-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 16 Jul 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.3-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 07 Jul 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.2-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 06 Jul 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.1-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 05 Jul 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.1.0-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 02 Jul 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.20-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 09 May 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.19-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 22 Feb 2017 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.18-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 28 Oct 2016 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.17-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 22 Oct 2016 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.16-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 17 Oct 2016 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.15-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 16 Oct 2016 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.14-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 20 Mar 2016 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.13-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 15 Dec 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.12-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 26 Nov 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.11-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Oct 2015 14:16:00 -0000
+
+ros-noetic-respeaker-ros (2.0.10-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Oct 2015 12:47:00 -0000
+
+ros-noetic-respeaker-ros (2.0.9-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 26 Sep 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.8-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 15 Sep 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.7-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 14 Sep 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.6-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 08 Sep 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.5-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 23 Aug 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.4-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 18 Aug 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.3-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 01 Aug 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.2-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 29 Jun 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (2.0.1-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 19 Jun 2015 21:21:00 -0000
+
+ros-noetic-respeaker-ros (2.0.0-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 19 Jun 2015 10:41:00 -0000
+
+ros-noetic-respeaker-ros (1.0.71-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 17 May 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.70-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 08 May 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.69-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 05 May 2015 12:28:00 -0000
+
+ros-noetic-respeaker-ros (1.0.68-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 05 May 2015 09:49:00 -0000
+
+ros-noetic-respeaker-ros (1.0.67-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 03 May 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.66-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 03 Apr 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.65-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 02 Apr 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.64-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 29 Mar 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.63-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 19 Feb 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.62-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 17 Feb 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.61-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 11 Feb 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.60-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 03 Feb 2015 10:12:00 -0000
+
+ros-noetic-respeaker-ros (1.0.59-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 03 Feb 2015 04:05:00 -0000
+
+ros-noetic-respeaker-ros (1.0.58-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Jan 2015 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.57-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 23 Dec 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.56-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 17 Dec 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.55-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 09 Dec 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.54-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 15 Nov 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.53-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 01 Nov 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.52-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 23 Oct 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.51-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Oct 2014 16:01:00 -0000
+
+ros-noetic-respeaker-ros (1.0.50-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Oct 2014 01:50:00 -0000
+
+ros-noetic-respeaker-ros (1.0.49-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 13 Oct 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.48-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 12 Oct 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.47-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 08 Oct 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.46-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 03 Oct 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.45-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 29 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.44-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 26 Sep 2014 09:17:00 -0000
+
+ros-noetic-respeaker-ros (1.0.43-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 26 Sep 2014 01:08:00 -0000
+
+ros-noetic-respeaker-ros (1.0.42-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 25 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.41-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 23 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.40-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 19 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.39-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 17 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.38-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 13 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.37-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 08 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.36-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 01 Sep 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.35-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 16 Aug 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.34-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 14 Aug 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.33-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 28 Jul 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.32-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 26 Jul 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.31-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 23 Jul 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.30-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 15 Jul 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.29-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 02 Jul 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.28-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 24 Jun 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.27-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 10 Jun 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.26-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 30 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.25-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 26 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.24-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 24 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.23-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 23 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.22-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 22 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.21-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 20 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.20-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 09 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.19-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 06 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.18-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 04 May 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.17-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 20 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.16-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 23:29:00 -0000
+
+ros-noetic-respeaker-ros (1.0.15-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 20:19:00 -0000
+
+ros-noetic-respeaker-ros (1.0.14-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 12:52:00 -0000
+
+ros-noetic-respeaker-ros (1.0.13-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 11:06:00 -0000
+
+ros-noetic-respeaker-ros (1.0.12-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 18 Apr 2014 16:58:00 -0000
+
+ros-noetic-respeaker-ros (1.0.11-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 18 Apr 2014 08:18:00 -0000
+
+ros-noetic-respeaker-ros (1.0.10-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 17 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.9-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 12 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.8-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 11 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.7-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 10 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.6-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 07 Apr 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.5-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 31 Mar 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.4-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 29 Mar 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.3-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 19 Mar 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.2-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 12 Mar 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.1-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 07 Mar 2014 00:00:00 -0000
+
+ros-noetic-respeaker-ros (1.0.0-1buster) buster; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 05 Mar 2014 00:00:00 -0000
+
+
