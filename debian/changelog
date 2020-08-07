@@ -1,0 +1,54 @@
+ros-noetic-dialogflow-task-executive (2.1.20-1focal) focal; urgency=high
+
+  * [dialogflow_task_executive] accepct full name of app name for dialogflow action (#208 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/208>)
+    
+      * update readme to accept dialogflow action name
+      * use whole app_name for action
+    
+  * Contributors: Kei Okada, Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Fri, 07 Aug 2020 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.19-1focal) focal; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.18-1focal) focal; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Mon, 20 Jul 2020 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.17-1focal) focal; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.16-1focal) focal; urgency=high
+
+
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 16 Apr 2020 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.15-1focal) focal; urgency=high
+
+  * add url in dialogflow_task_executive (#181 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/181>)
+  * Contributors: Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 12 Dec 2019 00:00:00 -0000
+
+ros-noetic-dialogflow-task-executive (2.1.14-1focal) focal; urgency=high
+
+  * [dialogflow_task_executive] add dialogflow_task_executive (#165 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/165>)
+    * add std_msgs in package.xml (#177 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/177>)
+    * update system fig/img
+    * add jsk-dialog.conf example
+    * add upstart example
+  * Contributors: Shingo Kitagawa
+
+ -- Shingo Kitagawa <shingogo.5511@gmail.com>  Thu, 21 Nov 2019 00:00:00 -0000
+
+
