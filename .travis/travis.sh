@@ -74,6 +74,7 @@ if [ "$USE_DOCKER" = true ]; then
       indigo|jade) DISTRO=trusty;;
       kinetic|lunar) DISTRO=xenial;;
       melodic) DISTRO=bionic;;
+      noetic) DISTRO=focal;;
       *) DISTRO=trusty;;
     esac
     export DOCKER_IMAGE=ubuntu:$DISTRO
@@ -138,27 +139,35 @@ if [ "$USE_DOCKER" = true ]; then
     -e ROS_DISTRO -e ROS_LOG_DIR -e ROS_REPOSITORY_PATH -e ROSWS \
     -e CATKIN_TOOLS_BUILD_OPTIONS -e CATKIN_TOOLS_CONFIG_OPTIONS \
     -e CATKIN_PARALLEL_JOBS -e CATKIN_PARALLEL_TEST_JOBS \
-    -e ROS_PARALLEL_JOBS -e ROS_PARALLEL_TEST_JOBS \
+    -e ROS_PARALLEL_JOBS -e ROS_PARALLEL_TEST_JOBS -e ROS_PYTHON_VERSION \
     -e ROSDEP_ADDITIONAL_OPTIONS -e ROSDEP_UPDATE_QUIET \
     -e SUDO_PIP -e USE_PYTHON_VIRTUALENV \
-    -e NOT_TEST_INSTALL \
+    -e NOT_TEST_INSTALL -e DEBUG_TRAVIS_PYTHON \
     --env-file $DOCKER_ENV_FILE \
     -t $DOCKER_IMAGE bash -c 'cd $CI_SOURCE_PATH; .travis/docker.sh'
   DOCKER_EXIT_CODE=$?
+
+  travis_time_start show_cache
   rm $DOCKER_ENV_FILE
   sudo chown -R travis.travis $HOME/apt-cacher-ng
   # sudo tail -n 100 /var/log/apt-cacher-ng/*
   # sudo find $HOME/apt-cacher-ng
   # sudo find /var/cache/apt-cacher-ng
   sudo chown -R travis.travis $HOME
-  find $HOME/.ccache    -type f
-  find $HOME/.cache/pip -type f
+  # find $HOME/.ccache    -type f
+  find $HOME/.cache/pip -type f | grep whl || echo "OK"
+  travis_time_end
+  set +x
   return $DOCKER_EXIT_CODE
 fi
 
 if [ "$USE_TRAVIS" != "true" ] && [ "$ROS_DISTRO" != "hydro" -o "${USE_JENKINS}" == "true" ] && [ "$TRAVIS_JOB_ID" ]; then
-    pip install --user -U python-jenkins==1.4.0 -q
-    ./.travis/travis_jenkins.py
+    if [ "${DEBUG_TRAVIS_PYTHON}" != "" ]; then
+        pip --version
+        python --version
+    fi
+    pip install --user -U python-jenkins==1.7.0 -q
+    PYTHONIOENCODING=utf-8 ${DEBUG_TRAVIS_PYTHON} ./.travis/travis_jenkins.py
     return $?
 fi
 
@@ -176,6 +185,7 @@ travis_time_start setup_ros
 # Define some config vars
 export CI_SOURCE_PATH=$(pwd)
 export REPOSITORY_NAME=${PWD##*/}
+export ROS_PYTHON_VERSION_ORIG=${ROS_PYTHON_VERSION}
 if [ ! "$ROS_PARALLEL_JOBS" ]; then export ROS_PARALLEL_JOBS="-j8";  fi
 if [ ! "$CATKIN_PARALLEL_JOBS" ]; then export CATKIN_PARALLEL_JOBS="-p4";  fi
 if [ ! "$ROS_PARALLEL_TEST_JOBS" ]; then export ROS_PARALLEL_TEST_JOBS="$ROS_PARALLEL_JOBS";  fi
@@ -210,7 +220,9 @@ if [[ "$ROS_DISTRO" ==  "hydro" ]]; then
     sudo apt-get install -y --force-yes -q python-vcstools=0.1.40-1
     sudo apt-mark hold python-vcstools
 fi
-sudo apt-get install -y --force-yes -q -qq python-rosdep python-wstool python-catkin-tools ros-$ROS_DISTRO-rosbash ros-$ROS_DISTRO-rospack ccache pv
+# noetic uses python3-rosdep
+sudo apt-get install -y --force-yes -q -qq python-rosdep python-wstool python-catkin-tools || (sudo apt-get install -y --force-yes -q -qq python3-rosdep python3-wstool; sudo pip install catkin-tools)
+sudo apt-get install -y --force-yes -q -qq ros-$ROS_DISTRO-rosbash ros-$ROS_DISTRO-rospack ccache pv
 
 # setup catkin-tools option
 if [ ! "$CATKIN_TOOLS_BUILD_OPTIONS" ]; then
@@ -260,8 +272,9 @@ else
 fi
 sudo apt-get install -y --force-yes -q -qq ros-$ROS_DISTRO-roslaunch
 ### https://github.com/ros/ros_comm/pull/641
-(cd /opt/ros/$ROS_DISTRO/lib/python2.7/dist-packages; wget --no-check-certificate https://patch-diff.githubusercontent.com/raw/ros/ros_comm/pull/641.diff -O /tmp/641.diff; [ "$ROS_DISTRO" == "hydro" ] && sed -i s@items@iteritems@ /tmp/641.diff ; sudo patch -p4 < /tmp/641.diff)
-
+if [[ "$ROS_DISTRO" =~ "hydro"|"indigo"|"jade"|"kinetic"|"lunar"|"melodic" ]]; then
+  (cd /opt/ros/$ROS_DISTRO/lib/python2.7/dist-packages; wget --no-check-certificate https://patch-diff.githubusercontent.com/raw/ros/ros_comm/pull/641.diff -O /tmp/641.diff; if [[ "$ROS_DISTRO" == "hydro" ]]; then sed -i s@items@iteritems@ /tmp/641.diff ; fi; sudo patch -p4 < /tmp/641.diff)
+fi
 
 travis_time_end
 
@@ -305,6 +318,7 @@ if [ "$ROSDEP_UPDATE_QUIET" == "true" ]; then
     ROSDEP_ARGS=>/dev/null
 fi
 source /opt/ros/$ROS_DISTRO/setup.bash > /tmp/$$.x 2>&1; grep export\ [^_] /tmp/$$.x # ROS_PACKAGE_PATH is important for rosdep
+if [ "${ROS_PYTHON_VERSION_ORIG}" != "" ]; then export ROS_PYTHON_VERSION=${ROS_PYTHON_VERSION_ORIG}; fi
 
 travis_time_end
 
@@ -312,6 +326,7 @@ travis_time_start before_script
 
 ### before_script: # Use this to prepare your build for testing e.g. copy database configurations, environment variables, etc.
 source /opt/ros/$ROS_DISTRO/setup.bash > /tmp/$$.x 2>&1; grep export\ [^_] /tmp/$$.x # re-source setup.bash for setting environmet vairable for package installed via rosdep
+if [ "${ROS_PYTHON_VERSION_ORIG}" != "" ]; then export ROS_PYTHON_VERSION=${ROS_PYTHON_VERSION_ORIG}; fi
 if [ "${BEFORE_SCRIPT// }" != "" ]; then sh -c "${BEFORE_SCRIPT}"; fi
 
 travis_time_end
@@ -359,6 +374,8 @@ travis_time_start catkin_build
 
 ### script: # All commands must exit with code 0 on success. Anything else is considered failure.
 source /opt/ros/$ROS_DISTRO/setup.bash > /tmp/$$.x 2>&1; grep export\ [^_] /tmp/$$.x # re-source setup.bash for setting environmet vairable for package installed via rosdep
+if [ "${ROS_PYTHON_VERSION_ORIG}" != "" ]; then export ROS_PYTHON_VERSION=${ROS_PYTHON_VERSION_ORIG}; fi
+
 # for catkin
 if [ "${TARGET_PKGS// }" == "" ]; then export TARGET_PKGS=`catkin_topological_order ${CI_SOURCE_PATH} --only-names`; fi
 if [ "${TEST_PKGS// }" == "" ]; then export TEST_PKGS=$( [ "${BUILD_PKGS// }" == "" ] && echo "$TARGET_PKGS" || echo "$BUILD_PKGS"); fi
@@ -381,6 +398,8 @@ if [ "$ROS_DISTRO" == "hydro" ]; then
 fi
 
 source devel/setup.bash > /tmp/$$.x 2>&1; grep export\ [^_] /tmp/$$.x ; rospack profile # force to update ROS_PACKAGE_PATH for rostest
+if [ "${ROS_PYTHON_VERSION_ORIG}" != "" ]; then export ROS_PYTHON_VERSION=${ROS_PYTHON_VERSION_ORIG}; fi
+
 # set -Werror=dev for developer errors (supported only fo kinetic and above)
 if [[ "$ROS_DISTRO" > "indigo" ]] && [[ "$CMAKE_DEVELOPER_ERROR" == "true" ]]; then
   CMAKE_ARGS_FLAGS="--cmake-args -Werror=dev"
@@ -402,6 +421,10 @@ else
   #travis_wait 60 catkin run_tests -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
   travis_wait 60 catkin build --catkin-make-args run_tests -- -i --no-deps --no-status $TEST_PKGS $CATKIN_PARALLEL_TEST_JOBS --make-args $ROS_PARALLEL_TEST_JOBS $CMAKE_ARGS_FLAGS --
 fi
+
+travis_time_end
+travis_time_start catkin_test_results
+
 catkin_test_results --verbose --all build || error
 
 travis_time_end
@@ -420,6 +443,8 @@ if [ "$NOT_TEST_INSTALL" != "true" ]; then
       travis_wait 60 catkin build $CATKIN_TOOLS_BUILD_OPTIONS $BUILD_PKGS $CATKIN_PARALLEL_JOBS --make-args $ROS_PARALLEL_JOBS --
     fi
     source install/setup.bash > /tmp/$$.x 2>&1; grep export\ [^_] /tmp/$$.x
+    if [ "${ROS_PYTHON_VERSION_ORIG}" != "" ]; then export ROS_PYTHON_VERSION=${ROS_PYTHON_VERSION_ORIG}; fi
+
     rospack profile
     rospack plugins --attrib=plugin nodelet || echo "ok"
 
