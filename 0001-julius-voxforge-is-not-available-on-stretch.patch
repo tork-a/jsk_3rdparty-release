@@ -1,6 +1,6 @@
-From a0b1c10284e8d387e45a8c3417451a1e16657ab8 Mon Sep 17 00:00:00 2001
+From 495a70fea8e2e3580a971a172679647409decf7a Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
-Date: Mon, 27 May 2019 03:13:36 +0000
+Date: Fri, 7 Aug 2020 09:50:36 +0000
 Subject: [PATCH] julius-voxforge is not available on stretch
 
 ---
@@ -8,18 +8,18 @@ Subject: [PATCH] julius-voxforge is not available on stretch
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 5e9d2f524..b685c02be 100644
+index b1fa1b0bd..33edada59 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -11,7 +11,7 @@
-   <run_depend>audio_capture</run_depend>
-   <run_depend>audio_common_msgs</run_depend>
-   <run_depend>julius</run_depend>
--  <run_depend>julius-voxforge</run_depend>
+   <exec_depend>audio_capture</exec_depend>
+   <exec_depend>audio_common_msgs</exec_depend>
+   <exec_depend>julius</exec_depend>
+-  <exec_depend>julius-voxforge</exec_depend>
 +  <!-- <run_depend>julius-voxforge</run_depend> --> <!-- julius-voxforge is not available on stretch -->
-   <run_depend>nkf</run_depend>
-   <run_depend>python-lxml</run_depend>
-   <run_depend>python-rospkg</run_depend>
+   <exec_depend>nkf</exec_depend>
+   <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-lxml</exec_depend>
+   <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-lxml</exec_depend>
 -- 
 2.17.1
 
