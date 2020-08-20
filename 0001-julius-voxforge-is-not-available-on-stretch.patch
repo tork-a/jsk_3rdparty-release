@@ -1,4 +1,4 @@
-From 495a70fea8e2e3580a971a172679647409decf7a Mon Sep 17 00:00:00 2001
+From 8fedc365e1e40c055734cf68a37145637833658f Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Fri, 7 Aug 2020 09:50:36 +0000
 Subject: [PATCH] julius-voxforge is not available on stretch
@@ -8,7 +8,7 @@ Subject: [PATCH] julius-voxforge is not available on stretch
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index b1fa1b0bd..33edada59 100644
+index ebaf33b08..d92763fc4 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -11,7 +11,7 @@
