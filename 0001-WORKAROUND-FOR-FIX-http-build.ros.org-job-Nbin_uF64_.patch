@@ -1,9 +1,9 @@
-From 476bd251726db3d5ed8d080067c9f6cca5c8a47d Mon Sep 17 00:00:00 2001
+From 3469f77e99c04d114f3a7c2a63fcb5ec435b4916 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 03:26:13 +0000
 Subject: [PATCH] WORKAROUND FOR FIX
  http://build.ros.org/job/Nbin_uF64__ros_speech_recognition__ubuntu_focal_amd64__binary/,
- see 
+ see
  https://stackoverflow.com/questions/28949154/trying-to-package-unity-game-in-ubuntu-linux-debian/29311292
 
 ---
