@@ -1,0 +1,12 @@
+Source: ros-noetic-jsk-3rdparty
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: http://ros.org/wiki/jsk_3rdparty
+Standards-Version: 3.9.2
+
+Package: ros-noetic-jsk-3rdparty
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-assimp-devel, ros-noetic-bayesian-belief-networks, ros-noetic-dialogflow-task-executive, ros-noetic-downward, ros-noetic-ff, ros-noetic-ffha, ros-noetic-gdrive-ros, ros-noetic-julius, ros-noetic-julius-ros, ros-noetic-libcmt, ros-noetic-libsiftfast, ros-noetic-mini-maxwell, ros-noetic-nlopt, ros-noetic-opt-camera, ros-noetic-pgm-learner, ros-noetic-rospatlite, ros-noetic-rosping, ros-noetic-rostwitter, ros-noetic-sesame-ros, ros-noetic-slic, ros-noetic-voice-text
+Description: Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg
