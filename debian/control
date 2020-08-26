@@ -1,0 +1,12 @@
+Source: ros-noetic-laser-filters-jsk-patch
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, ros-noetic-catkin, ros-noetic-cmake-modules, ros-noetic-filters, ros-noetic-laser-filters, ros-noetic-laser-geometry, ros-noetic-mk
+Homepage: http://ros.org/wiki/laser_filters_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-noetic-laser-filters-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-filters, ros-noetic-laser-filters
+Description: laser_filters_jsk_patch
