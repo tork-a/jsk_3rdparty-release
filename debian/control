@@ -1,0 +1,12 @@
+Source: ros-noetic-rostwitter
+Section: misc
+Priority: optional
+Maintainer: k-okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, ros-noetic-catkin, ros-noetic-mk, ros-noetic-rospy
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-rostwitter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, python3-requests-oauthlib, python3-simplejson, ros-noetic-rospy, ros-noetic-std-msgs
+Description: The rostwitter package
