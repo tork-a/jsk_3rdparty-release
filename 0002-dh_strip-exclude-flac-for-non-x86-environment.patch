@@ -1,0 +1,23 @@
+From 4220d497d33796573f35d3e58f52ec22a0752a0e Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Wed, 26 Aug 2020 14:05:55 +0900
+Subject: [PATCH 2/2] dh_strip: exclude flac for non x86 environment
+
+---
+ debian/rules.em | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index a951cb913..3541c351f 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -63,3 +63,6 @@ override_dh_auto_install:
+ 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
+ 	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
+ 	dh_auto_install
++
++override_dh_strip:
++	dh_strip $@ -Xflac
+-- 
+2.17.1
+
