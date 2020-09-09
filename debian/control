@@ -1,0 +1,12 @@
+Source: ros-noetic-opt-camera
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-camera-calibration-parsers, ros-noetic-catkin, ros-noetic-compressed-image-transport, ros-noetic-cv-bridge, ros-noetic-dynamic-reconfigure, ros-noetic-image-proc, ros-noetic-roslang, ros-noetic-rospack, ros-noetic-sensor-msgs
+Homepage: http://ros.org/wiki/opt_camera
+Standards-Version: 3.9.2
+
+Package: ros-noetic-opt-camera
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-camera-calibration-parsers, ros-noetic-compressed-image-transport, ros-noetic-cv-bridge, ros-noetic-dynamic-reconfigure, ros-noetic-image-proc, ros-noetic-rospack, ros-noetic-sensor-msgs
+Description: opt_camera
