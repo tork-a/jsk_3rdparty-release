@@ -1,0 +1,12 @@
+Source: ros-noetic-libsiftfast
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, python3-numpy, ros-noetic-catkin, ros-noetic-mk, ros-noetic-rosboost-cfg, ros-noetic-roslib, ros-noetic-rospack, subversion
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-libsiftfast
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, python3-numpy
+Description: Library to compute SIFT features
