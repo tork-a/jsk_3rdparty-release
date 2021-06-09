@@ -1,0 +1,12 @@
+Source: ros-melodic-gdrive-ros
+Section: misc
+Priority: optional
+Maintainer: Shingo Kitagawa <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-message-generation, ros-melodic-std-msgs
+Homepage: http://ros.org/wiki/gdrive_ros
+Standards-Version: 3.9.2
+
+Package: ros-melodic-gdrive-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-message-runtime
+Description: Google drive upload and download package
