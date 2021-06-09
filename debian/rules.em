@@ -71,4 +71,5 @@ override_dh_auto_install:
 	dh_auto_install
 
 override_dh_strip:
-	dh_strip $@ -Xflac
+	# WORKAROUND FOR FIX https://github.com/tork-a/jsk_3rdparty-release/commit/302452be190f0423c4e65be401513f27cbca95ad#commitcomment-51919365
+	dh_strip $@ -Xflac-x86_64
