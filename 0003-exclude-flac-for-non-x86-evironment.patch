@@ -1,0 +1,23 @@
+From 045596adde9c5e56bc3ecb39195fa3fdbf4efb42 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Wed, 9 Jun 2021 18:10:19 +0900
+Subject: [PATCH 3/3] exclude flac for non x86 evironment
+
+---
+ debian/rules.em | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 3541c351f..887f41d54 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -65,4 +65,5 @@ override_dh_auto_install:
+ 	dh_auto_install
+ 
+ override_dh_strip:
+-	dh_strip $@ -Xflac
++	# WORKAROUND FOR FIX https://github.com/tork-a/jsk_3rdparty-release/commit/302452be190f0423c4e65be401513f27cbca95ad#commitcomment-51919365
++	dh_strip $@ -Xflac-x86_64
+-- 
+2.17.1
+
