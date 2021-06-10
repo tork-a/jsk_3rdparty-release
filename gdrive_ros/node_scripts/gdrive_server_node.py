@@ -3,7 +3,9 @@
 import datetime
 import os.path
 import sys
+import time
 
+from httplib2 import ServerNotFoundError
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from pydrive.files import ApiRequestError
@@ -26,6 +28,8 @@ class GDriveServerNode(object):
         self.share_value = rospy.get_param('~share_value', 'anyone')
         self.share_role = rospy.get_param('~share_role', 'reader')
         self.share_with_link = rospy.get_param('~share_with_link', True)
+        auth_max_trial = rospy.get_param('~auth_max_trial', -1)
+        auth_wait_seconds = rospy.get_param('~auth_wait_seconds', 10.0)
         if settings_yaml is not None:
             self.gauth = GoogleAuth(settings_yaml)
         else:
@@ -33,7 +37,21 @@ class GDriveServerNode(object):
             sys.exit(1)
 
         rospy.loginfo('Google drive authentication starts.')
-        self.gauth.LocalWebserverAuth()
+        auth_success = False
+        auth_count = 0
+        while (not auth_success and
+                (auth_max_trial < 0 or auth_count < auth_max_trial)):
+            try:
+                self.gauth.LocalWebserverAuth()
+                auth_success = True
+            except ServerNotFoundError as e:
+                rospy.logerr('Authentication failed: {}'.format(e))
+                auth_count = auth_count + 1
+                time.sleep(auth_wait_seconds)
+        if not auth_success:
+            rospy.logerr(
+                'Authentication failed {} times.'.format(auth_max_trial))
+            sys.exit(1)
         self.gdrive = GoogleDrive(self.gauth)
         rospy.loginfo('Google drive authentication finished.')
         self.upload_server = rospy.Service('~upload', Upload, self._upload_cb)
@@ -53,14 +71,15 @@ class GDriveServerNode(object):
 
         if parents_id and parents_path:
             rospy.logerr('parents_path and parents_id is both set.')
-            rospy.logerr('parents_id: {} is selected to upload.'.format(parents_id))
+            rospy.logerr(
+                'parents_id: {} is selected to upload.'.format(parents_id))
             parents_path = ''
 
         if parents_path:
             try:
                 parents_id = self._get_parents_id(
                     parents_path, mkdir=True)
-            except (ValueError, ApiRequestError) as e:
+            except (ValueError, ApiRequestError, ServerNotFoundError) as e:
                 rospy.logerr(e)
                 rospy.logerr(
                     'Failed to get parents_id: {}'.format(parents_path))
@@ -73,7 +92,7 @@ class GDriveServerNode(object):
             try:
                 parents_id = self._get_parents_id(
                     [timestamp], parents_id=parents_id, mkdir=True)
-            except (ValueError, ApiRequestError) as e:
+            except (ValueError, ApiRequestError, ServerNotFoundError) as e:
                 rospy.logerr(e)
                 rospy.logerr(
                     'Failed to get parents_id: {} in {}'.format(
@@ -103,14 +122,15 @@ class GDriveServerNode(object):
 
         if parents_id and parents_path:
             rospy.logerr('parents_path and parents_id is both set.')
-            rospy.logerr('parents_id: {} is selected to upload.'.format(parents_id))
+            rospy.logerr(
+                'parents_id: {} is selected to upload.'.format(parents_id))
             parents_path = ''
 
         if parents_path:
             try:
                 parents_id = self._get_parents_id(
                     parents_path, mkdir=True)
-            except (ValueError, ApiRequestError) as e:
+            except (ValueError, ApiRequestError, ServerNotFoundError) as e:
                 rospy.logerr(e)
                 rospy.logerr(
                     'Failed to get parents_id: {}'.format(parents_path))
@@ -123,7 +143,7 @@ class GDriveServerNode(object):
             try:
                 parents_id = self._get_parents_id(
                     [timestamp], parents_id=parents_id, mkdir=True)
-            except (ValueError, ApiRequestError) as e:
+            except (ValueError, ApiRequestError, ServerNotFoundError) as e:
                 rospy.logerr(e)
                 rospy.logerr(
                     'Failed to get parents_id: {} in {}'.format(
@@ -160,7 +180,7 @@ class GDriveServerNode(object):
             success = True
             rospy.loginfo(
                 'Success to upload: {} -> {}'.format(file_path, file_url))
-        except (OSError, ApiRequestError) as e:
+        except (OSError, ApiRequestError, ServerNotFoundError) as e:
             rospy.logerr(e)
             rospy.logerr(
                 'Failed to upload: {} -> {}'.format(file_path, folder_url))
