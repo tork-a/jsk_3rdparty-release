@@ -2,6 +2,162 @@
 Changelog for package jsk_travis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.21 (2021-05-08)
+-------------------
+* fix .github/workflows to git update submodules (`#427 <https://github.com/jsk-ros-pkg/jsk_travis/issues/427>`_)
+
+  * git submodule update --init .travis for non jsk_travis pacakges
+
+* skip code only used in jsk_travis (`#426 <https://github.com/jsk-ros-pkg/jsk_travis/issues/426>`_)
+
+  * default branch name for jsk_travis is master
+
+* add hooks/build for docker automatead test (`#425 <https://github.com/jsk-ros-pkg/jsk_travis/issues/425>`_)
+
+  * moveit-ros-perception is not available as for 2021/5/5 http://repositories.ros.org/status_page/ros_noetic_default.html?q=moveit_ros_perception
+  * apt-get update and remove apt cache every run
+    we need to apt-get update in every steps to get latest apt information
+    we need to remove apt cache in every steps to make docker images lighter
+
+* add on: [pull_request] (`#422 <https://github.com/jsk-ros-pkg/jsk_travis/issues/422>`_)
+
+  * add each tests with individual workflow, to re-run single job, see https://github.community/t/ability-to-rerun-just-a-single-job-in-a-workflow/17234/41
+
+* try to build dockerhub images from jsk_travis/docker #420  (`#420 <https://github.com/jsk-ros-pkg/jsk_travis/issues/420>`_)
+
+  * ubuntu 14.04 need Python >= 2.7.9 to run pip
+  * use INCLUDE+ syntax, to run docker build within same directory, without using built images: see https://stackoverflow.com/a/65567427
+
+* enable to run github actions, until travis back (`#421 <https://github.com/jsk-ros-pkg/jsk_travis/issues/421>`_)
+
+  * add status badge
+  * support actions.yml, add exmaple files under .github/workflows/*.yml
+  * .travis.yml -> .github/workflow/main.yml
+  * travis_jenkins.py: send all environment variable through parameters, not config file
+  * do not build docker file on travis_jenkins
+  * use random value for TRAVIS_JENKINS_UNIQUE_ID
+  * somehow cat /dev/urandom whtin command substitution did not work on Github actions, not sure why
+
+* Contributors: Kei Okada, Shingo Kitagawa
+
+0.5.20 (2021-04-28)
+-------------------
+* fix travis to work (again....) (`#419 <https://github.com/jsk-ros-pkg/jsk_travis/issues/419>`_)
+
+  * pip install -I pip<9 does not work on hydro
+    * reinstall pip-9 from pypi, otherwise
+  ```
+  ImportError: Entry point ('console_scripts', 'pip2') not found
+  ```
+  occurs
+  * instal python >= 2.7.9 on ros-ubuntu:14.04-base
+  * hydro does not like lates pip install....
+  * apply turtlesim/CATKIN_IGNORE for all noetic tests
+  * fix hydro pip remove
+  * 20.04 needs pip
+  * hydro does not have python >= 2.7.9, so it fails on pip install, comment out pip depends
+  * do not error when pip/python is not installed
+  * set noninteractive before apt-get install
+  * On ubuntu >= 18, does not need to install pip
+  * pypa requires python >= 2.7.9, where trusty uses pyton 2.7.6, install ppa veresion of python2.7.13
+  * since .travis.yml move to bionic, do not run indigo/jade on travis
+  * update .travis.yml to bionic
+  * --user install is not supported
+  * mkdir -p /root/.cache/pip/
+  * fix travis problem, fix apt-ag-cacher, could not install get-pip.py, git clone fails of protocol.version2...
+  add python-pip, on 14.04 get-pip.py fils with
+  +curl https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  +sudo python -
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+  Dload  Upload   Total   Spent    Left  Speed
+  100 1863k  100 1863k    0     0  10.9M      0 --:--:-- --:--:-- --:--:-- 10.9M
+  DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+  WARNING: The directory '/home/travis/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+  /tmp/tmpqCDyYn/pip.zip/pip/_vendor/urllib3/util/ssl\_.py:424: SNIMissingWarning: An HTTPS request has been made, but the SNI (Server Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  /tmp/tmpqCDyYn/pip.zip/pip/_vendor/urllib3/util/ssl\_.py:164: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  ERROR: Could not find a version that satisfies the requirement pip<21.0 (from versions: none)
+  ERROR: No matching distribution found for pip<21.0
+  /tmp/tmpqCDyYn/pip.zip/pip/_vendor/urllib3/util/ssl\_.py:164: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+
+  * install decorator==4.4.2
+* Contributors: Kei Okada, Shingo Kitagawa
+
+0.5.19 (2021-03-09)
+-------------------
+* update 2.7/get-pip.py url (`#416 <https://github.com/jsk-ros-pkg/jsk_travis/issues/416>`_)
+
+  fix https://bootstrap.pypa.io/2.7/get-pip.py to
+      https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  ```
+  +curl https://bootstrap.pypa.io/2.7/get-pip.py
+  +sudo python -
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+  Dload  Upload   Total   Spent    Left  Speed
+  100   936  100   936    0     0  11036      0 --:--:-- --:--:-- --:--:-- 11142
+  Hi there!
+  The URL you are using to fetch this script has changed, and this one will no
+  longer work. Please use get-pip.py from the following URL instead:
+  https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  Sorry if this change causes any inconvenience for you!
+  We don't have a good mechanism to make more gradual changes here, and this
+  renaming is a part of an effort to make it easier to us to update these
+  scripts, when there's a pip release. It's also essential for improving how we
+  handle the `get-pip.py` scripts, when pip drops support for a Python minor
+  version.
+  There are no more renames/URL changes planned, and we don't expect that a need
+  would arise to do this again in the near future.
+  Thanks for understanding!
+  - Pradyun, on behalf of the volunteers who maintain pip.
+  ```
+* Contributors: Kei Okada
+
+0.5.18 (2021-01-27)
+-------------------
+* use 2.7 get-pip.py to install pip 20.3.4 to run  on python2.7 (`#414 <https://github.com/jsk-ros-pkg/jsk_travis/issues/414>`_)
+  * use 2.7 get-pip.py because pip 21.0 is released, which droped python 2.7 support in january 2021.
+    https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+* Contributors: Shingo Kitagawa
+
+0.5.17 (2020-09-29)
+-------------------
+* move to .travis directory to load travis_utils.sh (`#412 <https://github.com/jsk-ros-pkg/jsk_travis//issues/412>`_)
+* Contributors: Kei Okada
+
+0.5.16 (2020-09-28)
+-------------------
+* fix last release 0.5.15 (`#411 <https://github.com/jsk-ros-pkg/jsk_travis//issues/411>`_)
+
+  * use GLOB_RECOURSE to install scripts in test code
+  * source travis_utils.sh from .travis.sh directory
+  * mv all scripts into .travis and run tests
+
+* Contributors: Kei Okada
+
+0.5.15 (2020-09-24)
+-------------------
+* docker: install common packages for '-pcl', and reenable CACHEBUST (`#410 <https://github.com/jsk-ros-pkg/jsk_travis/issues/410>`_)
+
+  * add travis_utils
+  * clean up travis results
+
+* Contributors: Kei Okada
+
+0.5.14 (2020-09-08)
+-------------------
+* add /workspace/.chainer cache directory (`#409 <https://github.com/jsk-ros-pkg/jsk_travis/issues/409>`_)
+
+* Contributors: Kei Okada
+
+0.5.13 (2020-08-27)
+-------------------
+* Fix for new jenkins (`#407 <https://github.com/jsk-ros-pkg/jsk_travis/issues/407>`_)
+
+  * check if 'number' in item['executable']
+  * add comment when j.reconfig_job fails
+  * disable CACHEBUST, use --pull --no-cache to build, https://developer.devada.com/docs/appendix-a-troubleshooting-answerhub-docker-startup
+
+* Contributors: Kei Okada
+
 0.5.12 (2020-06-28)
 -------------------
 * check USE_JENKINS=true ROS_DISTRO=noetic without DOCKER_IMAGE_JENKINS (`#405 <https://github.com/jsk-ros-pkg/jsk_travis/issues/405>`_)
