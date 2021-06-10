@@ -1,6 +1,12 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package jsk_3rdparty
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package google_cloud_texttospeech
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2.1.22 (2021-06-10)
+-------------------
+* add google_cloud_texttospeech packagef( `#218 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/218>`_)
+
+* Contributors: Shingo Kitagawa, Shun Hasegawa
 
 2.1.21 (2020-08-19)
 -------------------
@@ -14,22 +20,17 @@ Changelog for package jsk_3rdparty
 2.1.18 (2020-07-20)
 -------------------
 
-2.1.17 (2020-04-16)
--------------------
+2.1.17 (2020-04-16 21:51)
+-------------------------
 
-2.1.16 (2020-04-16)
--------------------
+2.1.16 (2020-04-16 15:21)
+-------------------------
 
 2.1.15 (2019-12-12)
 -------------------
-* add gdrive_ros package (`#182 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/182>`_)
-* [dialogflow_task_executive] add dialogflow_task_executive run_depend in jsk_3rdparty (`#183 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/183>`_)
-* Contributors: Shingo Kitagawa
 
 2.1.14 (2019-11-21)
 -------------------
-* Add sesame_ros package (`#176 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/176>`_)
-* Contributors: Yuto Uchimi
 
 2.1.13 (2019-07-10)
 -------------------
@@ -66,8 +67,6 @@ Changelog for package jsk_3rdparty
 
 2.1.2 (2017-07-06)
 ------------------
-* add julius_ros to meta package (`#111 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/111>`_)
-* Contributors: Kei Okada
 
 2.1.1 (2017-07-05)
 ------------------
@@ -86,13 +85,9 @@ Changelog for package jsk_3rdparty
 
 2.0.17 (2016-10-22)
 -------------------
-* add missing run_depends
-* Contributors: Kei Okada
 
 2.0.16 (2016-10-17)
 -------------------
-* jsk_3rdparty/package.xml: sklearn is no longer exists `#53 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/53>`_
-* Contributors: Kei Okada
 
 2.0.15 (2016-10-16)
 -------------------
@@ -106,11 +101,11 @@ Changelog for package jsk_3rdparty
 2.0.12 (2015-11-26)
 -------------------
 
-2.0.11 (2015-10-07)
--------------------
+2.0.11 (2015-10-07 14:16)
+-------------------------
 
-2.0.10 (2015-10-07)
--------------------
+2.0.10 (2015-10-07 12:47)
+-------------------------
 
 2.0.9 (2015-09-26)
 ------------------
@@ -136,19 +131,11 @@ Changelog for package jsk_3rdparty
 2.0.2 (2015-06-29)
 ------------------
 
-2.0.1 (2015-06-19)
-------------------
-* jsk_patch is not releasesd on indigo
-* Contributors: Kei Okada
+2.0.1 (2015-06-19 21:21)
+------------------------
 
-2.0.0 (2015-06-19)
-------------------
-* move from jsk_common to jsk_3rdparty
-* add jsk_3rdparty meta package
-* Contributors: Kei Okada
-
-1.0.72 (2015-06-07)
--------------------
+2.0.0 (2015-06-19 10:41)
+------------------------
 
 1.0.71 (2015-05-17)
 -------------------
