@@ -2,6 +2,9 @@
 Changelog for package rosping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.23 (2021-07-21)
+-------------------
+
 2.1.22 (2021-06-10)
 -------------------
 * relax rosping test for GAf( `#245 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/245>`_)
