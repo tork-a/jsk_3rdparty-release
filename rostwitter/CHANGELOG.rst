@@ -2,6 +2,9 @@
 Changelog for package rostwitter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.23 (2021-07-21)
+-------------------
+
 2.1.22 (2021-06-10)
 -------------------
 * Refactor rostwitter (`#235 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/235>`_)
