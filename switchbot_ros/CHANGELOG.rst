@@ -2,6 +2,9 @@
 Changelog for package switchbot_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.24 (2021-07-26)
+-------------------
+
 2.1.23 (2021-07-21)
 -------------------
 * add rosnode for switchbot (`#260 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/260>`_)
