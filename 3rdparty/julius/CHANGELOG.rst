@@ -2,6 +2,12 @@
 Changelog for package julius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.24 (2021-07-26)
+-------------------
+* use latest config.guess.patch for https://github.com/ros/rosdistro/pull/30279 (`#275 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/275>`_)
+
+* Contributors: Kei Okada
+
 2.1.23 (2021-07-21)
 -------------------
 
