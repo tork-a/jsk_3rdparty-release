@@ -2,6 +2,9 @@
 Changelog for package chaplus_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.24 (2021-07-26)
+-------------------
+
 2.1.23 (2021-07-21)
 -------------------
 * add sample_json (`#264 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/264>`_)
