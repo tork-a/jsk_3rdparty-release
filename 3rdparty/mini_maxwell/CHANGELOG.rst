@@ -2,6 +2,9 @@
 Changelog for package mini_maxwell
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.24 (2021-07-26)
+-------------------
+
 2.1.23 (2021-07-21)
 -------------------
 * import future print_function in simple_echo_server.py (`#272 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/272>`_)
