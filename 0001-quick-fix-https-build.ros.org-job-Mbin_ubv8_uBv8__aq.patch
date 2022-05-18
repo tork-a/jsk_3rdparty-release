@@ -1,0 +1,28 @@
+From b65eea6947db8b015c300236078fafde1f69ee07 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Wed, 18 May 2022 20:28:16 +0900
+Subject: [PATCH] quick: fix
+ https://build.ros.org/job/Mbin_ubv8_uBv8__aques_talk__ubuntu_bionic_arm64__binary/,
+ before we merge PR and release jsk_3rdparty
+ https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/347
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cd2da2356..779ac7813 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -24,7 +24,7 @@ externalproject_add(aqtk2-lnx-eva
+   TIMEOUT 120
+   CONFIGURE_COMMAND bash -c "echo configure"
+   BUILD_COMMAND bash -c "(cd ${AQTK2_LNX_LIB_DIR} && ln -sf libAquesTalk2Eva.so.2.3 libAquesTalk2.so && ln -sf libAquesTalk2Eva.so.2.3 libAquesTalk2.so.2)"
+-  INSTALL_COMMAND bash -c "cp -P ${AQTK2_LNX_LIB_DIR}/libAquesTalk2* ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_LIB_DESTINATION} && cp phont/* ${CMAKE_CURRENT_SOURCE_DIR}/phont/"
++  INSTALL_COMMAND bash -c "cp -P ${AQTK2_LNX_LIB_DIR}/libAquesTalk2* ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_LIB_DESTINATION} && mkdir -p ${CMAKE_CURRENT_SOURCE_DIR}/phont/ && cp phont/* ${CMAKE_CURRENT_SOURCE_DIR}/phont/"
+   BUILD_IN_SOURCE 1
+ )
+ 
+-- 
+2.17.1
+
