@@ -1,3 +1,59 @@
+## jsk_3rdparty (melodic) - 2.1.24-2
+
+The packages in the `jsk_3rdparty` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --track melodic --rosdistro melodic` on `Wed, 18 May 2022 12:33:57 -0000`
+
+These packages were released:
+- `aques_talk`
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `chaplus_ros`
+- `collada_urdf_jsk_patch`
+- `dialogflow_task_executive`
+- `downward`
+- `ff`
+- `ffha`
+- `gdrive_ros`
+- `google_cloud_texttospeech`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nlopt`
+- `opt_camera`
+- `pgm_learner`
+- `respeaker_ros`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `sesame_ros`
+- `slic`
+- `switchbot_ros`
+- `voice_text`
+
+These packages were explicitly ignored:
+- `laser_filters_jsk_patch`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.24-1`
+- old version: `2.1.24-1`
+- new version: `2.1.24-2`
+
+Versions of tools used:
+
+- bloom version: `0.11.1`
+- catkin_pkg version: `0.5.0`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## jsk_3rdparty (melodic) - 2.1.24-1
 
 The packages in the `jsk_3rdparty` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --skip-pip jsk_3rdparty --rosdistro melodic --track melodic` on `Mon, 26 Jul 2021 04:50:53 -0000`
