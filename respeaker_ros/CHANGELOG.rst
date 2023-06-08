@@ -2,6 +2,47 @@
 Changelog for package respeaker_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.25 (2023-06-08)
+-------------------
+* add test to check if ros node is loadable (`#463 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/463>`_)
+* [respeaker_ros] add FileNotFoundError in respeaker for python3 (`#428 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/428>`_)
+* [respeaker_ros] Stop timer on shutdown (`#385 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/385>`_)
+* [ros_speech_recogniton, respeaker_ros] add confidence field (`#411 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/411>`_)
+* [`#405 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/405>`_ and `#410 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/410>`_] Fix CI (`#415 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/415>`_)
+* GithubAction: add test for  aarch64(melodic) / indigo (arm64) (`#365 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/365>`_)
+
+  * pgm_learner/respeaker_ros/ros_speech_recognition/rosping: increase time-limit/wait-time
+
+* [respeaker_ros] Add documentation for displaying Japanese `/speech_to_text` (`#352 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/352>`_)
+* [respeaker_ros] Display helpful setting command when udev rule is not set (`#351 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/351>`_)
+* Using RespeakerInterface instead of init_respeaker (`#305 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/305>`_)
+* respeaker_ros for Python 2.x and 3.x (`#284 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/284>`_)
+* Contributors: Aoi Nakane, Dirk Gorissen, Kei Okada, Naoto Tsukamoto, Naoya Yamaguchi, Shingo Kitagawa, Yoshiki Obinata
+
+2.1.24 (2021-07-26)
+-------------------
+
+2.1.23 (2021-07-21)
+-------------------
+
+2.1.22 (2021-06-10)
+-------------------
+* [respeaker_ros] Specify correct Python version in package.xml (`#247 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/247>`_)
+
+  * Fixes typo introduced in https://github.com/jsk-ros-pkg/jsk_3rdparty/commit/39be21894a38112a1633cf8385caf079c35536ff
+
+* Add respawn_delay to respeaker_node.py to reduce CPU load (`#241 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/241>`_)
+
+   * Kill respeaker_node.py when USBError occur to reduce CPU load
+
+* [respeaker_ros] fix default sound_play action name of speech_to_text.py (`#239 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/239>`_)
+* Mistakes I found when I tried to use respeaker_ros on hirovision (`#217 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/217>`_)
+
+  * add speech_recognition_msgs
+  * change the name from respeaker.launch to sample_respeaker.launch
+
+* Contributors: Koki Shinjo, Miyabi Tanemoto, Naoya Yamaguchi, Shun Hasegawa
+
 2.1.21 (2020-08-19)
 -------------------
 
