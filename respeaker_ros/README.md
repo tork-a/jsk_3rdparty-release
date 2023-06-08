@@ -63,12 +63,17 @@ A ROS Package for Respeaker Mic Array
 1. Run executables
 
     ```bash
-    roslaunch respeaker_ros respeaker.launch
+    roslaunch respeaker_ros sample_respeaker.launch
     rostopic echo /sound_direction     # Result of DoA
     rostopic echo /sound_localization  # Result of DoA as Pose
     rostopic echo /is_speeching        # Result of VAD
     rostopic echo /audio               # Raw audio
     rostopic echo /speech_audio        # Audio data while speeching
+    rostopic echo /speech_to_text      # Voice recognition
+    # Voice recognition result for Japanese
+    rostopic echo --filter "print(m.transcript[0])" /speech_to_text
+    rostopic echo --filter "print('transcript: [%s]\n---'%(', '.join(map(str, m.transcript))))" /speech_to_text
+    rostopic echo /speech_to_text | ascii2uni -a U -q
     ```
 
     You can also set various parameters via `dynamic_reconfigure`.
