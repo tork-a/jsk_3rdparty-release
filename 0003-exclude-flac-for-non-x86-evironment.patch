@@ -1,4 +1,4 @@
-From a1dedbc06088ea547531b546e03600cb888930c3 Mon Sep 17 00:00:00 2001
+From 3e2bd5e8351621a780d9e6f4009c3a07537ea596 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 9 Jun 2021 18:10:19 +0900
 Subject: [PATCH 3/4] exclude flac for non x86 evironment
@@ -8,10 +8,10 @@ Subject: [PATCH 3/4] exclude flac for non x86 evironment
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 3541c351f..887f41d54 100755
+index 0bd4374d3..8d5f4d209 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -65,4 +65,5 @@ override_dh_auto_install:
+@@ -71,4 +71,5 @@ override_dh_auto_install:
  	dh_auto_install
  
  override_dh_strip:

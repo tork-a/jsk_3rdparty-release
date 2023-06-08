@@ -1,4 +1,4 @@
-From 765d61b2fdceb732e34ce1f3d8e68db0cf566f48 Mon Sep 17 00:00:00 2001
+From 678ce3d1e4fb8debf5e0e187651a0d40184464fd Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Thu, 10 Jun 2021 08:02:53 +0900
 Subject: [PATCH 4/4] specify all binary files in upstream pip package as below
@@ -8,10 +8,10 @@ Subject: [PATCH 4/4] specify all binary files in upstream pip package as below
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 887f41d54..80dfe1022 100755
+index 8d5f4d209..2a6f7ffeb 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -66,4 +66,4 @@ override_dh_auto_install:
+@@ -72,4 +72,4 @@ override_dh_auto_install:
  
  override_dh_strip:
  	# WORKAROUND FOR FIX https://github.com/tork-a/jsk_3rdparty-release/commit/302452be190f0423c4e65be401513f27cbca95ad#commitcomment-51919365
