@@ -1,0 +1,60 @@
+From a37d5109d767accb9b22274eccc578e9083cd74f Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Thu, 8 Jun 2023 20:09:40 +0900
+Subject: [PATCH] skip ignored packages
+
+---
+ package.xml | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/package.xml b/package.xml
+index 3f48b4db8..d96b176b6 100644
+--- a/package.xml
++++ b/package.xml
+@@ -20,7 +20,7 @@
+   <run_depend>chaplus_ros</run_depend>
+   <run_depend>dialogflow_task_executive</run_depend>
+   <run_depend>google_chat_ros</run_depend>
+-  <run_depend>hark_jsk_plugins</run_depend>
++  <!-- <run_depend>hark_jsk_plugins</run_depend> -->
+   <run_depend>influxdb_store</run_depend>
+   <run_depend>julius_ros</run_depend>
+   <run_depend>nfc_ros</run_depend>
+@@ -40,12 +40,12 @@
+   <!-- 3rdparty/ dir -->
+   <run_depend>aques_talk</run_depend>
+   <run_depend>assimp_devel</run_depend>
+-  <run_depend>crlibm</run_depend>
++  <!-- <run_depend>crlibm</run_depend> -->
+   <run_depend>downward</run_depend>
+   <run_depend>ff</run_depend>
+   <run_depend>ffha</run_depend>
+   <run_depend>google_cloud_texttospeech</run_depend>
+-  <run_depend>jtalk</run_depend>
++  <!-- <run_depend>jtalk</run_depend> -->
+   <run_depend>julius</run_depend>
+   <run_depend>libcmt</run_depend>
+   <run_depend>libsiftfast</run_depend>
+@@ -53,8 +53,8 @@
+   <run_depend>mini_maxwell</run_depend>
+   <run_depend>nlopt</run_depend>
+   <run_depend>osqp</run_depend>
+-  <run_depend>python_twitter</run_depend>
+-  <run_depend>python_twoauth</run_depend>
++  <!-- <run_depend>python_twitter</run_depend> -->
++  <!-- <run_depend>python_twoauth</run_depend> -->
+   <run_depend>slic</run_depend>
+   <run_depend>voice_text</run_depend>
+   <run_depend>zdepth</run_depend>
+@@ -63,7 +63,7 @@
+   <run_depend>collada_urdf_jsk_patch</run_depend>
+   <!-- <run_depend>depth_image_proc_jsk_patch</run_depend> -->
+   <!-- <run_depend>eecart_imped_jsk_patch</run_depend> -->
+-  <run_depend>laser_filters_jsk_patch</run_depend>
++  <!-- <run_depend>laser_filters_jsk_patch</run_depend> -->
+   <!-- <run_depend>openni_tracker_jsk_patch</run_depend> -->
+ 
+   <export>
+-- 
+2.17.1
+
