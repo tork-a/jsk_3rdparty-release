@@ -1,4 +1,4 @@
-From b65eea6947db8b015c300236078fafde1f69ee07 Mon Sep 17 00:00:00 2001
+From 9cfb39ce25c45c700fe18d4cadaf4f7acd711c4d Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 18 May 2022 20:28:16 +0900
 Subject: [PATCH] quick: fix
