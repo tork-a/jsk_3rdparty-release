@@ -1,0 +1,12 @@
+Source: ros-melodic-ros-google-cloud-language
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-catkin-virtualenv, ros-melodic-diagnostic-msgs, ros-melodic-message-generation
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-ros-google-cloud-language
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-diagnostic-msgs, ros-melodic-message-runtime, ros-melodic-rospy
+Description: ros clinet library for google cloud language
