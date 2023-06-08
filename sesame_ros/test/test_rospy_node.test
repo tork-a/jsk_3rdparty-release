@@ -1,3 +1,0 @@
-<launch>
-  <test pkg="sesame_ros" type="test_rospy_node.py" test-name="ros_rospy_node" />
-</launch>
