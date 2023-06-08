@@ -1,4 +1,4 @@
-From 97163f56d1c7904fb98d80bd5bdd69d727ee6ba2 Mon Sep 17 00:00:00 2001
+From 54c55fe889f1a80ac910b560a3421e47e13d5df2 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 12:36:58 +0900
 Subject: [PATCH] app_manager is not yet released on noetic
@@ -21,5 +21,5 @@ index 9201a502c..2f74f9e1c 100644
    <run_depend>speech_recognition_msgs</run_depend>
    <run_depend>topic_tools</run_depend>
 -- 
-2.25.1
+2.17.1
 
