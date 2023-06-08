@@ -1,0 +1,12 @@
+Source: ros-melodic-google-chat-ros
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), python3-setuptools, ros-melodic-catkin, ros-melodic-catkin-virtualenv, ros-melodic-catkin-virtualenv <!nocheck>, ros-melodic-message-generation, ros-melodic-rostest <!nocheck>
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-google-chat-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dialogflow-task-executive, ros-melodic-gdrive-ros, ros-melodic-message-runtime, ros-melodic-rospy, ros-melodic-std-msgs
+Description: Use Google Chat API clients via ROS
