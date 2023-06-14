@@ -1,4 +1,4 @@
-From 678ce3d1e4fb8debf5e0e187651a0d40184464fd Mon Sep 17 00:00:00 2001
+From b386cb1ec72fcf8f10083ce189e275be61f1a535 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Thu, 10 Jun 2021 08:02:53 +0900
 Subject: [PATCH 4/4] specify all binary files in upstream pip package as below

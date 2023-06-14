@@ -1,4 +1,4 @@
-From daa4c09256cb25874154b6e3a92f5ec9422f5bac Mon Sep 17 00:00:00 2001
+From 593f2b75999e1a86b60639235856d6c1bd4a5371 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 14:01:46 +0900
 Subject: [PATCH 2/4] dh_strip: exclude flac for non x86 environment
