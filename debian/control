@@ -1,0 +1,12 @@
+Source: ros-noetic-collada-urdf-jsk-patch
+Section: misc
+Priority: optional
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, libcollada-dom2.4-dp-dev, libgts-dev, python3-catkin-tools, ros-noetic-angles, ros-noetic-assimp-devel, ros-noetic-catkin, ros-noetic-class-loader, ros-noetic-cmake-modules, ros-noetic-collada-parser, ros-noetic-collada-urdf, ros-noetic-geometric-shapes, ros-noetic-kdl-parser, ros-noetic-mk, ros-noetic-pluginlib, ros-noetic-resource-retriever, ros-noetic-roscpp, ros-noetic-rostest, ros-noetic-tf, unzip
+Homepage: http://ros.org/wiki/collada_urdf_jsk_patch
+Standards-Version: 3.9.2
+
+Package: ros-noetic-collada-urdf-jsk-patch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcollada-dom2.4-dp-dev, libgts-dev, python3-catkin-tools, ros-noetic-angles, ros-noetic-assimp-devel, ros-noetic-class-loader, ros-noetic-collada-parser, ros-noetic-collada-urdf, ros-noetic-geometric-shapes, ros-noetic-kdl-parser, ros-noetic-pluginlib, ros-noetic-resource-retriever, ros-noetic-roscpp, ros-noetic-tf, ros-noetic-urdf
+Description: unaccepted patch for collada_urdf
