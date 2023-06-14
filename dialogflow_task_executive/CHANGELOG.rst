@@ -2,6 +2,11 @@
 Changelog for package dialogflow_task_executive
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.26 (2023-06-14)
+-------------------
+* add LICENSE files (`#476 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/476>`_)
+* Contributors: Kei Okada
+
 2.1.25 (2023-06-08)
 -------------------
 * Add option to use project_id from json, instead of credentials (`#460 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/460>`_)
