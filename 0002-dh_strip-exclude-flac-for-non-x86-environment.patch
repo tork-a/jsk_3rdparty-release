@@ -1,4 +1,4 @@
-From c93c89e3d81695bae5aca9232f3667c3f0a79ac0 Mon Sep 17 00:00:00 2001
+From 86c9aa4177c2fd0247f3f62def87e723528f91f8 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 14:05:55 +0900
 Subject: [PATCH 2/2] dh_strip: exclude flac for non x86 environment
@@ -8,10 +8,10 @@ Subject: [PATCH 2/2] dh_strip: exclude flac for non x86 environment
  1 file changed, 3 insertions(+)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index a951cb913..3541c351f 100755
+index a23ba4179..0bd4374d3 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -63,3 +63,6 @@ override_dh_auto_install:
+@@ -69,3 +69,6 @@ override_dh_auto_install:
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
  	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
  	dh_auto_install

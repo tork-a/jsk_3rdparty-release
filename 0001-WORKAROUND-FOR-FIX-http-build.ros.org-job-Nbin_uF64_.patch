@@ -1,4 +1,4 @@
-From e03919dddb3d62ea40468bac1384b78afd79a2c6 Mon Sep 17 00:00:00 2001
+From c7b07f1b51022e4968b0153fc1a4091e89ab0184 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 03:26:13 +0000
 Subject: [PATCH 1/2] WORKAROUND FOR FIX
@@ -11,10 +11,10 @@ Subject: [PATCH 1/2] WORKAROUND FOR FIX
  1 file changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 1c02dd40c..a951cb913 100755
+index 276329db8..a23ba4179 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
-@@ -50,8 +50,12 @@ override_dh_shlibdeps:
+@@ -56,8 +56,12 @@ override_dh_shlibdeps:
  	# In case we're installing to a non-standard location, look for a setup.sh
  	# in the install tree that was dropped by catkin, and source it.  It will
  	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
