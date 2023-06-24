@@ -1,4 +1,4 @@
-From 4545d3e4e71d72760d3f29890c8f086e43920ec3 Mon Sep 17 00:00:00 2001
+From b551f074245a706050f1bc7954dd3c980374b19e Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Thu, 8 Jun 2023 20:09:40 +0900
 Subject: [PATCH] skip ignored packages
@@ -8,7 +8,7 @@ Subject: [PATCH] skip ignored packages
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index e73f75c3f..22b8db4aa 100644
+index 1d623b24c..0c96f843d 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -58,7 +58,7 @@
