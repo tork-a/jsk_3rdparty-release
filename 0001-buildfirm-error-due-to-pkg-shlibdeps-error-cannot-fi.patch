@@ -1,0 +1,43 @@
+From 7db046e2a7964c9ce8ed987beead804b81e28e23 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Sat, 24 Jun 2023 14:35:44 +0900
+Subject: [PATCH] =?UTF-8?q?buildfirm=20error=20due=20to=20:=20pkg-shlibdep?=
+ =?UTF-8?q?s:=20error:=20cannot=20find=20library=20libm.so.6=20needed=20?=
+ =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
+ =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=E2=94=82=20https://github.com/js?=
+ =?UTF-8?q?k-ros-pkg/jsk=5F3rdparty/pull/479=20=20=20=20=20=20=20=20=20=20?=
+ =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
+ =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
+ =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=E2=94=82=20https://github.com?=
+ =?UTF-8?q?/ros/rosdistro/pull/37745?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ debian/rules | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/debian/rules b/debian/rules
+index 1e1b5b902..a15dda3b8 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -56,8 +56,13 @@ override_dh_shlibdeps:
+ 	# In case we're installing to a non-standard location, look for a setup.sh
+ 	# in the install tree that was dropped by catkin, and source it.  It will
+ 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
+-	if [ -f "/opt/ros/melodic/setup.sh" ]; then . "/opt/ros/melodic/setup.sh"; fi && \
+-	dh_shlibdeps -l$(CURDIR)/debian/ros-melodic-lpg-planner//opt/ros/melodic/lib/
++	#
++	# buildfirm error due to : pkg-shlibdeps: error: cannot find library libm.so.6 needed
++	# https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/479
++	# https://github.com/ros/rosdistro/pull/37745
++	#
++	# if [ -f "/opt/ros/melodic/setup.sh" ]; then . "/opt/ros/melodic/setup.sh"; fi && \
++	# dh_shlibdeps -l$(CURDIR)/debian/ros-melodic-lpg-planner//opt/ros/melodic/lib/
+ 
+ override_dh_auto_install:
+ 	# In case we're installing to a non-standard location, look for a setup.sh
+-- 
+2.17.1
+
