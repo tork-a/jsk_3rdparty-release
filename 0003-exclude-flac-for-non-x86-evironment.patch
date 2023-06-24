@@ -1,4 +1,4 @@
-From 7c796986dae60333bd68604753b7fc14e10647a7 Mon Sep 17 00:00:00 2001
+From e5229d6a4dc8917cc9f82793bdc72864e425d43f Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 9 Jun 2021 18:10:19 +0900
 Subject: [PATCH 3/4] exclude flac for non x86 evironment
