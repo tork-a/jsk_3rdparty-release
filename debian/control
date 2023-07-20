@@ -1,0 +1,12 @@
+Source: ros-noetic-voice-text
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-dynamic-reconfigure, ros-noetic-message-generation, ros-noetic-roscpp
+Homepage: http://ros.org/wiki/voice_text
+Standards-Version: 3.9.2
+
+Package: ros-noetic-voice-text
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, nkf, ros-noetic-dynamic-reconfigure, ros-noetic-message-runtime, ros-noetic-sound-play
+Description: voice_text (www.voicetext.jp)
