@@ -48,7 +48,7 @@
   <run_depend>libsiftfast</run_depend>
   <run_depend>lpg_planner</run_depend>
   <run_depend>mini_maxwell</run_depend>
-  <!-- <run_depend>nlopt</run_depend> -->
+  <run_depend>nlopt</run_depend>
   <run_depend>osqp</run_depend>
   <run_depend>slic</run_depend>
   <run_depend>voice_text</run_depend>
