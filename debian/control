@@ -1,0 +1,13 @@
+Source: ros-noetic-rosping
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-mk, ros-noetic-rosboost-cfg, ros-noetic-rosbuild, ros-noetic-roscpp, ros-noetic-rostest, ros-noetic-std-msgs
+Homepage: http://ros.org/wiki/rosping
+Standards-Version: 3.9.2
+
+Package: ros-noetic-rosping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-roscpp, ros-noetic-std-msgs
+Description: rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message.
+ For echoing ROS node, use rosnode.
