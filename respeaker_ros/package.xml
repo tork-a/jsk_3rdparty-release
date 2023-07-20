@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>respeaker_ros</name>
-  <version>2.1.26</version>
+  <version>2.1.27</version>
   <description>The respeaker_ros package</description>
   <maintainer email="furushchev@jsk.imi.i.u-tokyo.ac.jp">Yuki Furuta</maintainer>
   <license>Apache</license>
@@ -24,6 +24,7 @@
   <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-pyaudio</exec_depend>
   <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-pyaudio</exec_depend>
 
+  <test_depend>rostest</test_depend>
   <test_depend>jsk_tools</test_depend>
 
   <export>
