@@ -1,15 +1,10 @@
-From 743bd7b6131fb4733ecc994d4d5679560c51f043 Mon Sep 17 00:00:00 2001
+From 25ef50832bfb1415c28960ee3f5106104fee31b3 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Sat, 24 Jun 2023 14:38:21 +0900
 Subject: [PATCH] =?UTF-8?q?buildfirm=20error=20due=20to=20:=20pkg-shlibdep?=
  =?UTF-8?q?s:=20error:=20cannot=20find=20library=20libm.so.6=20needed=20?=
- =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
- =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=E2=94=82=20https://github.com/js?=
- =?UTF-8?q?k-ros-pkg/jsk=5F3rdparty/pull/479=20=20=20=20=20=20=20=20=20=20?=
- =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
- =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20?=
- =?UTF-8?q?=20=20=20=20=20=20=20=20=20=20=20=E2=94=82=20https://github.com?=
- =?UTF-8?q?/ros/rosdistro/pull/37745?=
+ =?UTF-8?q?=E2=94=82=20https://github.com/jsk-ros-pkg/jsk=5F3rdparty/pull/?=
+ =?UTF-8?q?479=20=E2=94=82=20https://github.com/ros/rosdistro/pull/37745?=
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
