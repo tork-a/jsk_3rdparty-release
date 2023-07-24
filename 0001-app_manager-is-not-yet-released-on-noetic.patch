@@ -1,4 +1,4 @@
-From 350d54392573ccee449f570b12c0c0b61291de3a Mon Sep 17 00:00:00 2001
+From 9802afe31aef1b4e6b42cc257d714b1f927323d3 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 12:36:58 +0900
 Subject: [PATCH] app_manager is not yet released on noetic
@@ -8,18 +8,18 @@ Subject: [PATCH] app_manager is not yet released on noetic
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index af2cb0d57..192bb4c29 100644
+index 757641bca..8920bd59e 100644
 --- a/package.xml
 +++ b/package.xml
-@@ -21,7 +21,7 @@
+@@ -20,7 +20,7 @@
+   <build_depend>message_generation</build_depend>
    <build_depend>actionlib_msgs</build_depend>
-   <build_depend>std_msgs</build_depend>
    <build_depend>roslaunch</build_depend>
 -  <run_depend>app_manager</run_depend>
 +  <!-- <run_depend>app_manager</run_depend> -->
    <run_depend>message_runtime</run_depend>
-   <run_depend>speech_recognition_msgs</run_depend>
-   <run_depend>topic_tools</run_depend>
+   <run_depend>actionlib_msgs</run_depend>
+   <run_depend>std_msgs</run_depend>
 -- 
 2.17.1
 
