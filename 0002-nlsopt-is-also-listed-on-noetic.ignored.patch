@@ -1,4 +1,4 @@
-From bda666468ca04564280fa8418e281f0cc798f309 Mon Sep 17 00:00:00 2001
+From 201b4126d3fe25ee6ee7efaadfca00c6dee9a0e8 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Fri, 9 Jun 2023 00:54:52 +0900
 Subject: [PATCH 2/2] nlsopt is also listed on noetic.ignored
@@ -8,7 +8,7 @@ Subject: [PATCH 2/2] nlsopt is also listed on noetic.ignored
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index 22b8db4aa..9e5467fa1 100644
+index 0c96f843d..8e33cd0d2 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -48,7 +48,7 @@
