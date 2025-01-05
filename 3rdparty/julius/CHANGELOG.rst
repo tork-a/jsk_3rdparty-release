@@ -2,6 +2,9 @@
 Changelog for package julius
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.29 (2025-01-05)
+-------------------
+
 2.1.28 (2023-07-24)
 -------------------
 * fix build farm (`#487 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/487>`_)

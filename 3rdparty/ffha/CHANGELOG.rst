@@ -2,6 +2,14 @@
 Changelog for package ffha
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.29 (2025-01-05)
+-------------------
+* Support ros-o / Ubuntu 22.04 (`#512 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/512>`_)
+
+  * [ffha] relax linker. allow function duplication
+
+* Contributors: Yoshiki Obinata
+
 2.1.28 (2023-07-24)
 -------------------
 
