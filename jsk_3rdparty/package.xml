@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>jsk_3rdparty</name>
-  <version>2.1.28</version>
+  <version>2.1.29</version>
   <description>
    <p>Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg</p>
   </description>
@@ -55,7 +55,7 @@
   <run_depend>zdepth</run_depend>
 
   <!-- jsk_ros_patch/ dir -->
-  <run_depend>collada_urdf_jsk_patch</run_depend>
+  <!-- <run_depend>collada_urdf_jsk_patch</run_depend> -->
   <!-- <run_depend>depth_image_proc_jsk_patch</run_depend> -->
   <!-- <run_depend>eecart_imped_jsk_patch</run_depend> -->
   <run_depend>laser_filters_jsk_patch</run_depend>
