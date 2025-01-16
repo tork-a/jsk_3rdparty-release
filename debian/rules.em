@@ -58,10 +58,9 @@ override_dh_shlibdeps:
 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
 
 	## WORKAROUND FOR FIX http://build.ros.org/view/Mbin_uB64/job/Mbin_uB64__ros_speech_recognition__ubuntu_bionic_amd64__binary/37/consoleText
-	## https://stackoverflow.com/questions/28949154/trying-to-package-unity-game-in-ubuntu-linux-debian/29311292
-	## if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
-	## dh_shlibdeps -l$(CURDIR)/debian/@(Package)/@(InstallationPrefix)/lib/
-	echo "Skipping dh_shlibdeps"
+	## https://github.com/v4hn/ros-deb-builder-action/pull/3
+	if [ -f "/opt/ros/noetic/setup.sh" ]; then . "/opt/ros/noetic/setup.sh"; fi && \
+	dh_shlibdeps -l$(CURDIR)/debian/ros-noetic-ros-speech-recognition//opt/ros/noetic/lib/ || echo "Skip dh_shlibdeps error!!!"
 
 override_dh_auto_install:
 	# In case we're installing to a non-standard location, look for a setup.sh
@@ -71,4 +70,4 @@ override_dh_auto_install:
 	dh_auto_install
 
 override_dh_strip:
-	dh_strip $@ -Xflac
+	dh_strip || true
