@@ -2,6 +2,9 @@
 Changelog for package switchbot_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.30 (2025-05-10)
+-------------------
+
 2.1.29 (2025-01-05)
 -------------------
 * add codes for publishing switchbot CO2 meter status. (`#513 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/513>`_)
