@@ -1,4 +1,4 @@
-From 7c2dd9aaeee75c2c78b24588682aa5467d3ec55b Mon Sep 17 00:00:00 2001
+From b52e9b422ed084c7f6831c1c6af78f5f0508782d Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Fri, 9 Jun 2023 00:48:48 +0900
 Subject: [PATCH 1/2] remove unreleased packages
@@ -8,11 +8,11 @@ Subject: [PATCH 1/2] remove unreleased packages
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index b878b227b..02ab922c9 100644
+index 05ec5f929..278397342 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -58,7 +58,7 @@
-   <run_depend>collada_urdf_jsk_patch</run_depend>
+   <!-- <run_depend>collada_urdf_jsk_patch</run_depend> -->
    <!-- <run_depend>depth_image_proc_jsk_patch</run_depend> -->
    <!-- <run_depend>eecart_imped_jsk_patch</run_depend> -->
 -  <run_depend>laser_filters_jsk_patch</run_depend>
