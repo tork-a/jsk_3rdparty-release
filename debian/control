@@ -1,0 +1,12 @@
+Source: ros-noetic-nlopt
+Section: misc
+Priority: optional
+Maintainer: Noda Shintaro <s-noda@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libltdl-dev, libtool, libtool-bin, ros-noetic-catkin, ros-noetic-cmake-modules, ros-noetic-mk, ros-noetic-rosbuild, ros-noetic-rospack
+Homepage: http://ros.org/wiki/nlopt
+Standards-Version: 3.9.2
+
+Package: ros-noetic-nlopt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: nlopt
