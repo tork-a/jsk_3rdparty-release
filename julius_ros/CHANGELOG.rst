@@ -2,6 +2,61 @@
 Changelog for package julius_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.31 (2025-05-13)
+-------------------
+
+2.1.30 (2025-05-10)
+-------------------
+* [ros-o] julius: use system install julius (`#518 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/518>`_)
+* julius_ros/scripts/run_julius.sh: more information on how to install julius and grammer/dictation kit
+* [ros-o] julius: use system install julius, download dictation and grammer kit by script
+* Contributors: Kei Okada
+
+2.1.29 (2025-01-05)
+-------------------
+* GA: relax failed test dialogflow_task_executive, julius_ros (`#497 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/497>`_)
+* Contributors: Kei Okada
+
+2.1.28 (2023-07-24)
+-------------------
+
+2.1.27 (2023-06-24)
+-------------------
+* fix package.xml/CMakeLists.txt to supress catkin_lint errors (`#479 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/479>`_)
+* Contributors: Kei Okada
+
+2.1.26 (2023-06-14)
+-------------------
+* add LICENSE files (`#476 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/476>`_)
+* Contributors: Kei Okada
+
+2.1.25 (2023-06-08)
+-------------------
+* Pr/use sound themes freedesktop (`#472 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/472>`_)
+* add test to check if ros node is loadable (`#463 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/463>`_)
+* Contributors: Kei Okada, Koki Shinjo
+
+2.1.24 (2021-07-26)
+-------------------
+
+2.1.23 (2021-07-21)
+-------------------
+* Add DNN version julius (`#259 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/259>`_)
+
+  * Fix order of args in julius.launch
+  * Update README
+  * Do not use git-lfs and revert unnecessary change
+  * Add julius_ros test for DNN version
+  * Use audio port instead of microphone input
+  * Update README and julius.launch arg doc
+  * Use Julius config file in julius_ros
+  * Fix typo: input audio via port
+
+* Contributors: Naoya Yamaguchi
+
+2.1.22 (2021-06-10)
+-------------------
+
 2.1.21 (2020-08-19)
 -------------------
 
