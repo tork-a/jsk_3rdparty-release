@@ -2,6 +2,9 @@
 Changelog for package sesame_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.31 (2025-05-13)
+-------------------
+
 2.1.30 (2025-05-10)
 -------------------
 * CI: add ROS-O testing on arm (`#528 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/528>`_), fix sesame_ros on arm64
