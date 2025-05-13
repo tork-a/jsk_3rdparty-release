@@ -1,0 +1,12 @@
+Source: ros-noetic-bayesian-belief-networks
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, python3-packaging, ros-noetic-catkin, ros-noetic-message-generation, ros-noetic-mk, ros-noetic-rospy, ros-noetic-std-msgs, unzip
+Homepage: https://github.com/eBay/bayesian-belief-networks
+Standards-Version: 3.9.2
+
+Package: ros-noetic-bayesian-belief-networks
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-message-runtime, ros-noetic-rospy, ros-noetic-std-msgs
+Description: The bayesian_belief_networks package form https://github.com/eBay/bayesian-belief-networks, Authored by Neville Newey, Anzar Afaq, Copyright 2013 eBay Software Foundation
