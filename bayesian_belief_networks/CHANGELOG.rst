@@ -2,6 +2,9 @@
 Changelog for package bayesian_belief_networks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.31 (2025-05-13)
+-------------------
+
 2.1.30 (2025-05-10)
 -------------------
 * bayesian_belief_networks: fix deb build (`#525 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/525>`_) --single-version-externally-managed only available on ubuntu<20
