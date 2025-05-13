@@ -1,0 +1,12 @@
+Source: ros-noetic-downward
+Section: misc
+Priority: optional
+Maintainer: Yohei Kakiuchi <youhei@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), bison, ca-certificates, flex, gawk, libfl-dev, python3-dev, ros-noetic-catkin, ros-noetic-rostest, time
+Homepage: http://ros.org/wiki/downward
+Standards-Version: 3.9.2
+
+Package: ros-noetic-downward
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gawk, time
+Description: fast downward: PDDL Planner (http://www.fast-downward.org)
