@@ -2,6 +2,9 @@
 Changelog for package google_chat_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.31 (2025-05-13)
+-------------------
+
 2.1.30 (2025-05-10)
 -------------------
 * google_chat_ros: enable to get therad_name message result (`#516 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/516>`_)
