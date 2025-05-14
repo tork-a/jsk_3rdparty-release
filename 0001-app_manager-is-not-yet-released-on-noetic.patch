@@ -1,4 +1,4 @@
-From 72a9ae193d72938b89c64254ff318c9c1c8df74f Mon Sep 17 00:00:00 2001
+From bd9a6ca111c85ed64dfac1601ace7efee4c48470 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 12:36:58 +0900
 Subject: [PATCH] app_manager is not yet released on noetic
@@ -8,7 +8,7 @@ Subject: [PATCH] app_manager is not yet released on noetic
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index ca9dcab11..95b0a7154 100644
+index f3d8951c97..ee276d90fd 100644
 --- a/package.xml
 +++ b/package.xml
 @@ -20,7 +20,7 @@
