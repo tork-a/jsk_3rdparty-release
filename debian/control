@@ -1,0 +1,12 @@
+Source: ros-noetic-voicevox
+Section: misc
+Priority: optional
+Maintainer: Iori Yanokura <yanokura@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-catkin-virtualenv, unzip, wget
+Homepage: http://ros.org/wiki/voicevox
+Standards-Version: 3.9.2
+
+Package: ros-noetic-voicevox
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-dev, ros-noetic-sound-play
+Description: VOICEVOX: AI speech synthesis
