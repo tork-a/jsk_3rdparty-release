@@ -1,4 +1,4 @@
-From bd9a6ca111c85ed64dfac1601ace7efee4c48470 Mon Sep 17 00:00:00 2001
+From 3bd0a40ff0c7ac7b023a7be821a309c16c697bac Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 12:36:58 +0900
 Subject: [PATCH] app_manager is not yet released on noetic
