@@ -1,4 +1,4 @@
-From 2316741d984bab0f23a118ca03fef0e2df6a4dd7 Mon Sep 17 00:00:00 2001
+From 3d3937632fefed594710ae9e29f370dc4ddf07b8 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 26 Aug 2020 03:26:13 +0000
 Subject: [PATCH 1/2] WORKAROUND FOR FIX
@@ -11,7 +11,7 @@ Subject: [PATCH 1/2] WORKAROUND FOR FIX
  1 file changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 276329db8..a23ba4179 100755
+index 276329db83..a23ba41792 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
 @@ -56,8 +56,12 @@ override_dh_shlibdeps:
