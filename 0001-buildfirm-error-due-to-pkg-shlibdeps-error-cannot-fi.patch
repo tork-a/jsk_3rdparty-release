@@ -1,4 +1,4 @@
-From 471727dfe2e16a9a1e44eff7802dc8eba15da1a5 Mon Sep 17 00:00:00 2001
+From 815db5746e9549ccabe62374251a5d0b2284b2e1 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Sat, 24 Jun 2023 14:37:31 +0900
 Subject: [PATCH] =?UTF-8?q?buildfirm=20error=20due=20to=20:=20pkg-shlibdep?=
@@ -14,7 +14,7 @@ Content-Transfer-Encoding: 8bit
  1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 276329db8..d08cc5aca 100755
+index 276329db83..d08cc5acab 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
 @@ -56,8 +56,13 @@ override_dh_shlibdeps:
