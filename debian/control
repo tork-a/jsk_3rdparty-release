@@ -1,0 +1,12 @@
+Source: ros-noetic-libcmt
+Section: misc
+Priority: optional
+Maintainer: Yuto Inagaki <inagaki@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ca-certificates, cmake, git, openssl, ros-noetic-cv-bridge
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-libcmt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-cv-bridge
+Description: libCMT ROS Wrapper
