@@ -50,11 +50,13 @@
   <run_depend>libsiftfast</run_depend>
   <run_depend>lpg_planner</run_depend>
   <run_depend>mini_maxwell</run_depend>
+  <!-- use system package for noetic https://github.com/ros/rosdistro/pull/45725/files -->
   <!-- <run_depend>nlopt</run_depend> -->
   <run_depend>osqp</run_depend>
   <!-- https://github.com/ros/rosdistro/pull/45713 -->
   <!-- <run_depend>slic</run_depend> -->
-  <run_depend>voice_text</run_depend>
+  <!-- licence is complicated .. https://github.com/ros/rosdistro/pull/45725 -->
+  <!-- <run_depend>voice_text</run_depend> -->
   <run_depend>voicevox</run_depend>
   <run_depend>zdepth</run_depend>
 
