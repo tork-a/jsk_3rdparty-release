@@ -1,0 +1,31 @@
+From a5cc1605de83f74f5dc7184f986d4bb2279899f6 Mon Sep 17 00:00:00 2001
+From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Date: Wed, 14 May 2025 11:07:03 +0900
+Subject: [PATCH 3/3] remove nlopt/voice_text
+
+---
+ package.xml | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/package.xml b/package.xml
+index aaadee53be..d603a3a4c9 100644
+--- a/package.xml
++++ b/package.xml
+@@ -50,11 +50,13 @@
+   <run_depend>libsiftfast</run_depend>
+   <run_depend>lpg_planner</run_depend>
+   <run_depend>mini_maxwell</run_depend>
++  <!-- use system package for noetic https://github.com/ros/rosdistro/pull/45725/files -->
+   <!-- <run_depend>nlopt</run_depend> -->
+   <run_depend>osqp</run_depend>
+   <!-- https://github.com/ros/rosdistro/pull/45713 -->
+   <!-- <run_depend>slic</run_depend> -->
+-  <run_depend>voice_text</run_depend>
++  <!-- licence is complicated .. https://github.com/ros/rosdistro/pull/45725 -->
++  <!-- <run_depend>voice_text</run_depend> -->
+   <run_depend>voicevox</run_depend>
+   <run_depend>zdepth</run_depend>
+ 
+-- 
+2.17.1
+

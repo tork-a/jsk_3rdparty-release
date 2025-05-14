@@ -1,25 +1,25 @@
-From 8cb2ab1cd526bc26462ffda9a1298cd48133881a Mon Sep 17 00:00:00 2001
+From c0d8d845e25eff1b4e6c7dbfde21881bd721cd74 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Fri, 9 Jun 2023 00:54:52 +0900
-Subject: [PATCH 2/2] nlsopt is also listed on noetic.ignored
+Subject: [PATCH 2/3] nlsopt is also listed on noetic.ignored
 
 ---
  package.xml | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/package.xml b/package.xml
-index f508605c1..44420db90 100644
+index 00741672f4..aaadee53be 100644
 --- a/package.xml
 +++ b/package.xml
-@@ -48,7 +48,7 @@
+@@ -50,7 +50,7 @@
    <run_depend>libsiftfast</run_depend>
    <run_depend>lpg_planner</run_depend>
    <run_depend>mini_maxwell</run_depend>
 -  <run_depend>nlopt</run_depend>
 +  <!-- <run_depend>nlopt</run_depend> -->
    <run_depend>osqp</run_depend>
-   <run_depend>slic</run_depend>
-   <run_depend>voice_text</run_depend>
+   <!-- https://github.com/ros/rosdistro/pull/45713 -->
+   <!-- <run_depend>slic</run_depend> -->
 -- 
 2.17.1
 
