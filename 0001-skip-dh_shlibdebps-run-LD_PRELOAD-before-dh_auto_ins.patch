@@ -1,0 +1,31 @@
+From 3a41b6ac888e23bf4ed26f3c63342daff6310f18 Mon Sep 17 00:00:00 2001
+From: Kei <kei.okada@gmail.com>
+Date: Sun, 18 May 2025 16:38:31 +0900
+Subject: [PATCH] skip dh_shlibdebps, run LD_PRELOAD= before dh_auto_install,
+ closes https://github.com/ros/rosdistro/pull/45808
+
+---
+ debian/rules.em | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 276329db83..59b93bb607 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -57,11 +57,11 @@ override_dh_shlibdeps:
+ 	# in the install tree that was dropped by catkin, and source it.  It will
+ 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
+ 	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
+-	dh_shlibdeps -l$(CURDIR)/debian/@(Package)/@(InstallationPrefix)/lib/
++	dh_shlibdeps -l$(CURDIR)/debian/@(Package)/@(InstallationPrefix)/lib/ || true
+ 
+ override_dh_auto_install:
+ 	# In case we're installing to a non-standard location, look for a setup.sh
+ 	# in the install tree that was dropped by catkin, and source it.  It will
+ 	# set things like CMAKE_PREFIX_PATH, PKG_CONFIG_PATH, and PYTHONPATH.
+ 	if [ -f "@(InstallationPrefix)/setup.sh" ]; then . "@(InstallationPrefix)/setup.sh"; fi && \
+-	dh_auto_install
++	LD_PRELOAD=  dh_auto_install
+-- 
+2.17.1
+
