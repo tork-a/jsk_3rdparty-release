@@ -1,0 +1,12 @@
+Source: ros-noetic-influxdb-store
+Section: misc
+Priority: optional
+Maintainer: Shingo Kitagawa <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-setuptools, ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-influxdb-store
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-influxdb, python3-tz, ros-noetic-pr2-msgs, ros-noetic-sensor-msgs
+Description: The influxdb_store package
