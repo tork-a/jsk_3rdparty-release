@@ -1,3 +1,69 @@
+## jsk_3rdparty (noetic) - 2.1.31-4
+
+The packages in the `jsk_3rdparty` repository were released into the `noetic` distro by running `/usr/bin/bloom-release jsk_3rdparty --skip-pip --rosdistro noetic --track noetic` on `Sun, 18 May 2025 08:13:45 -0000`
+
+These packages were released:
+- `aques_talk`
+- `assimp_devel`
+- `bayesian_belief_networks`
+- `chaplus_ros`
+- `collada_urdf_jsk_patch`
+- `dialogflow_task_executive`
+- `downward`
+- `emotion_analyzer`
+- `ff`
+- `ffha`
+- `gdrive_ros`
+- `google_chat_ros`
+- `google_cloud_texttospeech`
+- `influxdb_store`
+- `jsk_3rdparty`
+- `julius`
+- `julius_ros`
+- `libcmt`
+- `libsiftfast`
+- `lpg_planner`
+- `mini_maxwell`
+- `nfc_ros`
+- `opt_camera`
+- `osqp`
+- `pgm_learner`
+- `respeaker_ros`
+- `ros_google_cloud_language`
+- `ros_speech_recognition`
+- `rospatlite`
+- `rosping`
+- `rostwitter`
+- `sesame_ros`
+- `switchbot_ros`
+- `voicevox`
+- `webrtcvad_ros`
+- `zdepth`
+- `zdepth_image_transport`
+
+These packages were explicitly ignored:
+- `nlopt`
+- `laser_filters_jsk_patch`
+- `voice_text`
+- `slic`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: https://github.com/tork-a/jsk_3rdparty-release.git
+- rosdistro version: `2.1.28-1`
+- old version: `2.1.31-3`
+- new version: `2.1.31-4`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## jsk_3rdparty (noetic) - 2.1.31-3
 
 The packages in the `jsk_3rdparty` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -y --skip-pip jsk_3rdparty --track noetic --rosdistro noetic` on `Wed, 14 May 2025 03:08:40 -0000`
