@@ -1,4 +1,4 @@
-From 36c06a7d5ab556ea0031e50fb0ac2a504c311d2d Mon Sep 17 00:00:00 2001
+From 144cf78da482d2b30aba21de4f0aadec2226d153 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Wed, 14 May 2025 11:07:03 +0900
 Subject: [PATCH 3/3] remove nlopt/voice_text
