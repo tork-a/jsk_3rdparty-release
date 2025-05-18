@@ -1,4 +1,4 @@
-From 998738867fe01d93a30c453966bfa7f28b1259e7 Mon Sep 17 00:00:00 2001
+From 33799ad5433b96b5a4393735438cc7fccb6ffd43 Mon Sep 17 00:00:00 2001
 From: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
 Date: Sat, 24 Jun 2023 14:38:21 +0900
 Subject: [PATCH] =?UTF-8?q?buildfirm=20error=20due=20to=20:=20pkg-shlibdep?=
