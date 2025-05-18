@@ -1,0 +1,12 @@
+Source: ros-noetic-chaplus-ros
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-chaplus-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, ros-noetic-rospy
+Description: The ROS package for chaplus service
