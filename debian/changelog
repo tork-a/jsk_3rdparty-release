@@ -1,0 +1,156 @@
+ros-noetic-sesame-ros (2.1.31-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 12 May 2025 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.30-4focal) focal; urgency=high
+
+  * CI: add ROS-O testing on arm (#528 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/528>), fix sesame_ros on arm64
+    * CI: add ROS-O testing on arm
+    * CI: use ros-one-catkin-virtualenv
+    * sesami_ros: add requirements.in.python3.12, for arm64 22.04/24.04
+  * Contributors: Kei Okada, Yoshiki Obinata
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 09 May 2025 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.29-4focal) focal; urgency=high
+
+  * Support ros-o / Ubuntu 22.04 (#512 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/512>)
+    
+      * [sesame_ros] relax venv check
+      * [sesame_ros] remove cffi which cannot be installed in Ubuntu 22.04 env & not used in sesame_ros
+    
+  * Contributors: Yoshiki Obinata
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sat, 04 Jan 2025 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.28-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 23 Jul 2023 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.27-4focal) focal; urgency=high
+
+  * fix package.xml/CMakeLists.txt to supress catkin_lint errors (#479 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/479>)
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Fri, 23 Jun 2023 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.26-4focal) focal; urgency=high
+
+  * add LICENSE files (#476 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/476>)
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 13 Jun 2023 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.25-4focal) focal; urgency=high
+
+  * add test to check if ros node is loadable (#463 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/463>)
+  * Explicit python interpreter in catkin_virtualenv (#367 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/367>)
+  * Contributors: Kei Okada, Shingo Kitagawa, Yoshiki Obinata
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 07 Jun 2023 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.24-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 25 Jul 2021 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.23-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 20 Jul 2021 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.22-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 09 Jun 2021 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.21-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Tue, 18 Aug 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.20-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Thu, 06 Aug 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.19-4focal) focal; urgency=high
+
+
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Mon, 20 Jul 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.18-4focal) focal; urgency=high
+
+  * Fix for noetic (#200 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/200>)
+    
+      * update sesame_ros/requirements.txt to pass https://github.com/locusrobotics/catkin_virtualenv/blob/master/README.md#locking-dependencies
+    
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Sun, 19 Jul 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.17-4focal) focal; urgency=high
+
+  * update pip modules for security reason (#196 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/196>)
+  * add idna==2.7
+    to cloes ERROR: requests 2.20.0 has requirement idna<2.8,>=2.5, but you'll have idna 2.9 which is incompatible.
+  * Bump urllib3 from 1.22 to 1.24.2 in /sesame_ros
+    Bumps [urllib3](https://github.com/urllib3/urllib3) from 1.22 to 1.24.2.
+    - [Release notes](https://github.com/urllib3/urllib3/releases)
+    - [Changelog](https://github.com/urllib3/urllib3/blob/master/CHANGES.rst)
+    - [Commits](https://github.com/urllib3/urllib3/compare/1.22...1.24.2)
+    Signed-off-by: dependabot[bot] <mailto:support@github.com>
+  * Bump requests from 2.19.1 to 2.20.0 in /sesame_ros
+    Bumps [requests](https://github.com/psf/requests) from 2.19.1 to 2.20.0.
+    - [Release notes](https://github.com/psf/requests/releases)
+    - [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
+    - [Commits](https://github.com/psf/requests/compare/v2.19.1...v2.20.0)
+    Signed-off-by: dependabot[bot] <mailto:support@github.com>
+  * Bump pyopenssl from 16.2.0 to 17.5.0 in /sesame_ros
+    Bumps [pyopenssl](https://github.com/pyca/pyopenssl) from 16.2.0 to 17.5.0.
+    - [Release notes](https://github.com/pyca/pyopenssl/releases)
+    - [Changelog](https://github.com/pyca/pyopenssl/blob/master/CHANGELOG.rst)
+    - [Commits](https://github.com/pyca/pyopenssl/compare/16.2.0...17.5.0)
+    Signed-off-by: dependabot[bot] <mailto:support@github.com>
+  * Contributors: Kei Okada, dependabot[bot]
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 15 Apr 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.16-4focal) focal; urgency=high
+
+  * add i386 tests (#191 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/191>)
+  * specify python module number, closes #190 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/190>
+  * Contributors: Kei Okada
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 15 Apr 2020 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.15-4focal) focal; urgency=high
+
+  * [sesame_ros] Add dependency for building cryptograpy (#180 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/180>)
+    
+      * Add url of ROS wiki for sesame_ros
+      * Add k-okada to maintainer of sesame_ros
+      * Add libffi-dev and libssl-dev as dependencies of cryptography
+    
+  * Contributors: Yuto Uchimi
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 11 Dec 2019 15:00:00 -0000
+
+ros-noetic-sesame-ros (2.1.14-4focal) focal; urgency=high
+
+  * Add sesame_ros package (#176 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/176>)
+  * Contributors: Yuto Uchimi
+
+ -- Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>  Wed, 20 Nov 2019 15:00:00 -0000
+
+

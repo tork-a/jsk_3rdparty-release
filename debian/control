@@ -1,0 +1,12 @@
+Source: ros-noetic-sesame-ros
+Section: misc
+Priority: optional
+Maintainer: Kei Okada <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libffi-dev, libssl-dev, ros-noetic-catkin, ros-noetic-catkin-virtualenv, ros-noetic-message-generation, ros-noetic-rostest <!nocheck>
+Homepage: http://ros.org/wiki/sesame_ros
+Standards-Version: 3.9.2
+
+Package: ros-noetic-sesame-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-message-runtime
+Description: ROS API for Sesame smart lock
