@@ -1,0 +1,814 @@
+ros-noetic-ros-speech-recognition (2.1.31-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 12 May 2025 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.30-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 09 May 2025 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.29-4focal) focal; urgency=high
+
+  * [doc] fix typo in jsk_3rdparty/ros_speech_recognition/README.md (#499 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/499>)
+  * Contributors: Yukina Iwata
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 04 Jan 2025 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.28-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 23 Jul 2023 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.27-4focal) focal; urgency=high
+
+  * fix package.xml/CMakeLists.txt to supress catkin_lint errors (#479 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/479>)
+  * Contributors: Kei Okada
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 23 Jun 2023 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.26-4focal) focal; urgency=high
+
+  * add LICENSE files (#476 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/476>)
+  * Contributors: Kei Okada
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 13 Jun 2023 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.25-4focal) focal; urgency=high
+
+  * [ros_speech_recognition] Add vosk engine (#474 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/474>)
+  * Pr/use sound themes freedesktop (#472 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/472>)
+  * add test to check if ros node is loadable (#463 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/463>)
+  * add self.conf_thresh in __init__ function (#457 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/457>)
+  * [ros_speech_recognition] add ubuntu-sounds dependency (#453 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/453>)
+  * [ros_speech_recognition] Return if result is empty (#443 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/443>)
+  * [ros_speece_recognition] Set confidence value of google (#434 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/434>)
+  * [ros_speech_recognition] add parrotry.launch (#414 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/414>)
+  * [ros_ speech_recognition] update default arg for speech_recognition.launch (#412 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/412>)
+  * [ros_speech_recogniton, respeaker_ros] add confidence field (#411 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/411>)
+  * [ros_speech_recognition] add self cancellation for speech recogntion (#413 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/413>)
+  * [#405 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/405> and #410 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/410>] Fix CI (#415 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/415>)
+  * add ROS interface for https://cloud.google.com/natural-language (#304 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/304>)
+  * GithubAction: add test for  aarch64(melodic) / indigo (arm64) (#365 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/365>)
+    
+      * pgm_learner/respeaker_ros/ros_speech_recognition/rosping: increase time-limit/wait-time
+    
+  * Explicit python interpreter in catkin_virtualenv (#367 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/367>)
+  * .github/workflow:  integrate all yaml to one (#338 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/338>)
+  * [ros_speech_recognition] Fixed the behavior of launch file (#336 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/336>)
+  * [ros_speech_recognition] add auto_start in speech_recognition_node.py (#301 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/301>)
+  * [ros_speech_recognition] add SpeechRecognitionCandidatesToString node (#303 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/303>)
+  * Enable sound play flag (#315 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/315>)
+  * Contributors: Aiko Ichikura, Aoi Nakane, Kei Okada, Koki Shinjo, Naoto Tsukamoto, Naoya Yamaguchi, Shingo Kitagawa, Yoshiki Obinata, Iory Yanokura
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Jun 2023 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.24-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 25 Jul 2021 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.23-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 20 Jul 2021 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.22-4focal) focal; urgency=high
+
+  * enable to change topic name from speech_recognition.launch (#254 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/254>)
+  * support SpeakerDiarization, see https://cloud.google.com/speech-to-text/docs/reference/rest/v1/speech/recognize#SpeechRecognitionAlternative (#244 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/244>)
+    
+      * [ros_speech_recognition] Add doc to speech_recognition.launch
+        add doc to args, and we need to use rosparm for device, not param. because 'device: ' causes
+        load_parameters: unable to set parameters (last param was [/speech_recognition/depth=16]): cannot marshal None unless allow_none is enabled  error
+      * more exception message for self.recognize
+    
+  * Use PYTHON_INTERPRETER python3 in ros_speech_recognition (#225 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/225>)
+  * Contributors: Kei Okada, Naoya Yamaguchi, Shingo Kitagawa
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 09 Jun 2021 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.21-4focal) focal; urgency=high
+
+  * add missing packages, closes https://github.com/ros/rosdistro/pull/26216 (#211 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/211>)
+  * Contributors: Kei Okada
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 18 Aug 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.20-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 06 Aug 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.19-4focal) focal; urgency=high
+
+  * Fixed issue #201 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/201> as requested, see https://github.com/jsk-ros-pkg/jsk_3rdparty/pull/202
+  * Contributors: MrMarshy
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Jul 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.18-4focal) focal; urgency=high
+
+  * Fix for noetic (#200 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/200>)
+    
+      * fix 2to3, with print, raise, exception
+    
+  * [ros_speech_recognition] Enable multi channel audio recognition (#198 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/198>)
+    
+      * adjust type code to the CPU platform
+      * replace rosparam name: channels -> n_channel
+      * add rosparam description to README
+      * enable multi channel audio recognition
+    
+  * Add args to ros_speech_recognition (#197 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/197>)
+    
+      * Add flac as run_depend for SpeechRecognition pip package
+      * Use catkin_virtualenv to use SpeechRecognition pip package
+      * Add arguments and params to pass rostest
+      * Add test for ros_speech_recognition
+      * add args to launch
+      * add pip install to tutorials
+      * add param description to README
+    
+  * Contributors: Kei Okada, Naoya Yamaguchi
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 19 Jul 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.17-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 15 Apr 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.16-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 15 Apr 2020 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.15-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 11 Dec 2019 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.14-4focal) focal; urgency=high
+
+  * set SoundRequest.volume for kinetic (#173 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/173>)
+  * Contributors: Kei Okada
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 20 Nov 2019 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.13-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 09 Jul 2019 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.12-4focal) focal; urgency=high
+
+  * fixes GoogleCloud auth (#158 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/158>)
+  * Contributors: jonasius
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 24 May 2019 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.11-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 28 Aug 2018 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.10-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 24 Apr 2018 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.9-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 23 Apr 2018 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.8-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 16 Apr 2018 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.7-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 08 Apr 2018 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.6-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Nov 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.5-4focal) focal; urgency=high
+
+  * ros_speech_recognition: add continuous mode (#127 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/127>)
+  * ros_speech_recognition: add README (#123 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/123>)
+  * add ros_speech_recognition package (#121 <https://github.com/jsk-ros-pkg/jsk_3rdparty/issues/121>)
+  * Contributors: Yuki Furuta
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 19 Nov 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.4-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 15 Jul 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.3-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 06 Jul 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.2-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 05 Jul 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.1-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 04 Jul 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.1.0-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 01 Jul 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.20-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 08 May 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.19-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 21 Feb 2017 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.18-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 27 Oct 2016 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.17-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 21 Oct 2016 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.16-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 16 Oct 2016 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.15-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 15 Oct 2016 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.14-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Mar 2016 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.13-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 14 Dec 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.12-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 25 Nov 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.11-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Oct 2015 05:16:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.10-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 07 Oct 2015 03:47:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.9-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 25 Sep 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.8-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 14 Sep 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.7-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 13 Sep 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.6-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 07 Sep 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.5-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 22 Aug 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.4-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 17 Aug 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.3-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 31 Jul 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.2-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 28 Jun 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.1-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 19 Jun 2015 12:21:00 -0000
+
+ros-noetic-ros-speech-recognition (2.0.0-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 19 Jun 2015 01:41:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.71-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 16 May 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.70-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 07 May 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.69-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 05 May 2015 03:28:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.68-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 05 May 2015 00:49:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.67-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 02 May 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.66-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 02 Apr 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.65-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 01 Apr 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.64-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 28 Mar 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.63-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 18 Feb 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.62-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 16 Feb 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.61-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 10 Feb 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.60-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 03 Feb 2015 01:12:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.59-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 02 Feb 2015 19:05:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.58-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 06 Jan 2015 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.57-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 22 Dec 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.56-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 16 Dec 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.55-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 08 Dec 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.54-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 14 Nov 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.53-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 31 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.52-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 22 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.51-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 20 Oct 2014 07:01:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.50-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 19 Oct 2014 16:50:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.49-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 12 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.48-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 11 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.47-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 07 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.46-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 02 Oct 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.45-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 28 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.44-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 26 Sep 2014 00:17:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.43-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 25 Sep 2014 16:08:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.42-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 24 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.41-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 22 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.40-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 18 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.39-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 16 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.38-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 12 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.37-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 07 Sep 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.36-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 31 Aug 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.35-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 15 Aug 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.34-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 13 Aug 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.33-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 27 Jul 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.32-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 25 Jul 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.31-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 22 Jul 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.30-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 14 Jul 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.29-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 01 Jul 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.28-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 23 Jun 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.27-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 09 Jun 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.26-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 29 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.25-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 25 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.24-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 23 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.23-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 22 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.22-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 21 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.21-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 19 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.20-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 08 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.19-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Mon, 05 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.18-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 03 May 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.17-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.16-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 14:29:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.15-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 11:19:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.14-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 03:52:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.13-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sat, 19 Apr 2014 02:06:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.12-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 18 Apr 2014 07:58:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.11-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 17 Apr 2014 23:18:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.10-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 16 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.9-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 11 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.8-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 10 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.7-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Wed, 09 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.6-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 06 Apr 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.5-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Sun, 30 Mar 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.4-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Fri, 28 Mar 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.3-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 18 Mar 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.2-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 11 Mar 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.1-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Thu, 06 Mar 2014 15:00:00 -0000
+
+ros-noetic-ros-speech-recognition (1.0.0-4focal) focal; urgency=high
+
+
+
+ -- Yuki Furuta <furushchev@jsk.imi.i.u-tokyo.ac.jp>  Tue, 04 Mar 2014 15:00:00 -0000
+
+
