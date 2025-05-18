@@ -50,7 +50,7 @@
   <run_depend>libsiftfast</run_depend>
   <run_depend>lpg_planner</run_depend>
   <run_depend>mini_maxwell</run_depend>
-  <!-- <run_depend>nlopt</run_depend> -->
+  <run_depend>nlopt</run_depend>
   <run_depend>osqp</run_depend>
   <!-- https://github.com/ros/rosdistro/pull/45713 -->
   <!-- <run_depend>slic</run_depend> -->
