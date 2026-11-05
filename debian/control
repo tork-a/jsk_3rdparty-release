@@ -1,0 +1,12 @@
+Source: ros-lyrical-emotion-analyzer
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-python, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-ros-environment, ros-lyrical-rosidl-default-generators, ros-lyrical-std-msgs, ros-lyrical-ros-workspace, ros-lyrical-rosidl-typesupport-fastrtps-c, ros-lyrical-rosidl-typesupport-fastrtps-cpp
+Homepage: https://index.ros.org/p/emotion_analyzer/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-emotion-analyzer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-pydub, python3-soundfile, ros-lyrical-audio-capture, ros-lyrical-audio-common-msgs, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-rclpy, ros-lyrical-rosidl-default-runtime, ros-lyrical-std-msgs, ros-lyrical-ros-workspace
+Description: The emotion_analyzer package
