@@ -1,0 +1,12 @@
+Source: ros-jazzy-voicevox
+Section: misc
+Priority: optional
+Maintainer: "Iori Yanokura" <yanokura@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, python3-dev, ros-jazzy-ament-cmake, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, unzip, wget, ros-jazzy-ros-workspace
+Homepage: http://ros.org/wiki/voicevox
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-voicevox
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-dev, ros-jazzy-audio-common-msgs, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-launch-ros, ros-jazzy-rclpy, ros-jazzy-sound-play, ros-jazzy-sound-play-msgs, ros-jazzy-std-msgs, ros-jazzy-ros-workspace
+Description: VOICEVOX: AI speech synthesis
