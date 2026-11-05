@@ -1,0 +1,12 @@
+Source: ros-lyrical-chaplus-ros
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-ros-environment, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/chaplus_ros/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-chaplus-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, ros-lyrical-ament-index-python, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-rclpy, ros-lyrical-std-msgs, ros-lyrical-ros-workspace
+Description: The ROS package for chaplus service
