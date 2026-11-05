@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-exec rosrun voice_text text2wave.py $@
