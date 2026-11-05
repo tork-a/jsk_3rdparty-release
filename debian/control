@@ -1,0 +1,12 @@
+Source: ros-jazzy-chaplus-ros
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, ros-jazzy-ros-workspace
+Homepage: https://index.ros.org/p/chaplus_ros/#jazzy
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-chaplus-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, ros-jazzy-ament-index-python, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-rclpy, ros-jazzy-std-msgs, ros-jazzy-ros-workspace
+Description: The ROS package for chaplus service
