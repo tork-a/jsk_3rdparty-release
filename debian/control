@@ -1,0 +1,12 @@
+Source: ros-kilted-power-switching-tools-ros
+Section: misc
+Priority: optional
+Maintainer: "Shun Hasegawa" <pazeshun3682@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ament-cmake-python, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-ros-environment, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/power_switching_tools_ros/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-power-switching-tools-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-serial, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-rclpy, ros-kilted-std-srvs, uhubctl, ros-kilted-ros-workspace
+Description: ROS tools for power switching tools
