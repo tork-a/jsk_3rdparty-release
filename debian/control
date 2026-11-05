@@ -1,0 +1,12 @@
+Source: ros-lyrical-voicevox
+Section: misc
+Priority: optional
+Maintainer: "Iori Yanokura" <yanokura@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, python3-dev, ros-lyrical-ament-cmake, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-ros-environment, unzip, wget, ros-lyrical-ros-workspace
+Homepage: http://ros.org/wiki/voicevox
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-voicevox
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-dev, ros-lyrical-audio-common-msgs, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-launch-ros, ros-lyrical-rclpy, ros-lyrical-sound-play, ros-lyrical-sound-play-msgs, ros-lyrical-std-msgs, ros-lyrical-ros-workspace
+Description: VOICEVOX: AI speech synthesis
