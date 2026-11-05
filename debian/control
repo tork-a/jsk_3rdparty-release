@@ -1,0 +1,12 @@
+Source: ros-kilted-voicevox
+Section: misc
+Priority: optional
+Maintainer: "Iori Yanokura" <yanokura@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), git, python3-dev, ros-kilted-ament-cmake, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-ros-environment, unzip, wget, ros-kilted-ros-workspace
+Homepage: http://ros.org/wiki/voicevox
+Standards-Version: 3.9.2
+
+Package: ros-kilted-voicevox
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-dev, ros-kilted-audio-common-msgs, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-launch-ros, ros-kilted-rclpy, ros-kilted-sound-play, ros-kilted-sound-play-msgs, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Description: VOICEVOX: AI speech synthesis
