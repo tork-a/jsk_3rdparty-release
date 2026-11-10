@@ -1,3 +1,40 @@
+## jsk_3rdparty (jazzy) - 3.0.1-1
+
+The packages in the `jsk_3rdparty` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy --no-pull-request --override-release-repository-url https://github.com/tork-a/jsk_3rdparty-release.git jsk_3rdparty` on `Tue, 10 Nov 2026 13:39:17 -0000`
+
+These packages were released:
+- `chaplus_ros`
+- `emotion_analyzer`
+- `gdrive_ros`
+- `google_chat_ros`
+- `influxdb_store`
+- `jsk_power_switching_tools`
+- `respeaker_ros`
+- `ros_speech_recognition`
+- `rospatlite`
+- `sesame_ros`
+- `switchbot_ros`
+
+These packages were explicitly ignored:
+- `voicevox`
+
+Version of package(s) in repository `jsk_3rdparty`:
+
+- upstream repository: https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `3.0.0-1`
+- new version: `3.0.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## jsk_3rdparty (lyrical) - 3.0.0-1
 
 The packages in the `jsk_3rdparty` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --rosdistro lyrical --track lyrical --new-track --override-release-repository-url https://github.com/tork-a/jsk_3rdparty-release.git jsk_3rdparty` on `Thu, 05 Nov 2026 22:24:20 -0000`
