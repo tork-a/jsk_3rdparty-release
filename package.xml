@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>ros_speech_recognition</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>ROS wrapper for Python SpeechRecognition library</description>
   <url type="website">https://pypi.python.org/pypi/SpeechRecognition/</url>
 
   <maintainer email="furushchev@jsk.imi.i.u-tokyo.ac.jp">Yuki Furuta</maintainer>
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
   <author email="furushchev@jsk.imi.i.u-tokyo.ac.jp">Yuki Furuta</author>
 
   <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
