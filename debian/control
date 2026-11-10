@@ -1,0 +1,12 @@
+Source: ros-jazzy-ros-speech-recognition
+Section: misc
+Priority: optional
+Maintainer: "Yuki Furuta" <furushchev@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-python, ros-jazzy-jsk-data, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, ros-jazzy-speech-recognition-msgs, ros-jazzy-ros-workspace
+Homepage: https://pypi.python.org/pypi/SpeechRecognition/
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-ros-speech-recognition
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, flac, python3-numpy, ros-jazzy-action-msgs, ros-jazzy-ament-index-python, ros-jazzy-audio-capture, ros-jazzy-audio-common-msgs, ros-jazzy-jsk-data, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-rclpy, ros-jazzy-sound-play, ros-jazzy-sound-play-msgs, ros-jazzy-speech-recognition-msgs, ros-jazzy-std-msgs, ros-jazzy-std-srvs, sound-theme-freedesktop, ros-jazzy-ros-workspace
+Description: ROS wrapper for Python SpeechRecognition library
