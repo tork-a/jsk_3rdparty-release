@@ -1,13 +1,13 @@
 <package format="3">
   <name>collada_urdf_jsk_patch</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>unaccepted patch for collada_urdf</description>
 
   <maintainer email="youhei@jsk.t.u-tokyo.ac.jp">Yohei Kakiuchi</maintainer>
   <maintainer email="k-okada@jsk.t.u-tokyo.ac.jp">Kei Okada</maintainer>
 
 
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
 
   <url type="website">http://ros.org/wiki/collada_urdf_jsk_patch</url>
   <!-- <url type="bugtracker"></url> -->

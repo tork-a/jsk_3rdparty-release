@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>google_chat_ros</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>Use Google Chat API clients via ROS</description>
 
   <author email="obinata@jsk.imi.i.u-tokyo.ac.jp">Yoshiki Obinata</author>
   <maintainer email="k-okada@jsk.t.u-tokyo.ac.jp">Kei Okada</maintainer>
 
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
 
   <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
   <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
