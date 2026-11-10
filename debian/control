@@ -1,0 +1,12 @@
+Source: ros-lyrical-jsk-power-switching-tools
+Section: misc
+Priority: optional
+Maintainer: "Shun Hasegawa" <pazeshun3682@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-python, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-ros-environment, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/jsk_power_switching_tools/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-jsk-power-switching-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-serial, ros-lyrical-jsk-ros1-ros2-compat (>= 3.0.2), ros-lyrical-rclpy, ros-lyrical-std-srvs, uhubctl, ros-lyrical-ros-workspace
+Description: ROS tools for power switching tools
