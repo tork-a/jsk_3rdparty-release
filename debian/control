@@ -1,0 +1,12 @@
+Source: ros-jazzy-jsk-power-switching-tools
+Section: misc
+Priority: optional
+Maintainer: "Shun Hasegawa" <pazeshun3682@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-python, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, ros-jazzy-ros-workspace
+Homepage: https://index.ros.org/p/jsk_power_switching_tools/#jazzy
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-jsk-power-switching-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-serial, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-rclpy, ros-jazzy-std-srvs, uhubctl, ros-jazzy-ros-workspace
+Description: ROS tools for power switching tools
