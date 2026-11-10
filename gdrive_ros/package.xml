@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>gdrive_ros</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>Google drive upload and download package</description>
 
   <maintainer email="shingogo.5511@gmail.com">Shingo Kitagawa</maintainer>
   <author email="shingogo.5511@gmail.com">Shingo Kitagawa</author>
 
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
   <url type="website">http://ros.org/wiki/gdrive_ros</url>
   <url type="repository">https://github.com/jsk-ros-pkg/jsk_3rdparty</url>
   <url type="bugtracker">https://github.com/jsk-ros-pkg/jsk_3rdparty/issues</url>
