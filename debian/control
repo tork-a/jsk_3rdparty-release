@@ -1,0 +1,12 @@
+Source: ros-jazzy-gdrive-ros
+Section: misc
+Priority: optional
+Maintainer: "Shingo Kitagawa" <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-python, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, ros-jazzy-rosidl-default-generators, ros-jazzy-ros-workspace, ros-jazzy-rosidl-typesupport-fastrtps-c, ros-jazzy-rosidl-typesupport-fastrtps-cpp
+Homepage: http://ros.org/wiki/gdrive_ros
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-gdrive-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-rclpy, ros-jazzy-rosidl-default-runtime, ros-jazzy-ros-workspace
+Description: Google drive upload and download package
