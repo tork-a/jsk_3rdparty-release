@@ -1,0 +1,38 @@
+# -*- makefile -*-
+
+all: installed.julius
+
+VERSION = 4.4.2
+FILENAME = julius-$(VERSION).tar.gz
+TARBALL = build/$(FILENAME)
+TARBALL_URL = "https://github.com/jsk-ros-pkg/archives/raw/master/$(FILENAME)"
+PATCH_DIR = $(CURDIR)/patch
+TARBALL_PATCH = $(PATCH_DIR)/config.patch $(PATCH_DIR)/aarch64.patch
+SOURCE_DIR = build/julius-$(VERSION)
+UNPACK_CMD = tar xf
+MD5SUM_DIR = $(CURDIR)/md5sum
+MD5SUM_FILE = $(MD5SUM_DIR)/$(FILENAME).md5sum
+include $(shell rospack find mk)/download_unpack_build.mk
+
+INSTALL_DIR = `rospack find julius`
+
+# Compiler Options (see http://julius.osdn.jp/juliusbook/ja/desc_install.html for detail)
+LIBSENT_OPTION =
+LIBJULIUS_OPTION = "--enable-decoder-vad"
+ifndef DEB_TARGET_GNU_TYPE
+	DEB_TARGET_GNU_TYPE = x86_64-linux-gnu
+endif
+installed.julius: $(SOURCE_DIR)/unpacked
+	echo $DEB_TARGET_GNU_TYPE
+	(cd $(SOURCE_DIR); unset LDFLAGS && unset CFLAGS && unset CPPFLAGS && ./configure --build=$(DEB_TARGET_GNU_TYPE) --prefix=$(INSTALL_DIR) $(LIBSENT_OPTION) $(LIBJULIUS_OPTION); make; make install)
+	touch installed.julius
+
+clean:
+	rm -rf $(TARBALL)
+	rm -rf $(SOURCE_DIR)
+	rm -rf $(INSTALL_DIR)/bin
+	rm -rf $(INSTALL_DIR)/include
+	rm -rf $(INSTALL_DIR)/lib
+	rm -rf $(INSTALL_DIR)/man
+	rm -rf $(INSTALL_DIR)/share
+	rm -rf installed.julius
