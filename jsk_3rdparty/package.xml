@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>jsk_3rdparty</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>
    <p>Metapackage that contains commonly used 3rdparty toolset for jsk-ros-pkg</p>
   </description>
@@ -9,7 +9,7 @@
   <maintainer email="k-okada@jsk.t.u-tokyo.ac.jp">Kei Okada</maintainer>
   <author email="k-okada@jsk.t.u-tokyo.ac.jp">Kei Okada</author>
 
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
   <url type="website">http://ros.org/wiki/jsk_3rdparty</url>
   <url type="repository">https://github.com/jsk-ros-pkg/jsk_3rdparty</url>
   <url type="bugtracker">https://github.com/jsk-ros-pkg/jsk_3rdparty/issues</url>
