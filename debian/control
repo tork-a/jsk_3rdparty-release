@@ -1,0 +1,12 @@
+Source: ros-kilted-sesame-ros
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-ros-environment, ros-kilted-rosidl-default-generators, ros-kilted-ros-workspace, ros-kilted-rosidl-typesupport-fastrtps-c, ros-kilted-rosidl-typesupport-fastrtps-cpp
+Homepage: http://ros.org/wiki/sesame_ros
+Standards-Version: 3.9.2
+
+Package: ros-kilted-sesame-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-rclpy, ros-kilted-rosidl-default-runtime, ros-kilted-ros-workspace
+Description: ROS API for Sesame smart lock
