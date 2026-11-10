@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ros_speech_recognition</name>
+  <version>3.0.0</version>
+  <description>ROS wrapper for Python SpeechRecognition library</description>
+  <url type="website">https://pypi.python.org/pypi/SpeechRecognition/</url>
+
+  <maintainer email="furushchev@jsk.imi.i.u-tokyo.ac.jp">Yuki Furuta</maintainer>
+  <license>BSD</license>
+  <author email="furushchev@jsk.imi.i.u-tokyo.ac.jp">Yuki Furuta</author>
+
+  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ros_environment</buildtool_depend>
+  <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake_python</buildtool_depend>
+
+  <build_depend condition="$ROS_VERSION == 1">catkin_virtualenv</build_depend>
+  <build_depend condition="$ROS_VERSION == 1">dynamic_reconfigure</build_depend>
+  <build_depend>jsk_data</build_depend>
+  <build_depend>speech_recognition_msgs</build_depend>
+  <build_depend condition="$ROS_VERSION == 1">g++-static</build_depend>
+
+  <exec_depend>audio_capture</exec_depend>
+  <exec_depend>audio_common_msgs</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 1">dynamic_reconfigure</exec_depend>
+  <exec_depend>flac</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 2">python-numpy</exec_depend>
+  <exec_depend condition="$ROS_PYTHON_VERSION == 3">python3-numpy</exec_depend>
+  <exec_depend>jsk_data</exec_depend>
+  <exec_depend>sound_play</exec_depend>
+  <exec_depend>sound-theme-freedesktop</exec_depend>
+  <exec_depend>speech_recognition_msgs</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 1">python3-pycryptodome</exec_depend> <!-- melodic requries to install python3-pycryptodome for rosbag with python3 -->
+  <exec_depend condition="$ROS_VERSION == 1">python3-gnupg</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">rclpy</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">action_msgs</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">ament_index_python</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">sound_play_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend condition="$ROS_VERSION == 2">std_srvs</exec_depend>
+  <!-- catkin_virtualenv (requirements.txt) has no ROS2 port -->
+  <!-- jsk_ros1_ros2_compat is only released with jsk_common >= 3.0;
+       ROS1 falls back to rospy when it is not available -->
+  <exec_depend condition="$ROS_VERSION == 2" version_gte="3.0.2">jsk_ros1_ros2_compat</exec_depend>
+  <!-- jsk_ros1_ros2_compat_install_python()/_generate_uv_venv() in CMakeLists.txt -->
+  <buildtool_depend condition="$ROS_VERSION == 2" version_gte="3.0.2">jsk_ros1_ros2_compat</buildtool_depend>
+
+  <test_depend condition="$ROS_VERSION == 1">rostest</test_depend>
+  <test_depend condition="$ROS_VERSION == 1">roslaunch</test_depend>
+
+  <export>
+    <build_type condition="$ROS_VERSION == 1">catkin</build_type>
+    <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
+    <pip_requirements>requirements.txt</pip_requirements>
+  </export>
+</package>
