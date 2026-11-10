@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package>
   <name>libcmt</name>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <description>libCMT ROS Wrapper</description>
   <maintainer email="inagaki@jsk.imi.i.u-tokyo.ac.jp">Yuto Inagaki</maintainer>
 
-  <license>BSD</license>
+  <license>BSD-3-Clause</license>
 
   <buildtool_depend>cmake</buildtool_depend>
 
