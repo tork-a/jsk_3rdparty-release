@@ -1,0 +1,12 @@
+Source: ros-kilted-influxdb-store
+Section: misc
+Priority: optional
+Maintainer: "Shingo Kitagawa" <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), python3-setuptools, ros-kilted-ament-cmake, ros-kilted-ament-cmake-python, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-ros-environment, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/influxdb_store/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-influxdb-store
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-influxdb, python3-tz, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-rclpy, ros-kilted-sensor-msgs, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Description: The influxdb_store package
