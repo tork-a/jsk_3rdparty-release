@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="rosping" name="rosping" type="rosping" args="8.8.8.8">
+    <param name="rate" value="0.5" /> <!-- 2hz -->
+  </node>
+  <test test-name="test_rosping" pkg="rosping" type="test-rosping.py" />
+</launch>
