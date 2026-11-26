@@ -1,0 +1,12 @@
+Source: ros-kilted-zdepth
+Section: misc
+Priority: optional
+Maintainer: "Shingo Kitagawa" <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, ros-kilted-ros-environment, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/zdepth/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-zdepth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-ros-workspace
+Description: The zdepth package
