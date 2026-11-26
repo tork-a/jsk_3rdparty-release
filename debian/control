@@ -1,0 +1,13 @@
+Source: ros-kilted-rosping
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, ros-kilted-ament-cmake, ros-kilted-ament-index-python <!nocheck>, ros-kilted-launch <!nocheck>, ros-kilted-launch-ros <!nocheck>, ros-kilted-launch-testing <!nocheck>, ros-kilted-launch-testing-ament-cmake <!nocheck>, ros-kilted-rclcpp, ros-kilted-rclpy <!nocheck>, ros-kilted-ros-environment, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Homepage: http://ros.org/wiki/rosping
+Standards-Version: 3.9.2
+
+Package: ros-kilted-rosping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, ros-kilted-rclcpp, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Description: rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message.
+ For echoing ROS node, use rosnode.
