@@ -1,86 +1,139 @@
-# jsk_3rdparty
+# nfc_ros
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+This package is for nfc communication.
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
+Currently only tag reading is supported.
 
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
+## How to use
 
-## Packages
+First build this package
 
-| Package | ROS 1 | ROS 2 | What it is |
-|---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
-
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
-
-## Install
-
-```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
 ```
-
-From source:
-
-```bash
-mkdir -p ~/ws/src && cd ~/ws/src
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin init
+cd src
 git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+catkin build nfc_ros
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+After that, connect NFC device and please activate virtualenv generated from nfc_ros and run nfcpy
+
+```bash
+source ~/catkin_ws/devel/share/nfc_ros/venv/bin/activate
+python -m nfc
+```
+
+This will show a message like this if you do not configure udev for NFC device.
+
+```bash
+~/ros/ws_jsk_ros_pkg/devel/share/nfc_ros/venv $ python -m nfc
+This is the 1.0.4 version of nfcpy run in Python 3.6.9
+on Linux-5.4.0-136-generic-x86_64-with-Ubuntu-18.04-bionic
+I'm now searching your system for contactless devices
+** found usb:054c:06c3 at usb:005:095 but access is denied
+-- the device is owned by 'root' but you are 'sktometometo'
+-- also members of the 'root' group would be permitted
+-- you could use 'sudo' but this is not recommended
+-- better assign the device to the 'plugdev' group
+   sudo sh -c 'echo SUBSYSTEM==\"usb\", ACTION==\"add\", ATTRS{idVendor}==\"054c\", ATTRS{idProduct}==\"06c3\", GROUP=\"plugdev\" >> /etc/udev/rules.d/nfcdev.rules'
+   sudo udevadm control -R # then re-attach device
+I'm not trying serial devices because you haven't told me
+-- add the option '--search-tty' to have me looking
+-- but beware that this may break other serial devs
+Sorry, but I couldn't find any contactless device
+```
+
+Please follow instructions until you get message like below
+
+```bash
+~/ros/ws_jsk_ros_pkg/devel/share/nfc_ros/venv $ python -m nfc
+This is the 1.0.4 version of nfcpy run in Python 3.6.9
+on Linux-5.4.0-136-generic-x86_64-with-Ubuntu-18.04-bionic
+I'm now searching your system for contactless devices
+** found SONY RC-S380/P NFC Port-100 v1.11 at usb:005:097
+I'm not trying serial devices because you haven't told me
+-- add the option '--search-tty' to have me looking
+-- but beware that this may break other serial devs
+```
+
+After that, you can now run `demo.launch`.
+
+```bash
+source ~/catkin_ws/devel/setup.bash
+roslaunch nfc_ros demo.launch
+```
+
+You can get messages from `/nfc_ros_node/tag` topic when you put NFC tag to NFC reader.
+
+```bash
+$ rostopic echo /nfc_ros_node/tag
+tag_type: 401
+ndef_records: []
+identifier: "083554be"
+---
+tag_type: 401
+ndef_records: []
+identifier: "08aa99aa"
+---
+tag_type: 401
+ndef_records: []
+identifier: "08f1b023"
+---
+```
+
+## ROS2
+
+Build with colcon. nfcpy (`nfcpy==1.0.4`, as `requirements.txt`) is installed into a venv made from `pyproject.toml`/`uv.lock` at build time, which the node runs in.
+
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
+cd ~/ros2_ws
+rosdep install --from-paths src --ignore-src -y
+colcon build --packages-up-to nfc_ros
+```
+
+Check the NFC device with nfcpy in that venv, as above
+
+```bash
+~/ros2_ws/install/nfc_ros/share/nfc_ros/venv/bin/python3 -m nfc
+```
+
+and run `demo.launch.xml`
+
+```bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch nfc_ros demo.launch.xml
+ros2 topic echo /nfc_ros_node/tag
+```
+
+Without the NFC device (or without the access to it, see the udev rule above), the node exits with
+
+```
+[ERROR] [nfc_ros_node]: Failed to open the NFC reader: [Errno 19] No such device
+```
+
+On ROS2, the constant names of `nfc_ros/msg/Tag` are upper case, as rosidl only allows them (e.g. `NFC_TAG_FELICASTANDARD` for `NFC_TAG_FelicaStandard` of ROS1); their values are the same.
+
+## Tag editing
+
+Currently nfc_ros does not support tag writing. If you want to customize your NFC Tag, please use other tools (e.g. NFC Tools [for Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc&hl=ja&gl=US&pli=1) and [for iPhone](https://apps.apple.com/jp/app/nfc-tools/id1252962749). )
+
+## Support devices
+
+### NFC Interface
+
+Basically we can use any NFC devices supported by [nfcpy](https://nfcpy.readthedocs.io/en/latest/index.html). Currently devices below are test.
+
+- [RC-S300](https://www.sony.co.jp/Products/felica/consumer/products/RC-S300.html)
+- [RC-S300/P]()
+
+### NFC Tags/Cards
+
+Available tags/cards types depend on which type of NFC Interface you use. If you use RC-S300 you can use almost any type of tags. (Type2 tags like Ultralight, NXP Mifare, Ultralight C and Type3 tags like Sony FeliCa tag and so on)
+
+For examples.
+
+- [SANWA SUPPLY MM-NFCT](https://www.sanwa.co.jp/product/syohin?code=MM-NFCT#spec-area) (Tagtype: ISO14443 type-A)
