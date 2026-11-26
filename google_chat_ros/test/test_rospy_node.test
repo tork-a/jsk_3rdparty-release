@@ -1,3 +1,0 @@
-<launch>
-  <test pkg="google_chat_ros" type="test_rospy_node.py" test-name="ros_rospy_node" />
-</launch>

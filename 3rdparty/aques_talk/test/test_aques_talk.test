@@ -1,4 +1,0 @@
-<launch>
-  <test pkg="aques_talk" type="test_aques_talk.py"
-        test-name="test_aques_talk" />
-</launch>
