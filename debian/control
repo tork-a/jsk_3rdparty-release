@@ -1,0 +1,12 @@
+Source: ros-jazzy-zdepth
+Section: misc
+Priority: optional
+Maintainer: "Shingo Kitagawa" <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, ros-jazzy-ros-environment, ros-jazzy-ros-workspace
+Homepage: https://index.ros.org/p/zdepth/#jazzy
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-zdepth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-ros-workspace
+Description: The zdepth package
