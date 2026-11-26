@@ -1,86 +1,174 @@
-# jsk_3rdparty
+# influxdb_store
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+Loggers which store ROS topics and TF into [InfluxDB](https://www.influxdata.com/) (1.x), to be browsed with e.g.
+[Grafana](https://grafana.com/).
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
+![influxdb_grafana](./.media/influxdb_grafana.png)
 
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
-
-## Packages
-
-| Package | ROS 1 | ROS 2 | What it is |
+| Node | ROS 1 | ROS 2 | What it stores |
 |---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
+| [`joint_states_logger.py`](#joint_states_loggerpy) | ✓ | ✓ | `sensor_msgs/JointState` (position, velocity, effort) |
+| [`network_states_logger.py`](#network_states_loggerpy) | ✓ | ✓ | Transmitted and received bps (`std_msgs/Float32`) |
+| [`map_transform_logger.py`](#map_transform_loggerpy--base_transform_loggerpy) | ✓ | | All TF frames relative to `map` |
+| [`base_transform_logger.py`](#map_transform_loggerpy--base_transform_loggerpy) | ✓ | | All TF frames relative to `base_link` |
+| [`pr2_battery_states_logger.py`](#pr2_battery_states_loggerpy) | ✓ | | PR2 batteries (`pr2_msgs/BatteryServer2`) |
+| [`fetch_battery_states_logger.py`](#fetch_battery_states_loggerpy) | ✓ | | Fetch battery (`power_msgs/BatteryState`) |
 
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
+The transform loggers use the `tf2_frames` service of the ROS 1 `tf2_ros` buffer server, and the battery loggers
+the messages of PR2 / Fetch, so they are on ROS 1 only. There are no ROS 2 launch files: run the nodes with
+`ros2 run`.
 
-## Install
+## Requirements
+
+An InfluxDB **1.x** server (e.g. 1.8). The nodes use the 1.x Python client (`python3-influxdb`, `InfluxDBClient`)
+without authentication, and create the database (`~database`) if it does not exist; InfluxDB 2.x and later are
+not supported. For a local test server:
 
 ```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
+docker run -d --name influxdb -p 8086:8086 influxdb:1.8
 ```
 
-From source:
+## Usage
+
+### ROS 2
 
 ```bash
-mkdir -p ~/ws/src && cd ~/ws/src
-git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+docker run -d --name influxdb -p 8086:8086 influxdb:1.8
+# joint states to store (or a robot / joint_state_publisher); start it first, as
+# joint_states_logger.py exits when no message comes in a period of ~duration (3 s)
+ros2 topic pub -r 10 /joint_states sensor_msgs/msg/JointState \
+  '{header: {stamp: now}, name: [joint1], position: [0.5], velocity: [0.0], effort: [0.1]}'
+# another terminal
+ros2 run influxdb_store joint_states_logger.py --ros-args \
+  -r '~/input:=/joint_states' -p host:=localhost -p port:=8086 -p database:=test
+# the stored data
+docker exec influxdb influx -database test -execute 'SELECT * FROM joint_states ORDER BY time DESC LIMIT 6'
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+![influxdb_store demo](doc/influxdb_store_demo.gif)
+
+(In the recording, the container is named `influxdb_demo`, the output of `ros2 topic pub` is discarded with
+`> /dev/null`, and `influx -precision rfc3339` prints the time as a date.)
+
+```bash
+ros2 run influxdb_store network_states_logger.py --ros-args \
+  -r '~/input/transmit:=/wlan0/transmit' -r '~/input/receive:=/wlan0/receive' -p database:=test
+```
+
+### ROS 1
+
+`launch/influxdb_logger.launch` starts the joint states, map transform, base transform and network states loggers;
+`host`, `port` and `database` have no default and must be given:
+
+```bash
+roslaunch influxdb_store influxdb_logger.launch host:=localhost port:=8086 database:=test
+```
+
+| Argument | Default | |
+|---|---|---|
+| `host`, `port`, `database` | (required) | InfluxDB server and database |
+| `launch_joint_states_logger` | `true` | Run `joint_states_logger.py` (`required="true"`) |
+| `launch_map_transform_logger` | `true` | Run `map_transform_logger.py` |
+| `launch_base_transform_logger` | `true` | Run `base_transform_logger.py` |
+| `launch_network_states_logger` | `true` | Run `network_states_logger.py` |
+| `joint_states_topic` | `/joint_states` | Input of `joint_states_logger.py` |
+| `map_frame_id` | `map` | `~frame_id` of `map_transform_logger.py` |
+| `base_frame_id` | `base_link` | `~frame_id` of `base_transform_logger.py` |
+| `network_states_transmit_topic` | `/<database>/wlan0/transmit` | Input of `network_states_logger.py` |
+| `network_states_receive_topic` | `/<database>/wlan0/receive` | Input of `network_states_logger.py` |
+
+`launch/pr2_battery_logger.launch` and `launch/fetch_battery_logger.launch` (arguments `host`, `port`, `database`,
+`battery_states_topic`, all required) run the battery loggers.
+
+Single nodes:
+
+```bash
+rosrun influxdb_store joint_states_logger.py ~input:=/joint_states _database:=test
+rostopic pub -r 10 -s /joint_states sensor_msgs/JointState \
+  '{header: {stamp: now}, name: [joint1], position: [0.5], velocity: [0.0], effort: [0.1]}'
+```
+
+#### For JSK robot users
+
+The launch files in `sample/` take `robot_name` (the database name, by default) and the topics of each robot
+(`host` defaults to `localhost`, `port` to `8086`):
+
+```bash
+rossetip
+rossetmaster pr1040   # or pr1012, fetch15, fetch1075, baxter
+roslaunch influxdb_store pr2_influxdb_logger.launch robot_name:=pr1040      # PR1012, PR1040
+roslaunch influxdb_store fetch_influxdb_logger.launch robot_name:=fetch15   # Fetch15, Fetch1075
+roslaunch influxdb_store baxter_influxdb_logger.launch robot_name:=baxter   # Baxter
+```
+
+The systemd units in `systemd/` and the scripts in `scripts/` run them as services; see also
+[jsk_database](https://github.com/knorth55/jsk_database).
+
+## Interface
+
+All nodes take these parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~host` | string | `localhost` | InfluxDB host |
+| `~port` | int | `8086` | InfluxDB port |
+| `~database` | string | `test` | InfluxDB database, created if it does not exist |
+
+The time of each point is the header stamp of the message where it has one (`joint_states_logger.py`,
+`pr2_battery_states_logger.py`), otherwise the current ROS time.
+
+### `joint_states_logger.py`
+
+Subscribed topics:
+
+- `~input` (`sensor_msgs/JointState`): measurement `joint_states`, one point per message for each of the tags
+  `type=position`, `type=velocity` and `type=effort`, with a field per joint name.
+
+Parameters:
+
+- `~duration` (double, default `3.0`): period [s] of writing the buffered points. If no message comes in a
+  period, the timer callback calls `sys.exit(1)`: on ROS 2 the node exits; on ROS 1 only the rospy timer thread
+  ends, so the node stays alive but stops writing. Keep the input topic published, or restart the node.
+
+### `network_states_logger.py`
+
+Stores the bandwidth published by
+[`jsk_network_tools/network_status.py`](https://github.com/jsk-ros-pkg/jsk_common/tree/master/jsk_network_tools).
+
+Subscribed topics:
+
+- `~input/transmit` (`std_msgs/Float32`): measurement `network_states`, tag `type=transmit`, field `bps`
+- `~input/receive` (`std_msgs/Float32`): measurement `network_states`, tag `type=receive`, field `bps`
+
+### `map_transform_logger.py` / `base_transform_logger.py`
+
+(ROS 1 only) Store the transforms of all the TF frames relative to `~frame_id`: tags `type`
+(`translation`/`rotation`), `field` (`x`, `y`, `z`, `w`, `theta`) and `frame_id`, a field per child frame.
+
+Services called:
+
+- `~tf2_frames` (`tf2_msgs/FrameGraph`): the list of frames, from a `tf2_ros` buffer server. The node waits for it
+  at start up.
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~frame_id` | string | `map` / `base_link` | Reference frame |
+| `~measurement_name` | string | `map_transform` / `base_transform` | Measurement name |
+| `~update_frequency` | double | `30.0` | Rate [Hz] of looking up the transforms |
+| `~duration` | double | `3.0` | Period [s] of writing the buffered points |
+| `~graph_duration` | double | `60.0` | Period [s] of updating the list of frames |
+
+### `pr2_battery_states_logger.py`
+
+(ROS 1 only) Subscribed topics:
+
+- `~input` (`pr2_msgs/BatteryServer2`): measurement `battery_states`, tag `battery_id`, fields of the average and
+  each of the four batteries: `temperature`, `voltage`, `current`, `charge_percent`.
+
+### `fetch_battery_states_logger.py`
+
+(ROS 1 only) Subscribed topics:
+
+- `~input` (`power_msgs/BatteryState`): measurement `battery_states`, tag `battery_name`, field `charge_percent`.
