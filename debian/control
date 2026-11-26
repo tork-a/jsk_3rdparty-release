@@ -1,0 +1,12 @@
+Source: ros-kilted-zdepth-image-transport
+Section: misc
+Priority: optional
+Maintainer: "Shingo Kitagawa" <shingogo.5511@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-image-transport, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-ros-environment, ros-kilted-rosidl-default-generators, ros-kilted-sensor-msgs, ros-kilted-std-msgs, ros-kilted-zdepth, ros-kilted-ros-workspace, ros-kilted-rosidl-typesupport-fastrtps-c, ros-kilted-rosidl-typesupport-fastrtps-cpp
+Homepage: https://index.ros.org/p/zdepth_image_transport/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-zdepth-image-transport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-image-transport, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-rosidl-default-runtime, ros-kilted-sensor-msgs, ros-kilted-std-msgs, ros-kilted-zdepth, ros-kilted-ros-workspace
+Description: The zdepth_image_transport package
