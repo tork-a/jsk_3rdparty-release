@@ -1,4 +1,0 @@
-# waiting for https://github.com/ros/rosdistro/pull/25807
-- git:
-    local-name: catkin_virtualenv
-    uri: https://github.com/locusrobotics/catkin_virtualenv
