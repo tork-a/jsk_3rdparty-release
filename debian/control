@@ -1,0 +1,13 @@
+Source: ros-lyrical-rosping
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-index-python <!nocheck>, ros-lyrical-launch <!nocheck>, ros-lyrical-launch-ros <!nocheck>, ros-lyrical-launch-testing <!nocheck>, ros-lyrical-launch-testing-ament-cmake <!nocheck>, ros-lyrical-rclcpp, ros-lyrical-rclpy <!nocheck>, ros-lyrical-ros-environment, ros-lyrical-std-msgs, ros-lyrical-ros-workspace
+Homepage: http://ros.org/wiki/rosping
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-rosping
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, ros-lyrical-rclcpp, ros-lyrical-std-msgs, ros-lyrical-ros-workspace
+Description: rosping is the tool to send ICMP ECHO_REQUEST to network hosts where roscore is running, and send back to you as rostopic message.
+ For echoing ROS node, use rosnode.
