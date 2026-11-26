@@ -1,86 +1,279 @@
-# jsk_3rdparty
+# jsk_power_switching_tools
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+ROS drivers of USB power switches, to power on/off or power-cycle a USB device (e.g. a camera or a serial device
+which hangs) by a service call, and a node which power-cycles it automatically when its topic stops.
+Supported tools are:
+- [USB-Serial troubleshooter](#usb-serial-troubleshooter)
+- [USB PPPS hubs](#usb-ppps-hubs)
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
-
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
-
-## Packages
-
-| Package | ROS 1 | ROS 2 | What it is |
+| Node | ROS 1 | ROS 2 | |
 |---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
+| [`usb_serial_troubleshooter_driver.py`](#usb_serial_troubleshooter_driverpy) | ✓ | ✓ | Driver of USB-Serial troubleshooter |
+| [`usb_ppps_hub_driver.py`](#usb_ppps_hub_driverpy) | ✓ | ✓ | Driver of USB PPPS hubs (via `uhubctl`) |
+| [`auto_power_cycle.py`](#auto_power_cyclepy) | ✓ | | Power cycle when a monitored topic stops |
 
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
+The launch files (`launch/*.launch`) are of ROS 1; on ROS 2 run the drivers with `ros2 run`.
 
-## Install
+## [USB-Serial troubleshooter](https://www.century.co.jp/products/ct-3usb1hub.html)
 
+### Preparation
+
+#### Udev setting
+
+This is optional, but we recommend this setting because USB-Serial troubleshooter is sometimes suddenly disconnected and its device file changes.
 ```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
+# ROS 1
+rosrun jsk_power_switching_tools setup_udev_for_usb_serial_troubleshooter <serial_number> <symlink_name>
+# <serial_number> : The serial number of your USB-Serial troubleshooter (e.g., 001A02F2046C). You can check the serial number by "udevadm info --name=/dev/ttyACM* --attribute-walk"
+# <symlink_name> : The name to create as a symbolic link in /dev (e.g., usb_serial_troubleshooter1)
+```
+The script finds the udev rule template by `rospack`, so it does not work on ROS 2. There, write the rule of
+`udev/90-usb-serial-troubleshooter.rules.template` by hand:
+```bash
+sed -e 's/{{SERIAL}}/<serial_number>/' -e 's/{{SYMLINK}}/<symlink_name>/' \
+  $(ros2 pkg prefix --share jsk_power_switching_tools)/udev/90-usb-serial-troubleshooter.rules.template \
+  | sudo tee /etc/udev/rules.d/90-usb-serial-troubleshooter.rules
+sudo udevadm control --reload && sudo udevadm trigger
 ```
 
-From source:
+#### Connecting USB-Serial troubleshooter
 
+When inserting your USB-Serial troubleshooter to your PC, check if LED in the troubleshooter becomes blue after a few moments.
+If it remains red, the connection between the troubleshooter and the PC fails to be established.
+If you face this phenomenon, try the following:
+- Reversing USB-C connector of USB hub/adapter/cable if you connect the troubleshooter to a USB hub/adapter/cable connected to a USB-C port of the PC
+- Connecting the troubleshooter to a USB-A port of the PC directly (not via a USB hub)
+- Connecting the troubleshooter to a USB-C port of the PC via an adapter/cable ([example](https://www.amazon.co.jp/dp/B09SFS9C5K))
+- Changing USB hub/adapter/cable
+- Changing the insertion process. Our experience has shown that success is more likely to be achieved if the insertion is stopped at a shallow point and then immediately deepened
+- Using USB 2.0 hub/adapter/cable. Note that you will be unable to use USB 3.0 features on the devices under the troubleshooter
+
+### Minimal usage: launching driver only
+
+ROS 2:
 ```bash
-mkdir -p ~/ws/src && cd ~/ws/src
-git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+ros2 run jsk_power_switching_tools usb_serial_troubleshooter_driver.py --ros-args \
+  -p port:=/dev/<symlink_name> -p serial_timeout:=1.0
+ros2 service call /usb_serial_troubleshooter_driver/power std_srvs/srv/SetBool '{data: false}'
+ros2 service call /usb_serial_troubleshooter_driver/power_cycle std_srvs/srv/Trigger
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+ROS 1:
+```bash
+roslaunch jsk_power_switching_tools usb_serial_troubleshooter.launch port:=/dev/<symlink_name>
+# <symlink_name> : The same as above
+rosservice call /usb_serial_troubleshooter_driver/power "data: false"
+rosservice call /usb_serial_troubleshooter_driver/power_cycle
+```
+
+#### Arguments
+
+Check them by `roslaunch jsk_power_switching_tools usb_serial_troubleshooter.launch --ros-args`:
+```
+Required Arguments:
+  port: Port connecting with USB-Serial troubleshooter (e.g., '/dev/ttyACM0')
+Optional Arguments:
+  init_with_power_on (default "true"): Power on USB when driver of USB-Serial troubleshooter is initialized. This argument is valid only when init_with_power_set is true
+  init_with_power_set (default "true"): Set power state of USB when driver of USB-Serial troubleshooter is initialized. Which state (ON or OFF) is set is defined by init_with_power_on
+  power_cycle_interval (default "1.0"): Interval [sec] in USB power cycle using USB-Serial troubleshooter
+  power_cycle_service (default "~power_cycle"): Name of service for USB power cycle
+  power_service (default "~power"): Name of service for USB power switching
+  serial_timeout (default "1"): Timeout [sec] of serial communication with USB-Serial troubleshooter
+```
+
+### Advanced usage: automated power cycle of USB (ROS 1)
+
+```bash
+roslaunch jsk_power_switching_tools auto_power_cycle.launch troubleshooter_port:=/dev/<symlink_name> monitored_topic:=<monitored_topic> monitored_topic_expected_hz:=<monitored_topic_expected_hz> monitored_topic_respawn_delay:=<monitored_topic_respawn_delay>
+# <symlink_name> : The same as above
+# <monitored_topic> : Topic monitored for determining health of monitored communication. If this is not published for an unusually long period, power cycle of that communication occurs
+# <monitored_topic_expected_hz> : Expected Hz of monitored topic
+# <monitored_topic_respawn_delay> : For this duration [sec] after power cycle, new power cycle does not occur to wait for topic to be published
+#
+# In default, this launch firstly executes power cycle once. If you want to change this behavior, set "init_with_power_cycle:=false"
+```
+
+Other arguments of `auto_power_cycle.launch` (check them by `--ros-args`): `launch_default_driver` (default
+`true`: run `usb_serial_troubleshooter.launch`), `troubleshooter_serial_timeout` (`1`),
+`troubleshooter_power_cycle_interval` (`1.0`), `troubleshooter_init_with_power_set` (`true`),
+`troubleshooter_init_with_power_on` (`true`), `monitored_topic_allowed_delay_cycles` (`2.0`) and
+`init_with_power_cycle` (`true`).
+
+## USB PPPS hubs
+
+"PPPS" stands for "Per-Port Power Switching" which is an advanced functionality of USB hubs.
+Hubs supporting PPPS (e.g., [VirtualHere USB 3 4-Port Hub](https://modularkvmip.com/product/usb-hub/)) are listed [here](https://github.com/mvp/uhubctl?tab=readme-ov-file#compatible-usb-hubs).
+- Advantages compared with USB-Serial troubleshooter:
+  - Having multiple ports
+  - [Connection problem](#connecting-usb-serial-troubleshooter) does not occur
+- Disadvantages compared with USB-Serial troubleshooter:
+  - Power switching is slower
+  - Some devices show unexpected behavior after you command your hub to power off them
+    - [Power comes back on after few seconds](https://github.com/mvp/uhubctl?tab=readme-ov-file#power-comes-back-on-after-few-seconds-on-linux)
+    - Power comes back on when the device is accessed.
+      This behavior was observed when webcams were used on Ubuntu 20.04 (not observed on Ubuntu 24.04).
+      This behavior is slightly different from the first behavior because the first behavior depends on no external access.
+      The workarounds for the first behavior on Ubuntu 20.04 (i.e., Linux 5.x) mentioned in the document do not work for the second behavior
+
+### Preparation
+
+#### Udev setting
+
+This is required for running the driver node without `sudo`.
+```bash
+# ROS 1
+rosrun jsk_power_switching_tools setup_udev_for_usb_ppps_hub
+# ROS 2
+$(ros2 pkg prefix --share jsk_power_switching_tools)/scripts/setup_udev_for_usb_ppps_hub
+# Reboot your PC after this script finishes
+# Note that this script adds your user to dialout group, which means "chmod" becomes unnecessary for accessing some device files (e.g., /dev/ttyACM0)
+```
+
+#### Check if power switching works
+
+Connect your hub to your PC, connect devices you want to use in your application to your hub, then run:
+```bash
+uhubctl  # If this command is not found, install it by "sudo apt install uhubctl"
+```
+You will get an output like:
+```
+Current status for hub 3-5 [366b:0004 VirtualHere Pty. Ltd. VirtualHere 4-Port Hub 91B35D672F3E3755, USB 2.10, 4 ports]
+  Port 1: 0103 power enable connect [2341:0058 Arduino LLC Arduino Nano Every 059D618F51514C4B38202020FF171A11]
+  Port 2: 0100 power
+  Port 3: 0100 power
+  Port 4: 0100 power
+Current status for hub 2-2 [366b:0005 VirtualHere Pty. Ltd. VirtualHere 4-Port Hub 91B35D672F3E3755, USB 3.20, 4 ports]
+  Port 1: 06a0 power Rx.Detect
+  Port 2: 06a0 power Rx.Detect
+  Port 3: 06a0 power Rx.Detect
+  Port 4: 06a0 power Rx.Detect
+```
+Write down the number just after `Current status for hub` whose section includes the device you want to power on/off (`3-5`, in the example above).
+This is the location of your hub.
+In addition, write down the port which that device is connected to (`1`, in the example above).
+Then try to power off and on the device:
+```bash
+uhubctl -a off -l <hub_location> -p <hub_port>
+# <hub_location> : Location of your hub
+# <hub_port> : Port of your hub which you want to power on/off
+uhubctl -a on -l <hub_location> -p <hub_port>
+```
+If USB power supply to the device is stopped and restarted as expected, `jsk_power_switching_tools` can also power on/off the device.
+If not, try the latest version of `uhubctl`:
+```bash
+cd ~
+git clone https://github.com/mvp/uhubctl.git
+cd uhubctl
+make
+./uhubctl -a off -l <hub_location> -p <hub_port>
+./uhubctl -a on -l <hub_location> -p <hub_port>
+```
+If this works as expected, use `~/uhubctl/uhubctl` to control your hub in the following (i.e., pass `uhubctl_executable:=~/uhubctl/uhubctl` to `usb_ppps_hub.launch`).
+If not, check [the web page of uhubctl](https://github.com/mvp/uhubctl) (especially [FAQ](https://github.com/mvp/uhubctl?tab=readme-ov-file#faq)) to find candidates for a workaround and try them.
+If the found workaround requires supplementary options for `uhubctl`, write them down.
+
+### Minimal usage: launching driver only
+
+ROS 2:
+```bash
+ros2 run jsk_power_switching_tools usb_ppps_hub_driver.py --ros-args \
+  -p hub_location:=<hub_location> -p hub_port:=<hub_port>
+# several ports: -p hub_location:="['3-5', '3-5']" -p hub_port:="[1, 2]"
+ros2 service call /usb_ppps_hub_driver/power std_srvs/srv/SetBool '{data: false}'
+ros2 service call /usb_ppps_hub_driver/power_cycle std_srvs/srv/Trigger
+```
+
+ROS 1:
+```bash
+roslaunch jsk_power_switching_tools usb_ppps_hub.launch hub_location:=<hub_location> hub_port:=<hub_port>
+# <hub_location> : Location of your hub
+# <hub_port> : Port of your hub which you want to power on/off
+```
+If [the previous checking](#check-if-power-switching-works) tells you to use the latest `uhubctl` and/or add supplementary options to `uhubctl`, use `uhubctl_executable` argument (parameter on ROS 2) explained below.
+
+#### Arguments
+
+Check them by `roslaunch jsk_power_switching_tools usb_ppps_hub.launch --ros-args`:
+```
+Required Arguments:
+  hub_location: Location(s) of USB PPPS hub (e.g., '3-5', '[3-5, 2-2]', , '[3-5, 3-5]')
+  hub_port: Port(s) of USB PPPS hub you want to power on/off (e.g., '1', '[1, 1]', '[1, 2]'). Must be the same length as hub_location and each element corresponds to the element at the same position in hub_location
+Optional Arguments:
+  init_with_power_on (default "true"): Power on USB when driver of USB PPPS hub is initialized. This argument is valid only when init_with_power_set is true
+  init_with_power_set (default "true"): Set power state of USB when driver of USB PPPS hub is initialized. Which state (ON or OFF) is set is defined by init_with_power_on
+  power_cycle_interval (default "1.0"): Interval [sec] in USB power cycle using USB PPPS hub
+  power_cycle_service (default "~power_cycle"): Name of service for USB power cycle
+  power_service (default "~power"): Name of service for USB power switching
+  uhubctl_executable (default "uhubctl"): Command to control USB PPPS hub. You can add supplementary options to uhubctl command (e.g., 'uhubctl -r 100'). In addition, you can specify the path to uhubctl command you installed on your own (e.g., '~/uhubctl/uhubctl')
+```
+
+### Advanced usage: automated power cycle of USB hub port (ROS 1)
+
+```bash
+roslaunch jsk_power_switching_tools usb_ppps_hub.launch power_cycle_service:=auto_power_cycle/power_cycle hub_location:=<hub_location> hub_port:=<hub_port>
+roslaunch jsk_power_switching_tools auto_power_cycle.launch launch_default_driver:=false monitored_topic:=<monitored_topic> monitored_topic_expected_hz:=<monitored_topic_expected_hz> monitored_topic_respawn_delay:=<monitored_topic_respawn_delay>
+# <monitored_topic> : Topic monitored for determining health of monitored communication. If this is not published for an unusually long period, power cycle of that communication occurs
+# <monitored_topic_expected_hz> : Expected Hz of monitored topic
+# <monitored_topic_respawn_delay> : For this duration [sec] after power cycle, new power cycle does not occur to wait for topic to be published
+#
+# In default, this launch firstly executes power cycle once. If you want to change this behavior, set "init_with_power_cycle:=false"
+```
+
+## Interface
+
+### Common to the drivers
+
+Services:
+
+- `~power` (`std_srvs/SetBool`): power on (`true`) / off (`false`) the USB device
+- `~power_cycle` (`std_srvs/Trigger`): power off, wait `~power_cycle_interval`, power on
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~power_cycle_interval` | double | `1.0` | Interval [s] between off and on of `~power_cycle` |
+| `~init_with_power_set` | bool | `true` | Set the power state at start up |
+| `~init_with_power_on` | bool | `true` | The state set at start up: on (`true`) or off (`false`) |
+
+### `usb_serial_troubleshooter_driver.py`
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~port` | string | `/dev/ttyACM0` | Serial port of the troubleshooter (115200 baud) |
+| `~serial_timeout` | double | none (blocking) | Timeout [s] of serial read/write; the launch file sets `1` |
+
+### `usb_ppps_hub_driver.py`
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~hub_location` | string or list of strings | (required) | Location(s) of the hub, as `uhubctl -l` |
+| `~hub_port` | int or list | (required) | Port(s) of the hub, as `uhubctl -p`; the same length as `~hub_location` |
+| `~uhubctl_executable` | string | `uhubctl` | Command (and options) of `uhubctl`; `~` is expanded |
+
+The node checks the location and the port with `uhubctl` at start up and shuts down when they are invalid.
+
+### `auto_power_cycle.py`
+
+(ROS 1 only) Subscribed topics:
+
+- `~monitored_topic` (any type): when no message comes for
+  `(1 / ~monitored_topic_expected_hz) * (1 + ~monitored_topic_allowed_delay_cycles)` seconds, it calls the power
+  cycle service, then waits `~monitored_topic_respawn_delay` seconds before the next check.
+
+Services called:
+
+- `~power_cycle` (`std_srvs/Trigger`): the power cycle service of a driver (waited for at start up)
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~monitored_topic_expected_hz` | double | `10` | Expected rate [Hz] of the monitored topic |
+| `~monitored_topic_allowed_delay_cycles` | double | `2.0` | Allowed delay, in cycles of the expected rate |
+| `~monitored_topic_respawn_delay` | double | `10.0` | Time [s] to wait after a power cycle |
+| `~init_with_power_cycle` | bool | `true` | Power cycle once at start up |
