@@ -1,86 +1,85 @@
-# jsk_3rdparty
+# rospatlite
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+A ROS driver of a network [PATLITE](https://www.patlite.jp/) signal tower (a LAN-controlled tower such as NH-SPL,
+with its PHN command over TCP), to switch its red, yellow, green, blue and white lights and its buzzer from topics.
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
+## Requirements
 
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
+A PATLITE with a LAN interface, reachable over TCP (port `10000`, the default of the PHN command).
 
-## Packages
+1. Connect the PATLITE with your computer directly.
+2. Set the IP address of your computer to `192.168.10.x` (the PATLITE has `192.168.10.1` by default).
+3. Open http://192.168.10.1/index.htm with your web browser and set up the network (IP address, and the PHN
+   command on TCP port 10000). Please see [the manual](http://www.patlite.jp/product/nh-spl.html) for details.
 
-| Package | ROS 1 | ROS 2 | What it is |
-|---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
+## Usage
 
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
+The launch file starts the node with the name `patlite`, so the topics are `/patlite/set/*`. Its argument `IP`
+(default `10.68.0.10`, the address in JSK) is the address of the PATLITE.
 
-## Install
+### ROS 2
 
 ```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
+ros2 launch rospatlite patlite.launch.xml IP:=192.168.10.1
+# or
+ros2 run rospatlite patlite_node.py --ros-args -r __node:=patlite -p host:=192.168.10.1
+
+ros2 topic pub --once /patlite/set/red std_msgs/msg/Int8 '{data: 1}'     # red light on
+ros2 topic pub --once /patlite/set/yellow std_msgs/msg/Int8 '{data: 2}'  # yellow light flashes
+ros2 topic pub --once /patlite/set/buzzer std_msgs/msg/Int8 '{data: 1}'  # buzzer on
+ros2 topic pub --once /patlite/set/buzzer std_msgs/msg/Int8 '{data: 0}'  # buzzer off
 ```
 
-From source:
+### ROS 1
 
 ```bash
-mkdir -p ~/ws/src && cd ~/ws/src
-git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+roslaunch rospatlite patlite.launch IP:=192.168.10.1
+
+rostopic pub -1 /patlite/set/red std_msgs/Int8 1     # red light on
+rostopic pub -1 /patlite/set/yellow std_msgs/Int8 2  # yellow light flashes
+rostopic pub -1 /patlite/set/buzzer std_msgs/Int8 1  # buzzer on
+rostopic pub -1 /patlite/set/buzzer std_msgs/Int8 0  # buzzer off
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+### Without a PATLITE
+
+Each change of the state is sent as a new TCP connection to `~host:~port`, with the 6 bytes `58 58 53 00 00 06`
+followed by the 6 states (red, yellow, green, blue, white, buzzer; `09` is "no change"). To see them without a
+device, run a dummy server which prints them and answers ACK (`06`), and give `host:=127.0.0.1`:
+
+```bash
+python3 -c "
+import socket
+s = socket.socket(); s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind(('127.0.0.1', 10000)); s.listen(1)
+while True:
+    c, _ = s.accept(); print(c.recv(512).hex(' ')); c.sendall(b'\x06'); c.close()
+"
+```
+
+![rospatlite demo](doc/rospatlite_demo.gif)
+
+## Interface
+
+### `patlite_node.py`
+
+Subscribed topics (`std_msgs/Int8`):
+
+| Topic | Values |
+|---|---|
+| `~set/red`, `~set/yellow`, `~set/green`, `~set/blue`, `~set/white` | `0`: off, `1`: on, `2`: flash pattern 1, `3`: flash pattern 2 |
+| `~set/buzzer` | `0`: off, `1` to `4`: buzzer patterns 1 to 4 |
+
+A value other than `0` to `4` leaves the state as it is. The node sends the new state every 0.1 s when a message has come;
+the other lights and the buzzer keep their states.
+
+Parameters:
+
+| Parameter | Type | Default | |
+|---|---|---|---|
+| `~host` | string | `10.68.0.10` | Host name or IP address of the PATLITE |
+| `~port` | int | `10000` | TCP port of the PATLITE |
+| `~timeout` | double | `0.5` | Timeout [s] of the socket |
+
+`patlite.py` is the Python module of the protocol (`Patlite`, `PatliteState`); run alone, it turns on the red,
+yellow and green lights of the PATLITE at `10.68.0.10`.
