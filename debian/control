@@ -1,0 +1,12 @@
+Source: ros-kilted-chaplus-ros
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.t.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-ros-environment, ros-kilted-ros-workspace
+Homepage: https://index.ros.org/p/chaplus_ros/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-chaplus-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-requests, ros-kilted-ament-index-python, ros-kilted-jsk-ros1-ros2-compat (>= 3.0.2), ros-kilted-rclpy, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Description: The ROS package for chaplus service
