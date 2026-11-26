@@ -1,86 +1,101 @@
-# jsk_3rdparty
+# sesame_ros
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+ROS API for the Sesame smart lock made by CANDY HOUSE, Inc. `sesame_server.py` provides services to get the status
+of a Sesame and to lock, unlock and sync it through the Web API of CANDY HOUSE (`https://api.candyhouse.co/public`).
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
+![](images/sesame_ros_system.png)
 
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
+## Requirements
 
-## Packages
+- A Sesame, reachable from the cloud of CANDY HOUSE (e.g. through its Wi-Fi access point), and the internet.
+- An authorization token of the Web API: log in to the CANDY HOUSE Dashboard (https://my.candyhouse.co/) and create
+  it there. You must be the owner of the Sesame to use the Web API; make sure that you can see the list of your
+  Sesames on the dashboard. The token can be given as it is or as the path of a file whose first line is the token.
+- Python package `requests`: on ROS 2 the system `python3-requests`; on ROS 1 it is installed into a virtualenv by
+  `catkin_virtualenv` from `requirements.in.python2` / `requirements.in.python3.12` at build time.
 
-| Package | ROS 1 | ROS 2 | What it is |
-|---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
+## Usage
 
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
-
-## Install
+### ROS 2
 
 ```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
+colcon build --packages-up-to sesame_ros
+source install/setup.bash
+# list your Sesames (prints the JSON of https://api.candyhouse.co/public/sesames)
+ros2 run sesame_ros list_sesames.py YOUR_AUTH_TOKEN   # or the path of a token file
+# start the server
+ros2 run sesame_ros sesame_server.py --ros-args -p auth_token:=YOUR_AUTH_TOKEN -p device_id:=YOUR_SESAMES_UUID
 ```
-
-From source:
 
 ```bash
-mkdir -p ~/ws/src && cd ~/ws/src
-git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+ros2 service call /sesame_server/get_status sesame_ros/srv/Status
+ros2 service call /sesame_server/lock sesame_ros/srv/Command
+ros2 service call /sesame_server/unlock sesame_ros/srv/Command
+ros2 service call /sesame_server/force_sync sesame_ros/srv/Command
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+There is no launch file.
+
+### ROS 1
+
+```bash
+rosrun sesame_ros list_sesames.py YOUR_AUTH_TOKEN
+rosrun sesame_ros sesame_server.py _auth_token:=YOUR_AUTH_TOKEN _device_id:=YOUR_SESAMES_UUID
+```
+
+```bash
+rosservice call /sesame_server/get_status
+rosservice call /sesame_server/lock
+rosservice call /sesame_server/unlock
+rosservice call /sesame_server/force_sync
+```
+
+## Interface
+
+### list_sesames.py
+
+A script (not a node) listing your Sesames. Argument: `auth_token` (required), the token or the path of its file.
+
+### sesame_server.py
+
+The node is named `sesame_server`.
+
+Services:
+
+- `~get_status` (`sesame_ros/Status`): the `nickname`, `serial`, `device_id`, `battery`, `locked` and `responsive`
+  of the Sesame.
+- `~lock` (`sesame_ros/Command`): locks the Sesame and waits for the end of the task.
+- `~unlock` (`sesame_ros/Command`): unlocks the Sesame and waits for the end of the task.
+- `~force_sync` (`sesame_ros/Command`): makes the server of CANDY HOUSE update the status of the Sesame.
+
+The response of `sesame_ros/Command` is `status` (`terminated` when the task ended), `successful` and `error`.
+
+Parameters:
+
+- `~auth_token` (string, required): the authorization token, or the path of a file of it.
+- `~device_id` (string, default: none): the UUID of the Sesame.
+- `~nickname` (string, default: none): the nickname of the Sesame.
+  The Sesame is searched in your list first by `~device_id`, then by `~nickname`; if neither matches or is given,
+  the first Sesame found is used.
+- `~command_timeout` (int or float, default: `60`): the timeout [s] of `lock`, `unlock` and `force_sync`.
+
+## Services
+
+```
+# sesame_ros/Status
+---
+string nickname
+string serial
+string device_id
+int32 battery
+bool locked
+bool responsive
+```
+
+```
+# sesame_ros/Command
+---
+string status
+bool successful
+string error
+```
