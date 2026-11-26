@@ -1,0 +1,12 @@
+Source: ros-jazzy-emotion-analyzer
+Section: misc
+Priority: optional
+Maintainer: "Kei Okada" <k-okada@jsk.imi.i.u-tokyo.ac.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-python, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-ros-environment, ros-jazzy-rosidl-default-generators, ros-jazzy-std-msgs, ros-jazzy-ros-workspace, ros-jazzy-rosidl-typesupport-fastrtps-c, ros-jazzy-rosidl-typesupport-fastrtps-cpp
+Homepage: https://index.ros.org/p/emotion_analyzer/#jazzy
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-emotion-analyzer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-pydub, python3-soundfile, ros-jazzy-audio-capture, ros-jazzy-audio-common-msgs, ros-jazzy-jsk-ros1-ros2-compat (>= 3.0.2), ros-jazzy-rclpy, ros-jazzy-rosidl-default-runtime, ros-jazzy-std-msgs, ros-jazzy-ros-workspace
+Description: The emotion_analyzer package
