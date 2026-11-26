@@ -1,86 +1,143 @@
-# jsk_3rdparty
+# gdrive_ros
 
-[![ROS 1](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/config.yml)
-[![ROS 2](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml/badge.svg?branch=master)](https://github.com/jsk-ros-pkg/jsk_3rdparty/actions/workflows/ros2.yaml)
-[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](jsk_3rdparty/package.xml)
+Google Drive file uploader for ROS: a server node which uploads local files to Google Drive (with
+[PyDrive](https://pythonhosted.org/PyDrive/)) on a service call and returns their URLs, and Python / EusLisp clients.
+The same script runs on ROS 1 and ROS 2.
 
-[![jazzy](https://img.shields.io/ros/v/jazzy/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#jazzy)
-[![kilted](https://img.shields.io/ros/v/kilted/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#kilted)
-[![lyrical](https://img.shields.io/ros/v/lyrical/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#lyrical)
-[![noetic](https://img.shields.io/ros/v/noetic/jsk_3rdparty)](https://index.ros.org/r/jsk_3rdparty/#noetic)
-[![ROS One](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jsk-ros-pkg/jsk_3rdparty/badges/ros_one.json)](https://ros.packages.techfak.net/)
+## Requirements
 
-ROS wrappers of third-party libraries and web services used in the JSK Lab (the University of Tokyo): speech
-synthesis and recognition, chat and cloud services, smart-home devices, PDDL planners, and libraries packaged for
-ROS. The packages marked ROS 2 below build from the same source for ROS 1 (catkin) and ROS 2 (ament); they switch by
-`$ROS_VERSION`, and `jsk_ros1_ros2_compat` (of [jsk_common](https://github.com/jsk-ros-pkg/jsk_common)) keeps the
-code shared. The other packages are of ROS 1 only and carry an `AMENT_IGNORE`.
+- A Google account and an OAuth 2.0 client of the Google Drive API: follow steps 1-5 of the
+  [PyDrive quickstart](https://pythonhosted.org/PyDrive/quickstart.html#authentication) (create a project in the
+  Google Cloud console, enable the Google Drive API, create an OAuth client ID and download it as
+  `client_secrets.json`).
+- A PyDrive settings yaml ([format](https://pythonhosted.org/PyDrive/oauth.html#automatic-and-custom-authentication-with-settings-yaml)),
+  for example:
 
-## Packages
+  ```yaml
+  client_config_file: /your/client/secrets/json/path
+  save_credentials: True
+  save_credentials_backend: file
+  save_credentials_file: /your/credentials/json/path
+  get_refresh_token: True
+  oauth_scope:
+    - https://www.googleapis.com/auth/drive.file
+  ```
 
-| Package | ROS 1 | ROS 2 | What it is |
-|---|:---:|:---:|---|
-| [chaplus_ros](chaplus_ros) | ✓ | ✓ | Chat with the chaplus, A3RT Talk or mebo dialogue services |
-| [emotion_analyzer](emotion_analyzer) | ✓ | ✓ | Emotions of a text or a voice by the Hume AI API |
-| [gdrive_ros](gdrive_ros) | ✓ | ✓ | Uploading files to Google Drive |
-| [google_chat_ros](google_chat_ros) | ✓ | ✓ | Sending and receiving messages of Google Chat |
-| [influxdb_store](influxdb_store) | ✓ | ✓ | Storing topics (battery, joint states, network, robot pose) into InfluxDB, to be shown on Grafana |
-| [jsk_power_switching_tools](jsk_power_switching_tools) | ✓ | ✓ | Power cycling USB devices: USB-serial troubleshooter, USB PPPS hubs |
-| [nfc_ros](nfc_ros) | ✓ | ✓ | Reading NFC tags |
-| [respeaker_ros](respeaker_ros) | ✓ | ✓ | Driver of the ReSpeaker Mic Array v2.0: audio, sound direction, voice activity |
-| [ros_speech_recognition](ros_speech_recognition) | ✓ | ✓ | Speech recognition by the Python SpeechRecognition library (Google, Google Cloud, Vosk, Sphinx, ...) |
-| [rospatlite](rospatlite) | ✓ | ✓ | Driver of the PATLITE signal tower (network) |
-| [rosping](rosping) | ✓ | ✓ | ICMP ping to hosts, as a topic |
-| [sesame_ros](sesame_ros) | ✓ | ✓ | Locking and unlocking the Sesame smart lock |
-| [switchbot_ros](switchbot_ros) | ✓ | ✓ | Controlling SwitchBot devices by the SwitchBot API |
-| [voicevox](3rdparty/voicevox) | ✓ | ✓ | VOICEVOX: Japanese text-to-speech, for `sound_play` |
-| [zdepth](3rdparty/zdepth), [zdepth_image_transport](zdepth_image_transport) | ✓ | ✓ | Zdepth depth image compression, as an image_transport plugin |
-| [aques_talk](3rdparty/aques_talk) | ✓ | | AquesTalk2: Japanese text-to-speech |
-| [google_cloud_texttospeech](3rdparty/google_cloud_texttospeech) | ✓ | | Google Cloud Text-to-Speech for `sound_play` |
-| [voice_text](3rdparty/voice_text) | ✓ | | HOYA VoiceText (ReadSpeaker) text-to-speech |
-| [julius](3rdparty/julius), [julius_ros](julius_ros) | ✓ | | Julius speech recognition engine and its ROS interface |
-| [webrtcvad_ros](webrtcvad_ros) | ✓ | | Voice activity detection of an audio topic by webrtcvad |
-| [dialogflow_task_executive](dialogflow_task_executive) | ✓ | | Dialogue by Google Dialogflow, launching apps by it |
-| [ros_google_cloud_language](ros_google_cloud_language) | ✓ | | Google Cloud Natural Language API |
-| [rostwitter](rostwitter) | ✓ | | Tweeting from ROS |
-| [opt_camera](opt_camera) | ✓ | | Driver of the OPT NM33 omnidirectional camera |
-| [downward](3rdparty/downward), [ff](3rdparty/ff), [ffha](3rdparty/ffha), [lpg_planner](3rdparty/lpg_planner) | ✓ | | PDDL planners |
-| [bayesian_belief_networks](bayesian_belief_networks), [pgm_learner](pgm_learner) | ✓ | | Bayesian belief networks, and their parameter estimation |
-| [assimp_devel](3rdparty/assimp_devel), [libcmt](3rdparty/libcmt), [libsiftfast](3rdparty/libsiftfast), [nlopt](3rdparty/nlopt), [osqp](3rdparty/osqp), [slic](3rdparty/slic) | ✓ | | Libraries packaged for ROS: assimp, CMT tracker, SIFT, NLopt, OSQP, SLIC superpixels |
-| [mini_maxwell](3rdparty/mini_maxwell) | ✓ | | Setting up the Mini Maxwell network emulator |
-| [collada_urdf_jsk_patch](jsk_ros_patch/collada_urdf_jsk_patch), [laser_filters_jsk_patch](jsk_ros_patch/laser_filters_jsk_patch) | ✓ | | Patched versions of collada_urdf and laser_filters |
-| [hark_jsk_plugins](hark_jsk_plugins) | | | Plugins of HARK (not a ROS package) |
-| [jsk_3rdparty](jsk_3rdparty) | ✓ | | The metapackage |
+  A relative `client_config_file` / `save_credentials_file` which is not found is looked up relative to the directory
+  of the settings yaml.
+- At the first start the node runs PyDrive's `LocalWebserverAuth()`: it opens a web browser to log in to the Google
+  account, so run it once on a machine with a browser. With `save_credentials: True` the token is saved to
+  `save_credentials_file` and later starts need no login.
+- Python dependencies: PyDrive is not available from apt. On ROS 1 it is installed into a virtualenv by
+  `catkin_virtualenv` (`requirements.txt`); on ROS 2 into a uv venv (`share/gdrive_ros/venv`) from
+  `pyproject.toml`/`uv.lock` at build time (`jsk_ros1_ros2_compat_generate_uv_venv()`). Run `uv lock` after changing
+  `pyproject.toml`.
 
-The README of each package (linked above) lists its nodes, launch files, topics and parameters. Many of these
-packages are clients of web services or drivers of devices, so they need an API key, a credential file or the
-hardware: see the "Requirements" of each README.
+## Usage
 
-## Install
+### ROS 2
 
 ```bash
-# ROS 1 noetic
-sudo apt install ros-noetic-jsk-3rdparty
-# ROS One (https://ros.packages.techfak.net)
-sudo apt install ros-one-jsk-3rdparty
-# ROS 2 (jazzy, kilted, lyrical, rolling): once released (see the badges above), per package, e.g.
-sudo apt install ros-$ROS_DISTRO-voicevox
+ros2 launch gdrive_ros gdrive_server.launch.xml settings_yaml:=/your/settings/yaml/path
 ```
-
-From source:
 
 ```bash
-mkdir -p ~/ws/src && cd ~/ws/src
-git clone https://github.com/jsk-ros-pkg/jsk_3rdparty.git
-cd ~/ws
-# ROS 2: the packages of ROS 1 only are skipped by their AMENT_IGNORE
-rosdep install -y -r --from-paths src --ignore-src
-colcon build --symlink-install
-# ROS 1: rosdep also skips the packages with AMENT_IGNORE, so remove the markers in a ROS 1 workspace
-find src/jsk_3rdparty -name AMENT_IGNORE -delete
-rosdep install -y -r --from-paths src --ignore-src
-catkin build
+ros2 service call /gdrive_server/upload gdrive_ros/srv/Upload \
+  "{file_path: /tmp/test.txt, parents_path: example_folder}"
+ros2 service call /gdrive_server/upload_multi gdrive_ros/srv/MultipleUpload \
+  "{file_paths: [/tmp/a.txt, /tmp/b.txt], file_titles: [a.txt, b.txt], use_timestamp_folder: true}"
 ```
 
-Note: in ROS 1 this repository contains non-catkin packages (pure-cmake directories such as `osqp`, `libcmt`,
-`slic` and `zdepth`), so use either `catkin build` or `catkin_make_isolated`. `catkin_make` will not work.
+The sample client uploads one file with both services:
+
+```bash
+ros2 run gdrive_ros sample_gdrive_rospy_client.py --ros-args \
+  -p file_name:=/tmp/test.txt -p file_title:=test.txt -p parents_path:=/example_folder
+```
+
+### ROS 1
+
+```bash
+export GOOGLE_DRIVE_SETTINGS_YAML=/your/settings/yaml/path
+roslaunch gdrive_ros gdrive_server.launch
+rosservice call /gdrive_server/upload "{file_path: /tmp/test.txt, parents_path: example_folder}"
+```
+
+Samples, which start the server and upload a file with the Python or the EusLisp client:
+
+```bash
+roslaunch gdrive_ros sample_rospy_client.launch file_name:=/tmp/test.txt file_title:=test.txt
+roslaunch gdrive_ros sample_roseus_client.launch file_name:=/tmp/test.txt file_title:=test.txt
+```
+
+### Launch arguments
+
+`launch/gdrive_server.launch` (ROS 1) and `launch/gdrive_server.launch.xml` (ROS 2):
+
+| Argument | Default | Description |
+|---|---|---|
+| `settings_yaml` | `$GOOGLE_DRIVE_SETTINGS_YAML`, or `/var/lib/robot/pydrive_settings.yaml` | The PyDrive settings yaml |
+| `respawn` | `false` | Respawn the node |
+| `node_name` | `gdrive_server` | The node name (and so the namespace of the services) |
+| `machine` | `localhost` | ROS 1 only: the machine to run the node |
+
+### Clients
+
+- Python: `gdrive_ros.gdrive_ros_client.GDriveROSClient(node)` with `wait_for_gdrive_server()`, `upload_file()` and
+  `upload_multiple_files()` (ROS 1 and ROS 2; see `node_scripts/sample_gdrive_rospy_client.py`).
+- EusLisp (ROS 1): `euslisp/gdrive-ros-utils.l` with `wait-for-gdrive-server`, `upload-file` and
+  `upload-multiple-files` (see `euslisp/sample-gdrive-roseus-client.l`).
+
+Both call `/gdrive_server/upload` and `/gdrive_server/upload_multi`, i.e. the server with the default `node_name`.
+
+## Interface
+
+### gdrive_server_node.py
+
+#### Services
+
+- `~upload` (`gdrive_ros/Upload`): upload a file.
+- `~upload_multi` (`gdrive_ros/MultipleUpload`): upload files into one folder.
+
+The services are advertised after the authentication has finished.
+
+#### Parameters
+
+- `~settings_yaml` (string, required): the PyDrive settings yaml.
+- `~share_type` (string, default: `anyone`): the [permission type](https://developers.google.com/drive/api/v2/reference/permissions)
+  of the uploaded files: `user`, `group`, `domain` or `anyone`.
+- `~share_value` (string, default: `anyone`): the e-mail address or domain of the permission.
+- `~share_role` (string, default: `reader`): the role of the permission.
+- `~share_with_link` (bool, default: `true`): share with a link.
+- `~auth_max_trial` (int, default: `-1`): the number of trials of the authentication when the server is not found
+  (no network); `-1` is infinite.
+- `~auth_wait_seconds` (float, default: `10.0`): the wait between the trials.
+
+### gdrive_ros/Upload
+
+Request:
+
+- `file_path` (string): the local file; `~` is expanded.
+- `file_title` (string): the title in Google Drive; empty means the base name of `file_path`.
+- `parents_path` (string): the folder in Google Drive, e.g. `a/b`; the folders are created when not found. Empty
+  means the root.
+- `parents_id` (string): the ID of the folder; used instead of `parents_path` when both are set.
+- `use_timestamp_folder` (bool): upload into a new folder named by the timestamp (`%Y%m%d%H%M%S`) in the folder.
+- `use_timestamp_file_title` (bool): prefix the title with the timestamp, as `<timestamp>_<file_title>`.
+
+Response: `success` (bool), `file_id` (string), `file_url` (string, a download URL), `parents_id` (string) and
+`parents_url` (string, the URL of the folder).
+
+### gdrive_ros/MultipleUpload
+
+The same as `Upload` with `file_paths` (string[]) and `file_titles` (string[]) for the files, and `successes`
+(bool[]), `file_ids` (string[]) and `file_urls` (string[]) in the response. Give `file_titles` the same length as
+`file_paths` (an empty string uses the base name); only as many files as `file_titles` are uploaded.
+
+## Troubleshooting
+
+On Ubuntu 18.04 with Python 2.7, `rsa < 4.6.0` is required:
+
+```bash
+pip install oauth2client==4.1.3 rsa==4.5 pydrive==1.3.1
+```
