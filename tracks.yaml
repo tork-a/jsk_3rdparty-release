@@ -1,4 +1,4 @@
-release_repo_url: git@github.com:tork-a/jsk_3rdparty-release
+release_repo_url: https://github.com/tork-a/jsk_3rdparty-release.git
 tracks:
   hydro:
     actions:
